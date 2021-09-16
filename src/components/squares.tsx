@@ -32,9 +32,9 @@ const Squares:React.FC<Props> = ({spec, baseAngle, baseLength, prsBase}) => {
     }
     
     return (
-        <div>
+        <>
             {sqrs}
-        </div>
+        </>
     );
 };
 

@@ -3,10 +3,13 @@ import Polygon from './polygon';
 import Squares from './squares';
 import { BaseAngle, BaseLength, PrsBase, Spec } from '../interface/interface';
 import styles from '../css/prism.module.css';
+import contentsJson from '../service/contents.json';
 
 const Prism:React.FC = () => {
+    const [contents] = useState(contentsJson);
+    
     const [spec] = useState<Spec>({
-        side: 3,
+        side: 5,
         width: 300,
         height: 600,
         color: [
