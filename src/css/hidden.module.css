@@ -1,0 +1,8 @@
+.hidden {
+    width: 100vw;
+    height: 100vh;
+    background: #d7ccc6;
+    text-align: center;
+    color: honeydew;
+    transform: rotateX(-90deg) translateZ(Calc(-100vh*3/2)) translateY(Calc(-100vh*3/2));
+}

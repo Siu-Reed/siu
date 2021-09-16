@@ -3,9 +3,13 @@ import Polygon from './polygon';
 import Squares from './squares';
 import { BaseAngle, BaseLength, PrsBase, Spec } from '../interface/interface';
 import styles from '../css/prism.module.css';
-import contentsJson from '../service/contents.json';
+import contentsJson from '../json/contents.json';
 
-const Prism:React.FC = () => {
+interface Props {
+    polygonClick: () => void;
+}
+
+const Prism : React.FC<Props> = ({polygonClick}) => {
     const [contents] = useState(contentsJson);
     
     const [spec] = useState<Spec>({
@@ -40,7 +44,7 @@ const Prism:React.FC = () => {
     return (
         <div className={styles.prism} style={prsBase}>
             <Squares spec={spec} baseAngle={baseAngle} baseLength={baseLength} prsBase={prsBase}/>
-            <Polygon spec={spec} baseAngle={baseAngle} baseLength={baseLength} prsBase={prsBase}/>
+            <Polygon spec={spec} baseAngle={baseAngle} baseLength={baseLength} polygonClick={polygonClick}/>
         </div>
     );
 };

@@ -3,3 +3,11 @@
     height: 100%;
     position: absolute;
 }
+.txt {
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    font-size : 3em;
+    color : #3f4a34;
+    text-align : center;
+}

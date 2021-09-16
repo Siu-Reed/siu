@@ -1,14 +1,14 @@
 import './app.module.css';
 import React from 'react';
-import Prism from './components/prism';
+import ThreeD from './components/threeD';
 
 
 
 const App: React.FC = () => {
     return (
-        <div>
-            <Prism />
-        </div>
+        <>
+            <ThreeD />
+        </>
     );
 };
 
