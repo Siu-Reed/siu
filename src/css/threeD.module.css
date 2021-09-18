@@ -4,3 +4,11 @@
     transform-style: preserve-3d;
     transition: 0.5s;
 }
+
+.x {
+    transform : none;
+}
+
+.y {
+    transform : rotateX(90deg) translateY(Calc(-100vh/2)) translateZ(Calc(-100vh/2));
+}

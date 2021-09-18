@@ -1,13 +1,13 @@
 import './app.module.css';
 import React from 'react';
-import ThreeD from './components/threeD';
+import View from './components/view';
 
 
 
 const App: React.FC = () => {
     return (
         <>
-            <ThreeD />
+            <View />
         </>
     );
 };

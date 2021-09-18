@@ -1,11 +1,14 @@
 import React from 'react';
 import styles from '../css/hidden.module.css';
 
-const Hidden : React.FC = () => {
-    
+interface Props {
+    hiddenBtnClick: () => void;
+};
+
+const Hidden : React.FC<Props> = ({hiddenBtnClick: resetScreen}) => {
     return (
         <div className={styles.hidden}>
-            
+            <div className={styles.resetBtn} onClick={resetScreen}>ㅇㅅㅇ</div>
         </div>
     );
 };

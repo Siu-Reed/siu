@@ -63,10 +63,8 @@ const Polygon: React.FC<Props> = ({spec, baseAngle, baseLength, polygonClick}) =
         rotateZ(${rttDeg*-1}deg)`,
     };
 
-    const plgClick = () => polygonClick();
-    
     return (
-        <div className={styles.cvsDiv} style={cvsDivStyle} onClick={plgClick}>
+        <div className={styles.cvsDiv} style={cvsDivStyle} onClick={polygonClick}>
             <canvas className={styles.cvs} ref={cvsRef}/>
             <p className={styles.txt} style={txtStyle}>ㅇㅅㅇ</p>
         </div>

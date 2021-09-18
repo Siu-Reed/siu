@@ -1,0 +1,14 @@
+.view {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: darkgreen;
+}
+
+.x {
+    perspective: 1000000px;
+}
+
+.y {
+    perspective: 4000px;
+}
