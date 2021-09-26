@@ -1,3 +1,15 @@
 .sqr {
     position : absolute;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.h2 {
+    margin: 1em;
+}
+
+.a {
+    text-decoration: none;
+    margin: 1em;
 }

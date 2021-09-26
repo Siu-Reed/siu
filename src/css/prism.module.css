@@ -1,8 +1,7 @@
 .prism {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
     transform-style: preserve-3d;
     transition: 0.4s;
-    transform: translate(-50%, -50%);
 }

@@ -20,3 +20,8 @@ export interface PrsBase {
     width: number;
     height: number;
 }
+
+export interface ContentsValues {
+    category: string | number;
+    items: object;
+}

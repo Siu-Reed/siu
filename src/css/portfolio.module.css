@@ -1,0 +1,10 @@
+.portfolio {
+    position: relative;
+    width: 70%;
+    height: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    background-color: teal;
+}

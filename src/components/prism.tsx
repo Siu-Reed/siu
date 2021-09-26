@@ -1,27 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Polygon from './polygon';
 import Squares from './squares';
-import { BaseAngle, BaseLength, PrsBase, Spec } from '../interface/interface';
+import { BaseAngle, BaseLength, ContentsValues, PrsBase, Spec } from '../interface/interface';
 import styles from '../css/prism.module.css';
-import contentsJson from '../json/contents.json';
 
 interface Props {
+    spec: Spec;
     polygonClick: () => void;
+    angle: number;
+    contentsKeys: Array<string | number>;
+    contentsValues: Array<ContentsValues>;
 }
 
-const Prism : React.FC<Props> = ({polygonClick}) => {
-    const [contents] = useState(contentsJson);
-    
-    const [spec] = useState<Spec>({
-        side: 5,
-        width: 300,
-        height: 600,
-        color: [
-            "#809071",
-            "#798a6d",
-            "#758569"
-        ]
-    });
+const Prism : React.FC<Props> = ({spec, polygonClick, angle, contentsKeys, contentsValues}) => {
 
     const rad = Math.PI/180;
 
@@ -38,12 +29,17 @@ const Prism : React.FC<Props> = ({polygonClick}) => {
 
     const prsBase:PrsBase = {
         width: baseLength.b*2,
-        height: baseLength.b*2,
+        height: baseLength.b*2
+    }
+
+    const prsStyle = {
+        ...prsBase,
+        transform : `rotateZ(${angle}deg)`
     }
 
     return (
-        <div className={styles.prism} style={prsBase}>
-            <Squares spec={spec} baseAngle={baseAngle} baseLength={baseLength} prsBase={prsBase}/>
+        <div className={styles.prism} style={prsStyle}>
+            <Squares spec={spec} baseAngle={baseAngle} baseLength={baseLength} prsBase={prsBase} contentsKeys={contentsKeys} contentsValues={contentsValues}/>
             <Polygon spec={spec} baseAngle={baseAngle} baseLength={baseLength} polygonClick={polygonClick}/>
         </div>
     );

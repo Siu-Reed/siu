@@ -1,5 +1,5 @@
 import React from 'react';
-import { BaseAngle, BaseLength, PrsBase, Spec } from '../interface/interface';
+import { BaseAngle, BaseLength, ContentsValues, PrsBase, Spec } from '../interface/interface';
 import styles from '../css/squares.module.css';
 
 interface Props {
@@ -7,9 +7,11 @@ interface Props {
     baseAngle: BaseAngle;
     baseLength: BaseLength;
     prsBase: PrsBase;
+    contentsKeys: Array<string | number>;
+    contentsValues: Array<ContentsValues>;
 }
 
-const Squares:React.FC<Props> = ({spec, baseAngle, baseLength, prsBase}) => {
+const Squares:React.FC<Props> = ({spec, baseAngle, baseLength, prsBase, contentsKeys, contentsValues}) => {
     
     const sqrs = [];
 
@@ -28,7 +30,20 @@ const Squares:React.FC<Props> = ({spec, baseAngle, baseLength, prsBase}) => {
                 translateY(-${spec.height/2}px)
             `,
         }
-        sqrs[i] = <div className={styles.sqr} style={sqrStyle}></div>
+
+        const itemsKeys = Object.keys(contentsValues[i].items);
+        const itemsValues = Object.values(contentsValues[i].items);
+
+        let items = itemsKeys.map((key, index) => <a key={key} href={itemsValues[index]} className={styles.a}>{key}</a>);
+
+        sqrs[i] = (
+        <div className={styles.sqr} style={sqrStyle} key={contentsKeys[i]}>
+            <h2 className={styles.h2}>
+                {contentsValues[i].category}
+            </h2>
+            {items}
+        </div>
+        )
     }
     
     return (

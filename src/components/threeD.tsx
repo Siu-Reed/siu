@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Hidden from './hidden';
-import Main from './main';
 import styles from '../css/threeD.module.css';
+import Main from './main';
 
 interface View {
     view : string;
@@ -27,8 +27,8 @@ const ThreeD : React.FC<Props> = ({rotateScreen}) => {
 
     return (
         <div className={`${styles.threeD} ${view.view}`}>
-            <Main polygonClick={polygonClick}/>
-            <Hidden hiddenBtnClick={hiddenBtnClick}/>
+            <Main polygonClick={polygonClick} />
+            <Hidden hiddenBtnClick={hiddenBtnClick} />
         </div>
     );
 };

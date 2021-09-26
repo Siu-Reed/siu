@@ -1,17 +1,19 @@
 import React from 'react';
-import Prism from './prism';
-import styles from '../css/main.module.css';
-import PrismBtn from './prismBtn';
+import styles from '../css/main.module.css'
+import Header from './header';
+import My from './my';
+import Portfolio from './portfolio';
 
 interface Props {
     polygonClick: () => void;
 }
 
-const Main : React.FC<Props> = ({polygonClick}) => {
+const Main:React.FC<Props> = ({polygonClick}) => {
     return (
         <div className={styles.main}>
-            <Prism polygonClick={polygonClick}/>
-            <PrismBtn />
+            <Header />
+            <My />
+            <Portfolio polygonClick={polygonClick}/>
         </div>
     );
 };
