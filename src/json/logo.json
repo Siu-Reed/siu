@@ -1,0 +1,26 @@
+{
+    "Front-End" : {
+        "HTML" : "./img/logo/html.svg",
+        "CSS" : "./img/logo/css.svg",
+        "JavaScript" : "./img/logo/javascript.svg",
+        "TypeScript" : "./img/logo/typescript.svg",
+        "React.js" : "./img/logo/reactjs.svg",
+        "Three.js" : "./img/logo/threejs.svg"
+    },
+    "Back-End" : {
+        "Node.js" : "./img/logo/nodejs.svg",
+        "Express.js" : "./img/logo/express.svg",
+        "MongoDB" : "./img/logo/mongodb.svg",
+        "MySQL" : "./img/logo/mysql.svg",
+        "Firebase" : "./img/logo/firebase.svg"
+    },
+    "Design Tool" : {
+        "PhotoShop" : "./img/logo/photoshop.svg",
+        "lightRoom" : "./img/logo/lightroom.svg",
+        "Illstrator" : "./img/logo/illustlator.svg",
+        "Premiere" : "./img/logo/premiere.svg"
+    },
+    "ETC" : {
+        "Git" : "./img/logo/github.svg"
+    }
+}

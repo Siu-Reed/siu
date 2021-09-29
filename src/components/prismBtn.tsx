@@ -11,10 +11,10 @@ const PrismBtn : React.FC<Props> = ({plusAngle, minusAngle}) => {
     return (
         <div className={styles.btns}>
             <button className={styles.btn} onClick={plusAngle}>
-                <iframe title='btn' src='./triangle.svg' />
+                <iframe title='btn' src='./img/icon/triangle.svg' />
             </button>
             <button className={styles.btn} onClick={minusAngle}>
-                <iframe title='btn' src='./triangle.svg' />
+                <iframe title='btn' src='./img/icon/triangle.svg' />
             </button>
         </div>
     );
