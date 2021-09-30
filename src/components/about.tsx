@@ -22,12 +22,15 @@ const About:React.FC = () => {
 
         window.addEventListener('resize',resize);
 
-        // const animate = (t) => {
-        //     ctx.clearRect(0, 0, cvsWidth, cvsHeight);
-        //     WaveGroup
-        // }
+        
+        const waveGroup = new WaveGroup(cvsWidth, cvsHeight);
 
-    }, [])
+        const animate = (t:any) => {
+            ctx.clearRect(0, 0, cvsWidth, cvsHeight);
+            waveGroup.resize();
+        }
+
+    }, )
 
     return (
         <div className={styles.about}>

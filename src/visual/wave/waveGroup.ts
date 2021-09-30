@@ -5,21 +5,26 @@ export class WaveGroup {
     totalPoints:number = 7;
     waves:Array<null | any> = [];
 
-    constructor() {
+    constructor(
+        public stageWidth : number,
+        public stageHeight : number,
+    ) {
         this.colors.forEach((value, i) => {
             const wave = new Wave(
                 i,
                 this.totalPoints,
                 value,
+                this.stageWidth,
+                this.stageHeight
             );
             this.waves[i] = wave;
         });
     }
 
-    resize(stageWidth:number, stageHeight:number) {
+    resize() {
         this.waves.forEach((value) => {
             const wave = value;
-            wave.resize(stageWidth, stageHeight);
+            wave.resize();
         });
     }
 
