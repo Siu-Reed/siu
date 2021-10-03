@@ -4,13 +4,14 @@ import About from './about';
 
 interface Props {
     aboutClick : () => void;
-    aboutSwitch: boolean;
+    aboutClose : () => void;
+    aboutSwitch : boolean;
 }
 
-const My : React.FC<Props> = ({aboutClick, aboutSwitch}) => {
+const My : React.FC<Props> = ({aboutClick, aboutClose, aboutSwitch}) => {
     return (
         <>
-            <About aboutClick={aboutClick} aboutSwitch={aboutSwitch}/>
+            <About aboutClick={aboutClick} aboutClose={aboutClose} aboutSwitch={aboutSwitch}/>
         </>
     );
 };

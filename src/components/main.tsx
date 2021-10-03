@@ -7,10 +7,11 @@ import Portfolio from './portfolio';
 interface Props {
     polygonClick: () => void;
     aboutClick: () => void;
+    aboutClose: () => void;
     aboutSwitch: boolean;
 }
 
-const Main:React.FC<Props> = ({polygonClick, aboutClick, aboutSwitch}) => {
+const Main:React.FC<Props> = ({polygonClick, aboutClick, aboutClose, aboutSwitch}) => {
 
     let con1Style;
     let con2Style;
@@ -27,7 +28,7 @@ const Main:React.FC<Props> = ({polygonClick, aboutClick, aboutSwitch}) => {
             <Header />
 
             <div className={`${styles.con1} ${con1Style}`}>
-                <My aboutClick={aboutClick} aboutSwitch={aboutSwitch}/>
+                <My aboutClick={aboutClick} aboutClose={aboutClose} aboutSwitch={aboutSwitch}/>
             </div>
             
             <div className={`${styles.con2} ${con2Style}`}>

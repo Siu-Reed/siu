@@ -4,15 +4,15 @@ import { WaveGroup } from '../visual/wave-group';
 
 interface Props {
     aboutClick: () => void;
+    aboutClose: () => void;
     aboutSwitch: boolean;
 }
 
-const About:React.FC<Props> = ({aboutClick, aboutSwitch}) => {
+const About:React.FC<Props> = ({aboutClick, aboutClose, aboutSwitch}) => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
 
     let aboutStyle;
     aboutSwitch ? aboutStyle = styles.click : aboutStyle = styles.default;
-
     const ratio = window.devicePixelRatio;
 
     useEffect(() =>{
@@ -21,6 +21,7 @@ const About:React.FC<Props> = ({aboutClick, aboutSwitch}) => {
         
         let stageWidth:number;
         let stageHeight:number;
+        
         if (aboutSwitch) {
             stageWidth = document.body.clientWidth;
             stageHeight = document.body.clientHeight;
@@ -46,10 +47,22 @@ const About:React.FC<Props> = ({aboutClick, aboutSwitch}) => {
             requestAnimationFrame(animate);
         }
     }, [ratio, aboutSwitch]);
-        
+    
+    const closeHandler = () => {
+        aboutClose();
+    }
+
     return (
         <div className={`${styles.about} ${aboutStyle}`} onClick={aboutClick}>
             <canvas className={styles.wave} ref={canvasRef}/>
+            <div className={styles.contents}>
+
+            </div>
+            <div className={styles.btnBox}>
+                <button className={`${styles.btn} ${styles.close}`} onClick={closeHandler}>닫기</button>
+                <button className={`${styles.btn} ${styles.right}`}>오른</button>
+                <button className={`${styles.btn} ${styles.left}`}>왼</button>
+            </div>
         </div>
     );
 };

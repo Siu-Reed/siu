@@ -27,13 +27,15 @@ const ThreeD : React.FC = () => {
 
     const aboutClick = () => {
         setAboutSwitch(true);
-        return true;
+    }
+    const aboutClose = () => {
+        setAboutSwitch(false);
     }
 
     return (
         <div className={`${styles.threeD} ${styleThreeD}`}>
             <div className={`${styles.screen} ${styleScreen}`}>
-                <Main polygonClick={polygonClick} aboutClick={aboutClick} aboutSwitch={aboutSwitch} />
+                <Main polygonClick={polygonClick} aboutClick={aboutClick} aboutClose={aboutClose} aboutSwitch={aboutSwitch} />
                 <Hidden hiddenBtnClick={hiddenBtnClick} />
             </div>
         </div>
