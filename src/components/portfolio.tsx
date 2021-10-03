@@ -36,10 +36,10 @@ const Portfolio : React.FC<Props> = ({polygonClick}) => {
     };
 
     return (
-        <div className={styles.portfolio}>
+        <>
             <PrismBtn plusAngle={plusAngle} minusAngle={minusAngle}/>
             <Prism spec={spec} polygonClick={polygonClick} angle={angle} contentsKeys={contentsKeys} contentsValues={contentsValues}/>
-        </div>
+        </>
     );
 };
 

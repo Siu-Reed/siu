@@ -1,4 +1,4 @@
-import { Wave } from "./wave";
+import { Wave } from "./wave-object";
 
 export class WaveGroup {
     colors:Array<string> = ['rgba(175,132,115,0.6)', 'rgba(169,132,115,0.6)', 'rgba(196,180,171,0.6)', 'rgba(200,180,171,0.6)'];

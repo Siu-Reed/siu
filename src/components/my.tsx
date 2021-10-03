@@ -2,11 +2,16 @@ import React from 'react';
 import styles from '../css/my.module.css'
 import About from './about';
 
-const My : React.FC = () => {
+interface Props {
+    aboutClick : () => void;
+    aboutSwitch: boolean;
+}
+
+const My : React.FC<Props> = ({aboutClick, aboutSwitch}) => {
     return (
-        <div className={styles.my}>
-            <About />
-        </div>
+        <>
+            <About aboutClick={aboutClick} aboutSwitch={aboutSwitch}/>
+        </>
     );
 };
 

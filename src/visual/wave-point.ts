@@ -1,4 +1,10 @@
-export class Point {
+interface PointShould {
+    index: number;
+    x: number;
+    y: number;
+}
+
+export class Point implements PointShould {
     constructor(
         public index : number,
         public x : number,

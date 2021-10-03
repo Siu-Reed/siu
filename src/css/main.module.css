@@ -3,3 +3,39 @@
     width: 100%;
     height: 100%;
 }
+
+.con1 {
+    position: relative;
+    height: 100%;
+    float: left;
+    transition: 0.8s;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+.con2 {
+    transition: 0.8s;
+    position: relative;
+    height: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    background-color: teal;
+}
+
+.con1_x {
+    width: 30%;
+}
+.con2_x {
+    width: 70%;
+    opacity: 1;
+}
+
+.con1_y {
+    width: 100%;
+}
+.con2_y {
+    width:  0;
+    opacity: 0;
+}

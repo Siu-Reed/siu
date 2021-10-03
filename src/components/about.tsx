@@ -1,39 +1,54 @@
 import React, { useEffect, useRef } from 'react';
 import styles from '../css/about.module.css';
-import { WaveGroup } from '../visual/wave/waveGroup';
+import { WaveGroup } from '../visual/wave-group';
 
-const About:React.FC = () => {
+interface Props {
+    aboutClick: () => void;
+    aboutSwitch: boolean;
+}
+
+const About:React.FC<Props> = ({aboutClick, aboutSwitch}) => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
+
+    let aboutStyle;
+    aboutSwitch ? aboutStyle = styles.click : aboutStyle = styles.default;
+
     const ratio = window.devicePixelRatio;
-        
+
     useEffect(() =>{
         const cvs = canvasRef.current;
-        if (!cvs) return;
-        const ctx = cvs.getContext('2d');
-        if (!ctx) return;
-        const cvsWidth = cvs.clientWidth;
-        const cvsHeight = cvs.clientHeight;
-
-        const resize = () => {
-            cvs.width = cvsWidth * ratio;
-            cvs.height = cvsHeight * ratio;
-            ctx.scale(ratio, ratio);
-        }
-
-        window.addEventListener('resize',resize);
-
+        const ctx = cvs!.getContext('2d');
         
-        const waveGroup = new WaveGroup(cvsWidth, cvsHeight);
-
-        const animate = (t:any) => {
-            ctx.clearRect(0, 0, cvsWidth, cvsHeight);
+        let stageWidth:number;
+        let stageHeight:number;
+        if (aboutSwitch) {
+            stageWidth = document.body.clientWidth;
+            stageHeight = document.body.clientHeight;
+        } else {
+            stageWidth = cvs!.clientWidth;
+            stageHeight = cvs!.clientHeight;
+        }
+    
+        const waveGroup = new WaveGroup(stageWidth, stageHeight);
+        
+        resize();
+        requestAnimationFrame(animate);
+        
+        function resize() {
+            cvs!.width = stageWidth * ratio;
+            cvs!.height = stageHeight * ratio;
+            ctx!.scale(ratio, ratio);
             waveGroup.resize();
         }
-
-    }, )
-
+        function animate() {
+            ctx!.clearRect(0, 0, stageWidth, stageHeight);
+            waveGroup.draw(ctx!);            
+            requestAnimationFrame(animate);
+        }
+    }, [ratio, aboutSwitch]);
+        
     return (
-        <div className={styles.about}>
+        <div className={`${styles.about} ${aboutStyle}`} onClick={aboutClick}>
             <canvas className={styles.wave} ref={canvasRef}/>
         </div>
     );
