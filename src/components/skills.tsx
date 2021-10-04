@@ -3,8 +3,8 @@ import styles from '../css/skills.module.css';
 
 const Skills:React.FC = () => {
     return (
-        <div>
-            
+        <div className={styles.skills}>
+            3 skills
         </div>
     );
 };

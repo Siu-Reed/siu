@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { MouseEvent } from 'react';
 import styles from '../css/my.module.css'
 import About from './about';
 
 interface Props {
     aboutClick : () => void;
-    aboutClose : () => void;
+    aboutClose : (e: MouseEvent<HTMLButtonElement>) => void;
     aboutSwitch : boolean;
 }
 

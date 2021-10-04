@@ -3,8 +3,8 @@ import styles from '../css/me.module.css';
 
 const Me:React.FC = () => {
     return (
-        <div>
-            
+        <div className={styles.me}>
+            1 me
         </div>
     );
 };

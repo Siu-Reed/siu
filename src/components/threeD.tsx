@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, MouseEvent } from 'react';
 import Hidden from './hidden';
 import styles from '../css/threeD.module.css';
 import Main from './main';
@@ -28,7 +28,10 @@ const ThreeD : React.FC = () => {
     const aboutClick = () => {
         setAboutSwitch(true);
     }
-    const aboutClose = () => {
+    
+    const aboutClose = (e: MouseEvent<HTMLButtonElement> ) => {
+        e.preventDefault();
+        e.stopPropagation();
         setAboutSwitch(false);
     }
 

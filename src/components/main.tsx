@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { MouseEvent } from 'react';
 import styles from '../css/main.module.css'
 import Header from './header';
 import My from './my';
@@ -7,7 +7,7 @@ import Portfolio from './portfolio';
 interface Props {
     polygonClick: () => void;
     aboutClick: () => void;
-    aboutClose: () => void;
+    aboutClose: (e: MouseEvent<HTMLButtonElement>) => void;
     aboutSwitch: boolean;
 }
 

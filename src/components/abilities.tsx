@@ -3,8 +3,8 @@ import styles from '../css/abilities.module.css';
 
 const Abilities:React.FC = () => {
     return (
-        <div>
-            
+        <div className={styles.abilities}>
+            2 abilities
         </div>
     );
 };
