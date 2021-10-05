@@ -23,6 +23,7 @@
 }
 
 .contents {
+    transition: 0.8s;
     position: absolute;
     top: 0;
     left: 0;

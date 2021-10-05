@@ -65,7 +65,7 @@ const About:React.FC<Props> = ({aboutClick, aboutClose, aboutSwitch}) => {
         <div className={`${styles.about} ${aboutStyle}`} onClick={aboutClick}>
             <canvas className={styles.wave} ref={canvasRef}/>
             <div className={styles.contents}>
-                {aboutChildren}
+                {aboutSwitch && aboutChildren}
             </div>
             <div className={styles.btnBox}>
                 <button className={`${styles.btn} ${styles.close}`} onClick={aboutClose}>닫기</button>
