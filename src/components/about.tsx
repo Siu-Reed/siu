@@ -23,9 +23,17 @@ const About:React.FC<Props> = ({aboutClick, aboutClose, aboutSwitch}) => {
         const value = page + parseInt(e.currentTarget.dataset.value!);
         !(value===0) && !(value===aboutChildren.length+1) && setPage(value);
     }
+    const cBoxTransform = { transform : `translateX(${(page-1)*-100}%)` }
 
     let aboutStyle;
-    aboutSwitch ? aboutStyle = styles.click : aboutStyle = styles.default;
+    let hiddenStyle;
+    if (aboutSwitch) {
+        aboutStyle = styles.click;
+        hiddenStyle = styles.appear;
+    } else {
+        aboutStyle = styles.default
+        hiddenStyle = styles.disappear;
+    };
     const ratio = window.devicePixelRatio;
 
     useEffect(() =>{
@@ -64,13 +72,13 @@ const About:React.FC<Props> = ({aboutClick, aboutClose, aboutSwitch}) => {
     return (
         <div className={`${styles.about} ${aboutStyle}`} onClick={aboutClick}>
             <canvas className={styles.wave} ref={canvasRef}/>
-            <div className={styles.contents}>
+            <div className={`${styles.contentsBox} ${hiddenStyle}`} style={cBoxTransform}>
                 {aboutSwitch && aboutChildren}
             </div>
-            <div className={styles.btnBox}>
+            <div className={`${styles.btnBox} ${hiddenStyle}`}>
                 <button className={`${styles.btn} ${styles.close}`} onClick={aboutClose}>닫기</button>
-                <button className={`${styles.btn} ${styles.right}`} onClick={pageHandler} data-value={-1}>오른</button>
-                <button className={`${styles.btn} ${styles.left}`} onClick={pageHandler} data-value={1}>왼</button>
+                <button className={`${styles.btn} ${styles.left}`} onClick={pageHandler} data-value={-1}>왼</button>
+                <button className={`${styles.btn} ${styles.right}`} onClick={pageHandler} data-value={1}>오른</button>
             </div>
         </div>
     );

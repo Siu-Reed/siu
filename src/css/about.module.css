@@ -10,7 +10,6 @@
     width: 200px;
     height: 300px;
 }
-
 .click {
     margin: 0 0 0 0;
     width: 100%;
@@ -22,8 +21,7 @@
     height: 100%;
 }
 
-.contents {
-    transition: 0.8s;
+.contentsBox {
     position: absolute;
     top: 0;
     left: 0;
@@ -32,13 +30,43 @@
 
     display: flex;
     flex-flow: column wrap;
+    
+    opacity: 0;
+    transition: 1s;
 }
 
 .btnBox {
-    display: none;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.disappear {
+    pointer-events: none;
+    transition: 0.5s;
+    opacity: 0;
+}
+.appear {
+    pointer-events: inherit;
+    transition: 1s;
+    opacity: 1;
+}
+
+.close {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+.left {
+    margin: 0 0 0 1em
+}
+.right {
+    margin: 0 1em 0 0;
 }
