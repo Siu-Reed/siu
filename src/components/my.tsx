@@ -1,17 +1,17 @@
-import React, { MouseEvent } from 'react';
+import React from 'react';
 import styles from '../css/my.module.css'
 import About from './about';
 
 interface Props {
-    aboutClick : () => void;
-    aboutClose : (e: MouseEvent<HTMLButtonElement>) => void;
+    aboutOpen : () => void;
+    aboutClose : () => void;
     aboutSwitch : boolean;
 }
 
-const My : React.FC<Props> = ({aboutClick, aboutClose, aboutSwitch}) => {
+const My : React.FC<Props> = ({aboutOpen, aboutClose, aboutSwitch}) => {
     return (
         <>
-            <About aboutClick={aboutClick} aboutClose={aboutClose} aboutSwitch={aboutSwitch}/>
+            <About aboutOpen={aboutOpen} aboutClose={aboutClose} aboutSwitch={aboutSwitch} />
         </>
     );
 };

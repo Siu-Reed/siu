@@ -1,25 +1,29 @@
 import React from 'react';
 import styles from '../css/skills.module.css';
-import logos from '../json/logo.json';
+import logosJson from '../json/logo.json';
 
 const Skills:React.FC = () => {
 
-    const stacks = Object.entries(logos).map((value) => { return (
-        <div>
-            <h2>{value[0]}</h2>
-            {Object.entries(value[1]).map((item) => {
-                <div>
-                    <p>{item[0]}</p>
-                    <iframe title='stack' src={item[1]} />
+    const contents = Object.entries(logosJson).map((value) => { return(
+        <div className={styles.category}>
+            <h3 className={styles.title}>{value[0]}</h3>
+            <div className={styles.items}>
+            {Object.values(value[1]).map((item) => { return(
+                <div className={styles.item}>
+                    <img src={item.src} alt="item" />
+                    <h3>{item.meta}</h3>
                 </div>
-            })}
+            )})}
+            </div>
         </div>
     )});
 
     return (
         <div className={styles.skills}>
-            <h1>Skill Stacks</h1>
-            {stacks}
+            <h1 className={styles.h1}>Skill Stacks</h1>
+            <div className={styles.contentsWrapper}>
+                {contents}
+            </div>
         </div>
     );
 };

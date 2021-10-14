@@ -12,7 +12,7 @@ export class Point implements PointShould {
     ) {}
     
     fixedY = this.y;
-    speed = 0.035;
+    speed = 0.038;
     cur = this.index;
     max = Math.random() * 30 + 10;
     

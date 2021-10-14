@@ -5,6 +5,7 @@ import App from './app';
 
 ReactDOM.render(
     <React.StrictMode>
+        {console.log('index')}
         <App />
     </React.StrictMode>,
     document.getElementById('root')

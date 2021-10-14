@@ -11,9 +11,9 @@ export class Wave {
         public stageHeight : number,
     ) { this.points = []; }
 
-    resize():void {
+    resize(waveHeight: number):void {
         // const centerX = this.stageWidth * (1/2);
-        const centerY = this.stageHeight * (1/4);
+        const centerY = this.stageHeight * waveHeight;
         const pointGap = this.stageWidth / (this.totalPoints - 1);
 
         this.init(centerY, pointGap);

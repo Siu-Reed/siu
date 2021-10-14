@@ -1,26 +1,74 @@
 {
     "Front-End" : {
-        "HTML" : "./img/logo/html.svg",
-        "CSS" : "./img/logo/css.svg",
-        "JavaScript" : "./img/logo/javascript.svg",
-        "TypeScript" : "./img/logo/typescript.svg",
-        "React.js" : "./img/logo/reactjs.svg",
-        "Three.js" : "./img/logo/threejs.svg"
+        "html" : {
+            "meta" : "HTML",
+            "src" : "./img/logo/html.svg"
+        },
+        "css" : {
+            "meta" : "CSS",
+            "src" : "./img/logo/css.svg"
+        },
+        "javascript" : {
+            "meta" : "JavaScript",
+            "src" : "./img/logo/javascript.svg"
+        },
+        "typescript" : {
+            "meta" : "TypeScript",
+            "src" : "./img/logo/typescript.svg"
+        },
+        "react" : {
+            "meta" : "React.js",
+            "src" : "./img/logo/reactjs.svg"
+        },
+        "three" : {
+            "meta" : "Three.js",
+            "src" : "./img/logo/threejs.svg"
+        }
     },
     "Back-End" : {
-        "Node.js" : "./img/logo/nodejs.svg",
-        "Express.js" : "./img/logo/express.svg",
-        "MongoDB" : "./img/logo/mongodb.svg",
-        "MySQL" : "./img/logo/mysql.svg",
-        "Firebase" : "./img/logo/firebase.svg"
+        "node" : {
+            "meta" : "Node.js",
+            "src" : "./img/logo/nodejs.svg"
+        },
+        "express" : {
+            "meta" : "Express.js",
+            "src" : "./img/logo/express.svg"
+        },
+        "mongodb" : {
+            "meta" : "MongoDB",
+            "src" : "./img/logo/mongodb.svg"
+        },
+        "mysql" : {
+            "meta" : "MySQL",
+            "src" : "./img/logo/mysql.svg"
+        },
+        "firebase" : {
+            "meta" : "Firebase",
+            "src" : "./img/logo/firebase.svg"
+        }
     },
     "Design Tool" : {
-        "PhotoShop" : "./img/logo/photoshop.svg",
-        "lightRoom" : "./img/logo/lightroom.svg",
-        "Illstrator" : "./img/logo/illustlator.svg",
-        "Premiere" : "./img/logo/premiere.svg"
+        "photoshop" : {
+            "meta" : "PhotoShop",
+            "src" : "./img/logo/photoshop.svg"
+        },
+        "lightroom" : {
+            "meta" : "lightRoom",
+            "src" : "./img/logo/lightroom.svg"
+        },
+        "illstrator" : {
+            "meta" : "Illstrator",
+            "src" : "./img/logo/illustrator.svg"
+        },
+        "premiere" : {
+            "meta" : "Premiere",
+            "src" : "./img/logo/premiere.svg"
+        }
     },
     "ETC" : {
-        "Git" : "./img/logo/github.svg"
+        "git" : {
+            "meta" : "Git/GitHub",
+            "src" : "./img/logo/github.svg"
+        }
     }
 }

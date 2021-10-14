@@ -8,6 +8,7 @@ export class WaveGroup {
     constructor(
         public stageWidth : number,
         public stageHeight : number,
+        public waveHeight : number | Array<number> = 1/4
     ) {
         this.colors.forEach((value, i) => {
             const wave = new Wave(
@@ -21,17 +22,19 @@ export class WaveGroup {
         });
     }
 
-    resize() {
-        this.waves.forEach((value) => {
-            const wave = value;
-            wave.resize();
+    resize(waveHeight: number | Array<number> = 1/4):void {
+        this.waves.forEach((value, i) => {
+            if (typeof(waveHeight) === 'number') {
+                value.resize(waveHeight);
+            } else {
+                value.resize(waveHeight[i])
+            }
         });
     }
 
     draw(ctx:CanvasRenderingContext2D) {
         this.waves.forEach((value) => {
-            const wave = value;
-            wave.draw(ctx);
+            value.draw(ctx);
         });
     }
 }

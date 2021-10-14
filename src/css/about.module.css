@@ -1,7 +1,7 @@
 .about {
     position: relative;
     transition: 0.2s;
-    background: darkkhaki;
+    background: #d7ccc6;
     z-index: 1;
 }
 
@@ -65,8 +65,12 @@
     right: 1em;
 }
 .left {
-    margin: 0 0 0 1em
+    position: absolute;
+    top: 50%;
+    left: 1em;
 }
 .right {
-    margin: 0 1em 0 0;
+    position: absolute;
+    top: 50%;
+    right: 1em;
 }
