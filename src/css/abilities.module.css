@@ -1,4 +1,98 @@
 .abilities {
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    top: 1em;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.graph {
+    width: 50%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.graph li {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.graph li h2 {
+    line-height: 5vh;
+    font-size: 1.3rem;
+    width: 7em;
+    text-align: center;
+    border-radius: 1em 1em 0 0;
+    background: #c3aea5;
+    box-shadow: 0.1em 0em 0.1em rgba(0, 0, 0, 0.3);
+    color: rgba(56, 16, 4, 0.9);
+}
+
+.graph li div {
+    width: 35%;
+    transition: 1.5s;
+    border-radius: 1em 1em 0 0;
+    box-shadow: 0.3em 0em 0.5em rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.hidden {
+    height: 0;
+}
+
+.frontEnd div {
+    background: #7a5948;
+}
+.frontEnd .appear {
+    height: 80vh;
+}
+
+.backEnd div {
+    background: #a98473;
+}
+.backEnd .appear {
+    height: 40vh;
+}
+
+.design div {
+    background: #809071;
+}
+.design .appear {
+    height: 70vh;
+}
+
+.meta {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.meta div {
+    width: 27em;
+    padding: 1em;
+    border-radius: 0.5em;
+    background: rgba(256, 256, 256, 0.2);
+}
+
+.meta div h2 {
+    margin: 0 0 0.3em 0.8em;
 }

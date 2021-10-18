@@ -5,7 +5,7 @@ interface PointShould {
 }
 
 export class Point implements PointShould {
-    constructor(
+    constructor (
         public index : number,
         public x : number,
         public y : number

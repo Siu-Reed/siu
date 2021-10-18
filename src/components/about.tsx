@@ -15,9 +15,9 @@ const About:React.FC<Props> = ({aboutOpen, aboutClose, aboutSwitch}) => {
     const [page, setPage] = useState(1);
     const canvasRef = useRef<HTMLCanvasElement>(null);
     
-    const aboutChildren = [<Me key='me' />, <Abilities key='abilities' />,<Skills />];
+    const aboutChildren = [<Me key='me' />, <Abilities key='abilities' page={page} />,<Skills key='skills' />];
 
-    const cBoxTransform = { transform : `translateX(${(page-1)*-100}%)` }
+    const cBoxTransform = { transform : `translateX(${(page-1)*-100}%)` };
 
     let aboutStyle;
     let hiddenStyle;
@@ -33,6 +33,7 @@ const About:React.FC<Props> = ({aboutOpen, aboutClose, aboutSwitch}) => {
     useEffect(() =>{
         const cvs = canvasRef.current;
         const ctx = cvs!.getContext('2d');
+        const page2Wave = [15/100, 25/100, 55/100, 95/100];
         const page3Wave = [14/100, 36/100, 58/100, 80/100];
         
         let stageWidth:number;
@@ -44,6 +45,8 @@ const About:React.FC<Props> = ({aboutOpen, aboutClose, aboutSwitch}) => {
             stageHeight = document.body.clientHeight;
             if (page === 3) {
                 waveHeight = page3Wave;
+            } else if (page === 2) {
+                waveHeight = page2Wave;
             } else {
                 waveHeight = 1/4;
             }
