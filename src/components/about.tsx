@@ -19,6 +19,7 @@ const About:React.FC<Props> = memo(({aboutOpen, aboutClose, aboutSwitch}) => {
     const [page, setPage] = useState(1);
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const requestRef = useRef<number>();
+    const newWaveHeights = useRef<Array<number>>();
     const previousWavesRef = useRef<Array<number>>();
     const [waveHeights, setWaveHeights] = useState<Array<number>>();
 
@@ -44,39 +45,26 @@ const About:React.FC<Props> = memo(({aboutOpen, aboutClose, aboutSwitch}) => {
         aboutStyle = styles.default
         hiddenStyle = styles.disappear;
     };
-    
-    let newWaveHeights:Array<number>;
-    switch (page) {
-        case 1:
-            newWaveHeights = newHeights1;
-            break;
-        case 2:
-            newWaveHeights = newHeights2;
-            break;
-        case 3:
-            newWaveHeights = newHeights3;
-            break;
-    }
 
     const timeLimit = 1000;
     let timeStart:number;
     function transition (timestamp:DOMHighResTimeStamp) {
-        if (!waveHeights) setWaveHeights(newWaveHeights);
-        if (!previousWavesRef.current) previousWavesRef.current = newWaveHeights;
-        if (!timeStart) timeStart = timestamp;
-        const progress = timestamp - timeStart;
-        setWaveHeights(previousWavesRef.current!.map((preWave, i) => (
-            preWave + (newWaveHeights[i] - preWave)*progress/timeLimit
-        )));
-        if (progress < timeLimit) {
-            requestRef.current = requestAnimationFrame(transition);
-        } else {
-            previousWavesRef.current = newWaveHeights;
-            console.log(`after previous.current - ${previousWavesRef.current}`)
-            return () => cancelAnimationFrame(requestRef.current!)
+        if (!waveHeights) setWaveHeights(newWaveHeights.current);
+        if (!previousWavesRef.current) {previousWavesRef.current = newWaveHeights.current} else {
+            if (!timeStart) timeStart = timestamp;
+            const progress = timestamp - timeStart;
+            setWaveHeights(previousWavesRef.current!.map((preWave, i) => (
+                preWave + (newWaveHeights.current![i] - preWave)*progress/timeLimit
+            )));
+            if (progress < timeLimit) {
+                requestRef.current = requestAnimationFrame(transition);
+            } else {
+                previousWavesRef.current = newWaveHeights.current;
+                console.log(`after previous.current - ${previousWavesRef.current}`);
+                return () => cancelAnimationFrame(requestRef.current!);
+            }
         }
     }
-
 
     useLayoutEffect(() => {
         const cvs = canvasRef.current;
@@ -84,7 +72,6 @@ const About:React.FC<Props> = memo(({aboutOpen, aboutClose, aboutSwitch}) => {
         
         resize();
         requestAnimationFrame(animate);
-        requestRef.current = requestAnimationFrame(transition);
         
         function resize() {
             cvs!.width = waveGroup.stageWidth * ratio;
@@ -98,6 +85,26 @@ const About:React.FC<Props> = memo(({aboutOpen, aboutClose, aboutSwitch}) => {
         }
         
     }, [ratio, waveGroup]);
+
+    useLayoutEffect(() => {
+        switch (page) {
+            case 1:
+                newWaveHeights.current = newHeights1;
+                console.log(newWaveHeights);
+                requestRef.current = requestAnimationFrame(transition);
+                break;
+            case 2:
+                newWaveHeights.current = newHeights2;
+                console.log(newWaveHeights);
+                requestRef.current = requestAnimationFrame(transition);
+                break;
+            case 3:
+                newWaveHeights.current = newHeights3;
+                console.log(newWaveHeights);
+                requestRef.current = requestAnimationFrame(transition);
+                break;
+        }
+    }, [page])
 
     const waveClick = (e:MouseEvent) => {
         e.preventDefault();
@@ -115,8 +122,7 @@ const About:React.FC<Props> = memo(({aboutOpen, aboutClose, aboutSwitch}) => {
         e.preventDefault();
         e.stopPropagation();
         const value = page + parseInt(e.currentTarget.dataset.value!);
-        !(value===0) && !(value===aboutChildren.length+1) && setPage(value);
-        requestRef.current = requestAnimationFrame(transition);
+        (value!==0) && (value!==aboutChildren.length+1) && setPage(value);
     }
 
     return (
