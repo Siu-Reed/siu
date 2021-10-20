@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef, MouseEvent, useState, memo, useMemo } from 'react';
+import React, { useEffect, useLayoutEffect, useRef, MouseEvent, useState, memo, useMemo } from 'react';
 import styles from '../css/about.module.css';
 import { WaveGroup } from '../visual/wave-group';
 import Me from './me';
@@ -12,15 +12,20 @@ interface Props {
 }
 
 const About:React.FC<Props> = memo(({aboutOpen, aboutClose, aboutSwitch}) => {
-    const newHeights1 = [1/4, 1/4, 1/4, 1/4];
-    const newHeights2 = [15/100, 25/100, 55/100, 95/100];
-    const newHeights3 = [12/100, 34/100, 56/100, 78/100];
-    
+    console.log('ㅇㅅㅇ');
     const [page, setPage] = useState(1);
     const canvasRef = useRef<HTMLCanvasElement>(null);
-    const requestRef = useRef<number>();
-    const newWaveHeights = useRef<Array<number>>();
+    const ctxRef = useRef<CanvasRenderingContext2D>();
+    const animationRef = useRef<Function>();
+
+    const heights1 = useMemo(() => [1/4, 1/4, 1/4, 1/4], []);
+    const heights2 = useMemo(() => [15/100, 25/100, 55/100, 95/100], []);
+    const heights3 = useMemo(() => [12/100, 34/100, 56/100, 78/100], []);
+        
+    const newWavesRef = useRef<Array<number>>();
     const previousWavesRef = useRef<Array<number>>();
+    const requestRef = useRef<number>();
+
     const [waveHeights, setWaveHeights] = useState<Array<number>>();
 
     const ratio = window.devicePixelRatio;
@@ -29,7 +34,7 @@ const About:React.FC<Props> = memo(({aboutOpen, aboutClose, aboutSwitch}) => {
     const stageHeight:number = document.body.clientHeight;
     
     const waveGroup = useMemo(() =>
-        (new WaveGroup(stageWidth, stageHeight)), [stageWidth, stageHeight]
+        (new WaveGroup(stageWidth, stageHeight, heights1)), [stageWidth, stageHeight, heights1]
     );
 
     const aboutChildren = [<Me key='me' />, <Abilities key='abilities' page={page} />,<Skills key='skills' />];
@@ -49,18 +54,17 @@ const About:React.FC<Props> = memo(({aboutOpen, aboutClose, aboutSwitch}) => {
     const timeLimit = 1000;
     let timeStart:number;
     function transition (timestamp:DOMHighResTimeStamp) {
-        if (!waveHeights) setWaveHeights(newWaveHeights.current);
-        if (!previousWavesRef.current) {previousWavesRef.current = newWaveHeights.current} else {
+        if (!waveHeights) setWaveHeights(newWavesRef.current);
+        if (!previousWavesRef.current) {previousWavesRef.current = newWavesRef.current} else {
             if (!timeStart) timeStart = timestamp;
             const progress = timestamp - timeStart;
-            setWaveHeights(previousWavesRef.current!.map((preWave, i) => (
-                preWave + (newWaveHeights.current![i] - preWave)*progress/timeLimit
+            setWaveHeights(previousWavesRef.current.map((preWave, i) => (
+                preWave + (newWavesRef.current![i] - preWave)*progress/timeLimit
             )));
             if (progress < timeLimit) {
                 requestRef.current = requestAnimationFrame(transition);
             } else {
-                previousWavesRef.current = newWaveHeights.current;
-                console.log(`after previous.current - ${previousWavesRef.current}`);
+                previousWavesRef.current = newWavesRef.current;
                 return () => cancelAnimationFrame(requestRef.current!);
             }
         }
@@ -69,6 +73,9 @@ const About:React.FC<Props> = memo(({aboutOpen, aboutClose, aboutSwitch}) => {
     useLayoutEffect(() => {
         const cvs = canvasRef.current;
         const ctx = cvs!.getContext('2d');
+
+        ctxRef.current = ctx!;
+        animationRef.current = animate;
         
         resize();
         requestAnimationFrame(animate);
@@ -79,32 +86,35 @@ const About:React.FC<Props> = memo(({aboutOpen, aboutClose, aboutSwitch}) => {
             ctx!.scale(ratio, ratio);
             waveGroup.resize();
         }
+
         function animate() {
             waveGroup.draw(ctx!);
             requestAnimationFrame(animate);
         }
-        
     }, [ratio, waveGroup]);
 
     useLayoutEffect(() => {
         switch (page) {
             case 1:
-                newWaveHeights.current = newHeights1;
-                console.log(newWaveHeights);
+                newWavesRef.current = heights1;
                 requestRef.current = requestAnimationFrame(transition);
                 break;
             case 2:
-                newWaveHeights.current = newHeights2;
-                console.log(newWaveHeights);
+                newWavesRef.current = heights2;
                 requestRef.current = requestAnimationFrame(transition);
                 break;
             case 3:
-                newWaveHeights.current = newHeights3;
-                console.log(newWaveHeights);
+                newWavesRef.current = heights3;
                 requestRef.current = requestAnimationFrame(transition);
                 break;
         }
-    }, [page])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [page]);
+
+    useEffect(() => {
+        waveGroup.resize(waveHeights);
+        waveGroup.draw(ctxRef.current!);
+    }, [waveGroup, waveHeights]);
 
     const waveClick = (e:MouseEvent) => {
         e.preventDefault();

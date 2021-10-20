@@ -9,6 +9,7 @@ export class Wave {
         public color : string,
         public stageWidth : number,
         public stageHeight : number,
+        public waveRandoms : Array<number>
     ) { this.points = []; }
 
     resize(waveHeight: number):void {
@@ -22,7 +23,7 @@ export class Wave {
 
     init(centerY:number, pointGap:number):void {
         for (let i = 0; i < this.totalPoints; i++) {
-            this.points[i] = new Point(this.index + i, pointGap * i, centerY);
+            this.points[i] = new Point(this.index + i, pointGap * i, centerY, this.waveRandoms[i]);
         }
     }
 

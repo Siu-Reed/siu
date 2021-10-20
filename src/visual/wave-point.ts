@@ -8,13 +8,14 @@ export class Point implements PointShould {
     constructor (
         public index : number,
         public x : number,
-        public y : number
+        public y : number,
+        public random : number
     ) {}
     
     fixedY = this.y;
     speed = 0.038;
     cur = this.index;
-    max = Math.random() * 30 + 10;
+    max = this.random * 30 + 10;
     
     update() {
         this.cur += this.speed;
