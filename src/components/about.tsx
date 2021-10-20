@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, MouseEvent, useState, memo, useMemo } from 'react';
+import React, { useLayoutEffect, useRef, MouseEvent, useState, memo, useMemo } from 'react';
 import styles from '../css/about.module.css';
 import { WaveGroup } from '../visual/wave-group';
 import Me from './me';
@@ -12,10 +12,16 @@ interface Props {
 }
 
 const About:React.FC<Props> = memo(({aboutOpen, aboutClose, aboutSwitch}) => {
-    console.log('ㅇㅅㅇ');
+    const newHeights1 = [1/4, 1/4, 1/4, 1/4];
+    const newHeights2 = [15/100, 25/100, 55/100, 95/100];
+    const newHeights3 = [12/100, 34/100, 56/100, 78/100];
+    
     const [page, setPage] = useState(1);
     const canvasRef = useRef<HTMLCanvasElement>(null);
-    
+    const requestRef = useRef<number>();
+    const previousWavesRef = useRef<Array<number>>();
+    const [waveHeights, setWaveHeights] = useState<Array<number>>();
+
     const ratio = window.devicePixelRatio;
 
     const stageWidth:number = document.body.clientWidth;
@@ -39,46 +45,59 @@ const About:React.FC<Props> = memo(({aboutOpen, aboutClose, aboutSwitch}) => {
         hiddenStyle = styles.disappear;
     };
     
-    let newWaveHeight:Array<number>;
-
-    const newHeight1 = [1/4, 1/4, 1/4, 1/4];
-    const newHeight2 = [15/100, 25/100, 55/100, 95/100];
-    const newHeight3 = [12/100, 34/100, 56/100, 78/100];
-
+    let newWaveHeights:Array<number>;
     switch (page) {
-        case 1: newWaveHeight = newHeight1;
-            console.log(newWaveHeight);
+        case 1:
+            newWaveHeights = newHeights1;
             break;
-        case 2: newWaveHeight = newHeight2;
-            console.log(newWaveHeight);
+        case 2:
+            newWaveHeights = newHeights2;
             break;
-        case 3: newWaveHeight = newHeight3;
-            console.log(newWaveHeight);
+        case 3:
+            newWaveHeights = newHeights3;
             break;
     }
 
+    const timeLimit = 1000;
+    let timeStart:number;
+    function transition (timestamp:DOMHighResTimeStamp) {
+        if (!waveHeights) setWaveHeights(newWaveHeights);
+        if (!previousWavesRef.current) previousWavesRef.current = newWaveHeights;
+        if (!timeStart) timeStart = timestamp;
+        const progress = timestamp - timeStart;
+        setWaveHeights(previousWavesRef.current!.map((preWave, i) => (
+            preWave + (newWaveHeights[i] - preWave)*progress/timeLimit
+        )));
+        if (progress < timeLimit) {
+            requestRef.current = requestAnimationFrame(transition);
+        } else {
+            previousWavesRef.current = newWaveHeights;
+            console.log(`after previous.current - ${previousWavesRef.current}`)
+            return () => cancelAnimationFrame(requestRef.current!)
+        }
+    }
 
-    useEffect(() => {
+
+    useLayoutEffect(() => {
         const cvs = canvasRef.current;
         const ctx = cvs!.getContext('2d');
         
-        let waveHeight:number | Array<number>;
-        
-        resize(waveHeight!);
+        resize();
         requestAnimationFrame(animate);
-
-        function resize(waveHeight: number | Array<number> = 1/4) {
+        requestRef.current = requestAnimationFrame(transition);
+        
+        function resize() {
             cvs!.width = waveGroup.stageWidth * ratio;
             cvs!.height = waveGroup.stageHeight * ratio;
             ctx!.scale(ratio, ratio);
-            waveGroup.resize(waveHeight);
+            waveGroup.resize();
         }
         function animate() {
             waveGroup.draw(ctx!);
             requestAnimationFrame(animate);
         }
         
-    }, [ratio, page, waveGroup]);
+    }, [ratio, waveGroup]);
 
     const waveClick = (e:MouseEvent) => {
         e.preventDefault();
@@ -97,6 +116,7 @@ const About:React.FC<Props> = memo(({aboutOpen, aboutClose, aboutSwitch}) => {
         e.stopPropagation();
         const value = page + parseInt(e.currentTarget.dataset.value!);
         !(value===0) && !(value===aboutChildren.length+1) && setPage(value);
+        requestRef.current = requestAnimationFrame(transition);
     }
 
     return (
