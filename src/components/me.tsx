@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { memo } from 'react';
 import styles from '../css/me.module.css';
 
-const Me:React.FC = () => {
-    
+const Me:React.FC = memo(() => {
     let age
     let today = new Date();
     let myBirth = new Date(1996, 8, 23);
@@ -76,6 +75,6 @@ const Me:React.FC = () => {
             </div>
         </div>
     );
-};
+});
 
 export default Me;

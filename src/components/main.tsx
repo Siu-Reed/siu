@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { memo, useState } from 'react';
 import styles from '../css/main.module.css'
 import Header from './header';
 import My from './my';
@@ -8,7 +8,7 @@ interface Props {
     polygonClick: () => void;
 }
 
-const Main:React.FC<Props> = ({polygonClick}) => {
+const Main:React.FC<Props> = memo(({polygonClick}) => {
     console.log('main');
     const [aboutSwitch, setAboutSwitch] = useState<boolean>(false);
     let con1Style;
@@ -41,6 +41,6 @@ const Main:React.FC<Props> = ({polygonClick}) => {
             </div>
         </div>
     );
-};
+});
 
 export default Main;

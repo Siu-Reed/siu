@@ -45,9 +45,10 @@ export class Wave {
             prevX = this.points[i].x;
             prevY = this.points[i].y;
 
-            if (i > 0 && i < this.totalPoints - 1) {
-                this.points[i].update();
-            }
+            this.points[i].update();
+            // if (i > 0 && i < this.totalPoints - 1) {
+            //     this.points[i].update();
+            // }
         }
 
         ctx.lineTo(prevX, prevY);

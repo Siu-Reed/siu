@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { memo } from 'react';
 import styles from '../css/abilities.module.css';
 
 interface Props {
     page : number;
 }
 
-const Abilities:React.FC<Props> = ({page}) => {
+const Abilities:React.FC<Props> = memo(({page}) => {
     let animation;
     if (page === 2) {
         animation = styles.appear;
@@ -68,6 +68,6 @@ const Abilities:React.FC<Props> = ({page}) => {
             </div>
         </div>
     );
-};
+});
 
 export default Abilities;

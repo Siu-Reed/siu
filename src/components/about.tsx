@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, MouseEvent, useState } from 'react';
+import React, { useEffect, useRef, MouseEvent, useState, memo, useMemo } from 'react';
 import styles from '../css/about.module.css';
 import { WaveGroup } from '../visual/wave-group';
 import Me from './me';
@@ -11,10 +11,20 @@ interface Props {
     aboutSwitch: boolean;
 }
 
-const About:React.FC<Props> = ({aboutOpen, aboutClose, aboutSwitch}) => {
+const About:React.FC<Props> = memo(({aboutOpen, aboutClose, aboutSwitch}) => {
+    console.log('ㅇㅅㅇ');
     const [page, setPage] = useState(1);
     const canvasRef = useRef<HTMLCanvasElement>(null);
     
+    const ratio = window.devicePixelRatio;
+
+    const stageWidth:number = document.body.clientWidth;
+    const stageHeight:number = document.body.clientHeight;
+    
+    const waveGroup = useMemo(() =>
+        (new WaveGroup(stageWidth, stageHeight)), [stageWidth, stageHeight]
+    );
+
     const aboutChildren = [<Me key='me' />, <Abilities key='abilities' page={page} />,<Skills key='skills' />];
 
     const cBoxTransform = { transform : `translateX(${(page-1)*-100}%)` };
@@ -28,50 +38,47 @@ const About:React.FC<Props> = ({aboutOpen, aboutClose, aboutSwitch}) => {
         aboutStyle = styles.default
         hiddenStyle = styles.disappear;
     };
-    const ratio = window.devicePixelRatio;
+    
+    let newWaveHeight:Array<number>;
 
-    useEffect(() =>{
+    const newHeight1 = [1/4, 1/4, 1/4, 1/4];
+    const newHeight2 = [15/100, 25/100, 55/100, 95/100];
+    const newHeight3 = [12/100, 34/100, 56/100, 78/100];
+
+    switch (page) {
+        case 1: newWaveHeight = newHeight1;
+            console.log(newWaveHeight);
+            break;
+        case 2: newWaveHeight = newHeight2;
+            console.log(newWaveHeight);
+            break;
+        case 3: newWaveHeight = newHeight3;
+            console.log(newWaveHeight);
+            break;
+    }
+
+
+    useEffect(() => {
         const cvs = canvasRef.current;
         const ctx = cvs!.getContext('2d');
-        const page2Wave = [15/100, 25/100, 55/100, 95/100];
-        const page3Wave = [14/100, 36/100, 58/100, 80/100];
         
-        let stageWidth:number;
-        let stageHeight:number;
         let waveHeight:number | Array<number>;
-
-        if (aboutSwitch) {
-            stageWidth = document.body.clientWidth;
-            stageHeight = document.body.clientHeight;
-            if (page === 3) {
-                waveHeight = page3Wave;
-            } else if (page === 2) {
-                waveHeight = page2Wave;
-            } else {
-                waveHeight = 1/4;
-            }
-        } else {
-            stageWidth = cvs!.clientWidth;
-            stageHeight = cvs!.clientHeight;
-        }
-    
-        const waveGroup = new WaveGroup(stageWidth, stageHeight);
+        
         resize(waveHeight!);
         requestAnimationFrame(animate);
+
         function resize(waveHeight: number | Array<number> = 1/4) {
-            cvs!.width = stageWidth * ratio;
-            cvs!.height = stageHeight * ratio;
+            cvs!.width = waveGroup.stageWidth * ratio;
+            cvs!.height = waveGroup.stageHeight * ratio;
             ctx!.scale(ratio, ratio);
-            console.log('resize');
             waveGroup.resize(waveHeight);
         }
-        function animate() { 
-            ctx!.clearRect(0, 0, stageWidth, stageHeight);
+        function animate() {
             waveGroup.draw(ctx!);
             requestAnimationFrame(animate);
         }
-        console.log('isthis??');
-    }, [ratio, aboutSwitch, page]);
+        
+    }, [ratio, page, waveGroup]);
 
     const waveClick = (e:MouseEvent) => {
         e.preventDefault();
@@ -103,6 +110,6 @@ const About:React.FC<Props> = ({aboutOpen, aboutClose, aboutSwitch}) => {
             <button className={`${styles.btn} ${styles.right} ${hiddenStyle}`} onClick={pageHandler} data-value={1}>오른</button>
         </div>
     );
-};
+});
 
 export default About;

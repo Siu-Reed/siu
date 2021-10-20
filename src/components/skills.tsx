@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { memo } from 'react';
 import styles from '../css/skills.module.css';
 import logosJson from '../json/logo.json';
 
-const Skills:React.FC = () => {
+const Skills:React.FC = memo(() => {
 
     const contents = Object.entries(logosJson).map((value) => { return(
         <div className={styles.category}>
@@ -26,6 +26,6 @@ const Skills:React.FC = () => {
             </div>
         </div>
     );
-};
+});
 
 export default Skills;
