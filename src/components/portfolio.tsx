@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { memo, useState } from 'react';
 import Prism from './prism';
 import PrismBtn from './prismBtn';
 import { Spec } from '../interface/interface';
+// import styles from '../css/portfolio.module.css';
 import contentsJson from '../json/contents.json';
 import squareSpec from '../json/squareSpec.json';
 
@@ -9,7 +10,7 @@ interface Props {
     polygonClick: () => void;
 }
 
-const Portfolio : React.FC<Props> = ({polygonClick}) => {
+const Portfolio : React.FC<Props> = memo(({polygonClick}) => {
     const contentsKeys = Object.keys(contentsJson);
     const contentsValues = Object.values(contentsJson);
 
@@ -26,12 +27,12 @@ const Portfolio : React.FC<Props> = ({polygonClick}) => {
     
     const plusAngle = (e:Event) => {
         e.preventDefault();
-        setAngle( angle + angleValue );
+        setAngle((angle) => angle+angleValue);
     };
     
     const minusAngle = (e:Event) => {
         e.preventDefault();
-        setAngle( angle - angleValue );
+        setAngle((angle) => angle-angleValue);
     };
 
     return (
@@ -40,6 +41,6 @@ const Portfolio : React.FC<Props> = ({polygonClick}) => {
             <Prism spec={spec} polygonClick={polygonClick} angle={angle} contentsKeys={contentsKeys} contentsValues={contentsValues}/>
         </>
     );
-};
+});
 
 export default Portfolio;

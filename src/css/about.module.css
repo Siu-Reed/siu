@@ -1,4 +1,4 @@
-@value Acolor1, Bcolor4, Acolor2 from './common.css';
+@value Acolor1, Bcolor4, Acolor2 from './common/color.css';
 
 .about {
     position: relative;
@@ -49,14 +49,6 @@
     transition: 1s;
 }
 
-.btnBox {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
 .disappear {
     pointer-events: none;
     transition: 0.5s;
@@ -67,30 +59,50 @@
     transition: 1.4s;
     opacity: 1;
 }
+
 .btn {
-    width: 3rem;
     background: none;
     border: none;
     cursor: pointer;
-    fill: Bcolor4;
     transition: 0.3s;
-}
-.btn:hover {
-    width: 3.5rem;
-    fill: Acolor2;
 }
 .click .btn {
     animation-delay:1s;
     animation-duration: 0.4s;
-    animation-name: btnNotice;
     animation-iteration-count: 6;
     animation-direction: alternate;
 }
+.click .arrow {
+    animation-name: arrowNotice;
+}
+.click .close {
+    animation-name: closeNotice;
+}
+
 
 .close {
     position: absolute;
-    top: 1rem;
+    top: 0.5rem;
     right: 1rem;
+    font-family: 'ColorsOfAutumn';
+    font-size: 2rem;
+    font-weight: bolder;
+    transform: skewX(30deg);
+    color: Bcolor4;
+    user-select: none;
+}
+.close:hover {
+    color : #000000;
+    font-size: 2.5rem;
+}
+
+.arrow {
+    width: 3rem;
+    fill: Bcolor4;
+}
+.arrow:hover {
+    width: 3.5rem;
+    fill: Acolor2;
 }
 .left {
     position: absolute;
@@ -105,7 +117,7 @@
     transform: translateY(-50%) rotateZ(90deg);
 }
 
-@keyframes btnNotice {
+@keyframes arrowNotice {
     from {
         width: 3rem;
         fill: Bcolor1;
@@ -113,5 +125,16 @@
     to {
         width: 3.5rem;
         fill: #000000;
+    }
+}
+
+@keyframes closeNotice {
+    from {
+        color: Bcolor4;
+        font-size: 2rem;
+    }
+    to {
+        color : #000000;
+        font-size: 2.5rem;
     }
 }

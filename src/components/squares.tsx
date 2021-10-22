@@ -17,17 +17,17 @@ const Squares:React.FC<Props> = ({spec, baseAngle, baseLength, prsBase, contents
 
     for (let i:number = 0; i < spec.side; i++) {
         let sqrStyle = {
-            width : spec.width,
-            height : spec.height,
+            width : `${spec.width}rem`,
+            height : `${spec.height}rem`,
             background : spec.color[i%3],
-            left : (prsBase.width - spec.width)/2,
-            top : (prsBase.height - spec.height)/2,
+            left : `${(prsBase.width - spec.width)/2}rem`,
+            top : `${(prsBase.height - spec.height)/2}rem`,
             transform : `
                 rotateZ(${baseAngle.x * i}deg)
-                translateY(${spec.height/2 + baseLength.b}px)
+                translateY(${spec.height/2 + baseLength.b}rem)
                 rotateX(-90deg)
-                translateZ(-${spec.height/2}px)
-                translateY(-${spec.height/2}px)
+                translateZ(-${spec.height/2}rem)
+                translateY(-${spec.height/2}rem)
             `,
         }
 

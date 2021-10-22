@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import Polygon from './polygon';
 import Squares from './squares';
 import { BaseAngle, BaseLength, ContentsValues, PrsBase, Spec } from '../interface/interface';
@@ -12,7 +12,7 @@ interface Props {
     contentsValues: Array<ContentsValues>;
 }
 
-const Prism : React.FC<Props> = ({spec, polygonClick, angle, contentsKeys, contentsValues}) => {
+const Prism : React.FC<Props> = memo(({spec, polygonClick, angle, contentsKeys, contentsValues}) => {
 
     const rad = Math.PI/180;
 
@@ -33,7 +33,8 @@ const Prism : React.FC<Props> = ({spec, polygonClick, angle, contentsKeys, conte
     }
 
     const prsStyle = {
-        ...prsBase,
+        width : `${prsBase.width}rem`,
+        height : `${prsBase.height}rem`,
         transform : `rotateZ(${angle}deg)`
     }
 
@@ -41,8 +42,9 @@ const Prism : React.FC<Props> = ({spec, polygonClick, angle, contentsKeys, conte
         <div className={styles.prism} style={prsStyle}>
             <Squares spec={spec} baseAngle={baseAngle} baseLength={baseLength} prsBase={prsBase} contentsKeys={contentsKeys} contentsValues={contentsValues}/>
             <Polygon spec={spec} baseAngle={baseAngle} baseLength={baseLength} polygonClick={polygonClick}/>
+            <h3 className={styles.notice}>Click this ↑</h3>
         </div>
     );
-};
+});
 
 export default Prism;

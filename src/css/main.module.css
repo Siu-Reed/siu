@@ -1,4 +1,4 @@
-@value Acolor2, Acolor4 from './common.css';
+@value Acolor2, Acolor4 from './common/color.css';
 
 .main {
     position: relative;

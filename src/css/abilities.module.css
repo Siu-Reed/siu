@@ -1,4 +1,4 @@
-@value Mono1, Mono5, TxtOpacity1, Acolor4, Acolor3, Acolor2, Acolor1, Bcolor4 from './common.css';
+@value Mono1, Mono5, TxtOpacity1, Acolor4, Acolor3, Acolor2, Acolor1, Bcolor4 from './common/color.css';
 
 .abilities {
     width: 100%;

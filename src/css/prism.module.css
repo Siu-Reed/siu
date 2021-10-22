@@ -1,7 +1,17 @@
+@value Mono1, TxtOpacity2 from './common/color.css';
+
 .prism {
     display: flex;
     justify-content: center;
     align-items: center;    
     transform-style: preserve-3d;
     transition: 0.4s;
+    position: relative;
+}
+
+.notice {
+    position: absolute;
+    bottom: -1.5em;
+    font-family: 'Times New Roman', Times, serif;
+    opacity: TxtOpacity2;
 }

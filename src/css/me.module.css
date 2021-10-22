@@ -1,4 +1,4 @@
-@value Mono1, Mono5, Bcolor4, TxtOpacity1 from './common.css';
+@value Mono1, Mono5, Bcolor4, TxtOpacity1 from './common/color.css';
 
 .me {
     width: 100%;

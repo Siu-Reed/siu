@@ -11,33 +11,39 @@ interface Props {
 
 const Polygon: React.FC<Props> = ({spec, baseAngle, baseLength, polygonClick}) => {
     const cvsRef = useRef<HTMLCanvasElement>(null);
+    const ratio = window.devicePixelRatio;
+
     useEffect(() => {
         const cvs = cvsRef.current
         if (!cvs) return;
-        cvs.width = baseLength.c*2;
-        cvs.height = baseLength.c*2;
+
+        cvs.style.width = `${baseLength.c*2}rem`;
+        cvs.style.height = `${baseLength.c*2}rem`;
         cvs.style.position = "absolute";
-        cvs.style.top = `${baseLength.b - baseLength.c}px`;
-        cvs.style.left = `${baseLength.b - baseLength.c}px`;
-        
+        cvs.style.top = `${baseLength.b - baseLength.c}rem`;
+        cvs.style.left = `${baseLength.b - baseLength.c}rem`;
+
         const ctx = cvs.getContext('2d');
+        cvs.width = baseLength.c*2 * 16 * ratio;
+        cvs.height = baseLength.c*2 * 16 * ratio;
+        ctx!.scale(ratio, ratio);
         if (!ctx) return;
         ctx.save();
-        ctx.fillStyle = 'rgba(128, 144, 113, 1)';
+        ctx.fillStyle = '#879678';
         ctx.beginPath();
         
-        ctx.translate(baseLength.c, baseLength.c);
+        ctx.translate(baseLength.c*16, baseLength.c*16);
         
         for (let j = 0; j < spec.side; j++) {
-            const x = baseLength.c * Math.cos((Math.PI/180) * baseAngle.x * j);
-            const y = baseLength.c * Math.sin((Math.PI/180) * baseAngle.x * j);
+            const x = baseLength.c*16 * Math.cos((Math.PI/180) * baseAngle.x * j);
+            const y = baseLength.c*16 * Math.sin((Math.PI/180) * baseAngle.x * j);
 
             (j === 0) ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
         }
         ctx.fill();
         ctx.closePath();
         ctx.restore();
-    });
+    }, [baseAngle.x, baseLength.b, baseLength.c, spec.side, ratio]);
 
     let rttDeg : number;
         
@@ -54,7 +60,7 @@ const Polygon: React.FC<Props> = ({spec, baseAngle, baseLength, polygonClick}) =
     const cvsDivStyle = {
         transform : 
         `rotateZ(${rttDeg}deg)
-        translateZ(${spec.height}px)`
+        translateZ(${spec.height}rem)`
     };
 
     const txtStyle = {
@@ -66,7 +72,7 @@ const Polygon: React.FC<Props> = ({spec, baseAngle, baseLength, polygonClick}) =
     return (
         <div className={styles.cvsDiv} style={cvsDivStyle} onClick={polygonClick}>
             <canvas className={styles.cvs} ref={cvsRef}/>
-            <p className={styles.txt} style={txtStyle}>ㅇㅅㅇ</p>
+            <h1 className={styles.txt} style={txtStyle}>works</h1>
         </div>
     );
 };
