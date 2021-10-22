@@ -1,18 +1,25 @@
+@value Mono1, Mono5, Bcolor4, TxtOpacity1 from './common.css';
+
 .me {
     width: 100%;
     height: 100%;
+    padding: 0 2rem;
+    position: relative;
+
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items:flex-end;
-    color: rgba(0, 0, 0, 0.8);
-    position: relative;
 }
 
 .title {
     position: absolute;
     top: 1em;
-    font-size: 2.5rem;
+    color: Bcolor4;
+    font-family: 'ColorsOfAutumn';
+    font-weight: normal;
+
+    font-size: 3rem;
 }
 
 .profilePic {
@@ -23,6 +30,9 @@
 .profileMeta {
     height: 34rem;
     margin: 3rem 5rem 3rem 10rem;
+    color: Mono1;
+    opacity: TxtOpacity1;
+
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
@@ -30,6 +40,8 @@
 
 .profileMeta h3 {
     margin-bottom: 0.3em;
+    font-size: 1.3rem;
+    font-family: 'Baloo Thambi 2', cursive;
     user-select: none;
 }
 
@@ -44,6 +56,9 @@
 .aboutMe {
     height: 34rem;
     margin: 3rem 0;
+    color: Mono1;
+    opacity: TxtOpacity1;
+
     display: flex;
     flex-flow: column nowrap;
     justify-content: baseline;
@@ -51,6 +66,8 @@
 }
 
 .aboutMe h3 {
+    font-size: 1.3rem;
+    font-family: 'Baloo Thambi 2', cursive;
     margin-bottom: 0.3em;
 }
 
@@ -59,4 +76,5 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-evenly;
+    font-weight: 500;
 }

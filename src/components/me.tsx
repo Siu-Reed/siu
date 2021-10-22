@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import styles from '../css/me.module.css';
 
 const Me:React.FC = memo(() => {
-    let age
+    let age : number;
     let today = new Date();
     let myBirth = new Date(1996, 8, 23);
     age = today.getFullYear() - myBirth.getFullYear();
@@ -10,6 +10,8 @@ const Me:React.FC = memo(() => {
     if ((m < 0) || (m === 0 && today.getDate() < myBirth.getDate())) {
         age--;
     }
+
+    console.log('me');
 
     return (
         <div className={styles.me}>

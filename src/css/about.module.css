@@ -1,24 +1,38 @@
+@value Acolor1, Bcolor4, Acolor2 from './common.css';
+
 .about {
     position: relative;
     transition: 0.2s;
-    background: #d7ccc6;
+    background: Acolor1;
+    display: flex;
+    justify-content: center;
     z-index: 1;
 }
-
 .default {
     margin: 4em 0 0 0;
-    width: 200px;
-    height: 300px;
+    width: 12.5rem;
+    height: 18.75rem;
+    cursor: pointer;
 }
 .click {
     margin: 0 0 0 0;
     width: 100%;
     height: 100%;
+    cursor: default;
 }
 
 .wave {
     width: 100%;
     height: 100%;
+    opacity: 0.9;
+}
+.aboutMe {
+    position: absolute;
+    font-size: 1.8rem;
+    font-family: 'ColorsOfAutumn';
+    font-weight: normal;
+    top: 1em;
+    color: Bcolor4;
 }
 
 .contentsBox {
@@ -41,11 +55,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .disappear {
@@ -55,22 +64,54 @@
 }
 .appear {
     pointer-events: inherit;
-    transition: 1s;
+    transition: 1.4s;
     opacity: 1;
+}
+.btn {
+    width: 3rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    fill: Bcolor4;
+    transition: 0.3s;
+}
+.btn:hover {
+    width: 3.5rem;
+    fill: Acolor2;
+}
+.click .btn {
+    animation-delay:1s;
+    animation-duration: 0.4s;
+    animation-name: btnNotice;
+    animation-iteration-count: 6;
+    animation-direction: alternate;
 }
 
 .close {
     position: absolute;
-    top: 1em;
-    right: 1em;
+    top: 1rem;
+    right: 1rem;
 }
 .left {
     position: absolute;
     top: 50%;
-    left: 1em;
+    left: 1rem;
+    transform: translateY(-50%) rotateZ(-90deg);
 }
 .right {
     position: absolute;
     top: 50%;
-    right: 1em;
+    right: 1rem;
+    transform: translateY(-50%) rotateZ(90deg);
+}
+
+@keyframes btnNotice {
+    from {
+        width: 3rem;
+        fill: Bcolor1;
+    }
+    to {
+        width: 3.5rem;
+        fill: #000000;
+    }
 }

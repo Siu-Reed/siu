@@ -1,7 +1,12 @@
 import { Wave } from "./wave-object";
 
 export class WaveGroup {
-    colors:Array<string> = ['rgba(175, 132, 115, 0.6)', 'rgba(169,132,115,0.6)', 'rgba(196,180,171,0.6)', 'rgba(209, 218, 147, 0.6)'];
+    colors:Array<string> = [
+        '#64735050', '#8c78693b',
+        '#87967850', '#a091823b',
+        '#ebf0d250', '#c8b9aa3b',
+        '#d2dc9650', '#e1d7c83b'
+    ];
     totalPoints:number = 7;
     waves:Array<null | any> = [];
     randoms:Array<Array<number>> = this.colors.map(() => {

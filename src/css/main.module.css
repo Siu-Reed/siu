@@ -1,3 +1,5 @@
+@value Acolor2, Acolor4 from './common.css';
+
 .main {
     position: relative;
     width: 100%;
@@ -6,21 +8,27 @@
 
 .con1 {
     position: relative;
-    height: 100%;
     float: left;
-    transition: 0.8s;
+    height: 100%;
+    background-color: Acolor2;
+    
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    
+    transition: 0.8s;
 }
 .con2 {
-    transition: 0.8s;
     position: relative;
-    height: 100%;
     float: left;
+    height: 100%;
+    background: linear-gradient(to top, Acolor2, Acolor4, Acolor4, Acolor4);
+
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    transition: 0.8s;
 }
 
 .con1_x {

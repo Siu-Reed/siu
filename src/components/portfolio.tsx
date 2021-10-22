@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Prism from './prism';
-import styles from '../css/portfolio.module.css';
 import PrismBtn from './prismBtn';
 import { Spec } from '../interface/interface';
 import contentsJson from '../json/contents.json';

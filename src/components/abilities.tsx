@@ -45,7 +45,7 @@ const Abilities:React.FC<Props> = memo(({page}) => {
                 <div className={styles.metaBack}>
                     <h2>Back-End</h2>
                     <pre>
-                        &nbsp;온전히 혼자 완전한 프로젝트를 배포하며<br/>
+                        &nbsp;혼자 완전한 서비스를 배포하고,<br/>
                         다양한 언어를 접하고 이해하기 위해<br/>
                         Node.js, Express.js 위주로 REST Api 개발과 함께<br/>
                         요즘은 C++을 공부하며 원시적인 언어를 배우고 있습니다.

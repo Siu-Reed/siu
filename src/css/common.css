@@ -1,14 +1,20 @@
-@value Font1: ;
-@value Font2: ;
+/* eslint-disable */
 
-@value Acolor1: #;
-@value Acolor2: #;
-@value Acolor3: #;
+@value Acolor1: #647350;
+@value Acolor2: #879678;
+@value Acolor3: #d2dc96;
+@value Acolor4: #e1e6c3;
 
-@value Bcolor1: #;
-@value Bcolor2: #;
+@value Bcolor1: #8c7869;
+@value Bcolor2: #a09182;
+@value Bcolor3: #c8b9aa;
+@value Bcolor4: #e1d7c8;
 
-@value Mono1: #;
-@value Mono2: #;
-@value Mono3: #;
-@value Mono4: #;
+@value Mono1: #202020;
+@value Mono2: #585858;
+@value Mono3: #909090;
+@value Mono4: #c8c8c8;
+@value Mono5: #ffffff;
+
+@value TxtOpacity1: 0.6;
+@value TxtOpacity2: 0.4;

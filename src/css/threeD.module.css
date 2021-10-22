@@ -2,13 +2,12 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background: darkgreen;
 }
 .threeDX {
-    perspective: 1000000px;
+    perspective: 62500rem;
 }
 .threeDY {
-    perspective: 4000px;
+    perspective: 250rem;
 }
 
 .screen {

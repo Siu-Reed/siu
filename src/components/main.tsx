@@ -1,7 +1,7 @@
 import React, { memo, useState } from 'react';
 import styles from '../css/main.module.css'
 import Header from './header';
-import My from './my';
+import About from './about';
 import Portfolio from './portfolio';
 
 interface Props {
@@ -33,7 +33,7 @@ const Main:React.FC<Props> = memo(({polygonClick}) => {
             <Header />
 
             <div className={`${styles.con1} ${con1Style}`}>
-                <My aboutOpen={aboutOpen} aboutClose={aboutClose} aboutSwitch={aboutSwitch} />
+                <About aboutOpen={aboutOpen} aboutClose={aboutClose} aboutSwitch={aboutSwitch} />
             </div>
             
             <div className={`${styles.con2} ${con2Style}`}>

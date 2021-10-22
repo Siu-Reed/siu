@@ -1,6 +1,9 @@
+@value Mono1, Mono5, TxtOpacity1, Acolor4, Acolor3, Acolor2, Acolor1, Bcolor4 from './common.css';
+
 .abilities {
     width: 100%;
     height: 100%;
+    padding: 0 2rem;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -10,8 +13,12 @@
 .title {
     position: absolute;
     top: 1em;
-    font-size: 2.5rem;
+    font-size: 3em;
     text-align: center;
+    font-family: 'ColorsOfAutumn';
+    font-weight: normal;
+
+    color: Bcolor4;
 }
 
 .graph {
@@ -35,19 +42,21 @@
 .graph li h2 {
     line-height: 5vh;
     font-size: 1.3rem;
+    font-family: 'Baloo Thambi 2', cursive;
+    font-weight: normal;
     width: 7em;
     text-align: center;
     border-radius: 1em 1em 0 0;
-    background: #c3aea5;
-    box-shadow: 0.1em 0em 0.1em rgba(0, 0, 0, 0.3);
-    color: rgba(56, 16, 4, 0.9);
+    background: Acolor1;
+    box-shadow: 0.1em 0em 0.1em rgba(0, 0, 0, 0.2);
+    color: Bcolor4;
 }
 
 .graph li div {
     width: 35%;
     transition: 1.5s;
     border-radius: 1em 1em 0 0;
-    box-shadow: 0.3em 0em 0.5em rgba(0, 0, 0, 0.3);
+    box-shadow: 0.3em 0em 0.5em rgba(0, 0, 0, 0.2);
     overflow: hidden;
 }
 
@@ -56,21 +65,21 @@
 }
 
 .frontEnd div {
-    background: #7a5948;
+    background: Acolor4;
 }
 .frontEnd .appear {
     height: 80vh;
 }
 
 .backEnd div {
-    background: #a98473;
+    background: Acolor3;
 }
 .backEnd .appear {
     height: 40vh;
 }
 
 .design div {
-    background: #809071;
+    background: Acolor2;
 }
 .design .appear {
     height: 70vh;
@@ -81,18 +90,27 @@
     height: 100%;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 1.5em;
     align-items: center;
-    color: rgba(0, 0, 0, 0.7);
+    color: Mono1;
 }
 
 .meta div {
     width: 27em;
-    padding: 1em;
+    padding: 1.5em;
     border-radius: 0.5em;
-    background: rgba(256, 256, 256, 0.2);
+    background: rgba(256, 256, 256, 0.5);
+    box-shadow: rgba(0, 0, 0, 0.2) 0.2em 0.2em 0.4em;
 }
 
 .meta div h2 {
     margin: 0 0 0.3em 0.8em;
+    opacity: TxtOpacity1;
+    font-family: 'Baloo Thambi 2', cursive;
+}
+
+.meta div pre {
+    opacity: TxtOpacity1;
+    font-weight: 500;
 }
