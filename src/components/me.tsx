@@ -2,17 +2,13 @@ import React, { memo } from 'react';
 import styles from '../css/me.module.css';
 
 const Me:React.FC = memo(() => {
+    console.log('me');
     let age : number;
     let today = new Date();
     let myBirth = new Date(1996, 8, 23);
     age = today.getFullYear() - myBirth.getFullYear();
     const m = today.getMonth() - myBirth.getMonth();    
-    if ((m < 0) || (m === 0 && today.getDate() < myBirth.getDate())) {
-        age--;
-    }
-
-    console.log('me');
-
+    if ((m < 0) || (m === 0 && today.getDate() < myBirth.getDate())) age--;
     return (
         <div className={styles.me}>
             <h1 className={styles.title}>Siu Lee</h1>

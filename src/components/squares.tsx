@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { BaseAngle, BaseLength, ContentsValues, PrsBase, Spec } from '../interface/interface';
 import styles from '../css/squares.module.css';
 
@@ -11,7 +11,8 @@ interface Props {
     contentsValues: Array<ContentsValues>;
 }
 
-const Squares:React.FC<Props> = ({spec, baseAngle, baseLength, prsBase, contentsKeys, contentsValues}) => {
+const Squares:React.FC<Props> = memo(({spec, baseAngle, baseLength, prsBase, contentsKeys, contentsValues}) => {
+    console.log('squares');
     
     const sqrs = [];
 
@@ -51,6 +52,6 @@ const Squares:React.FC<Props> = ({spec, baseAngle, baseLength, prsBase, contents
             {sqrs}
         </>
     );
-};
+});
 
 export default Squares;

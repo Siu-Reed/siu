@@ -16,7 +16,12 @@
     left : 50%;
     font-size : 5em;
     font-family: 'ColorsOfAutumn';
+    transition: 0.4s;
     color : Mono1;
     opacity: TxtOpacity1;
     text-align : center;
+}
+
+.cvsDiv:hover .txt  {
+    color: #ffffff;
 }

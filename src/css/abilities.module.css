@@ -1,4 +1,4 @@
-@value Mono1, Mono5, TxtOpacity1, Acolor4, Acolor3, Acolor2, Acolor1, Bcolor4 from './common/color.css';
+@value Mono1, Mono5, TxtOpacity1, Acolor4, Acolor3, Bcolor3, Acolor1, Bcolor4 from './common/color.css';
 
 .abilities {
     width: 100%;
@@ -17,6 +17,7 @@
     text-align: center;
     font-family: 'ColorsOfAutumn';
     font-weight: normal;
+    text-shadow: rgba(0, 0, 0, 0.3) 0.03em 0.03em 0.03em;
 
     color: Bcolor4;
 }
@@ -79,7 +80,7 @@
 }
 
 .design div {
-    background: Acolor2;
+    background: Bcolor3;
 }
 .design .appear {
     height: 70vh;
@@ -91,21 +92,21 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    gap: 1.5em;
+    gap: 1rem;
     align-items: center;
     color: Mono1;
 }
 
 .meta div {
     width: 27em;
-    padding: 1.5em;
+    padding: 0.5em 1em 1.3em 1em;
     border-radius: 0.5em;
     background: rgba(256, 256, 256, 0.5);
     box-shadow: rgba(0, 0, 0, 0.2) 0.2em 0.2em 0.4em;
 }
 
 .meta div h2 {
-    margin: 0 0 0.3em 0.8em;
+    margin: 0 0 0.1em 0.3em;
     opacity: TxtOpacity1;
     font-family: 'Baloo Thambi 2', cursive;
 }

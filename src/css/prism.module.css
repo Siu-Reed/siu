@@ -1,12 +1,47 @@
-@value Mono1, TxtOpacity2 from './common/color.css';
+@value Mono1, Acolor2, Acolor1, TxtOpacity2 from './common/color.css';
+
+.prsHome {
+    position: relative;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
 
 .prism {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;    
     transform-style: preserve-3d;
     transition: 0.4s;
     position: relative;
+}
+.btn {
+    position: absolute;
+    width : 5rem;
+    transition : 0.3s;
+    cursor: pointer;
+    border: none;
+    background: none;
+    fill: Acolor2;
+}
+
+.left {
+    left: -30%;
+    transform: rotateX(90deg) translateY(18.75rem) rotateZ(-90deg);
+}
+
+.right {
+    right: -30%;
+    transform: rotateX(90deg) translateY(18.75rem) rotateZ(90deg);
+}
+
+
+.btn:hover {
+    width: 6rem;
+    fill: Acolor1;
 }
 
 .notice {

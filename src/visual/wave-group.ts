@@ -5,7 +5,7 @@ export class WaveGroup {
         '#64735050', '#8c78693b',
         '#87967850', '#a091823b',
         '#ebf0d250', '#c8b9aa3b',
-        '#d2dc9650', '#e1d7c83b'
+        '#e1d7c83b', '#d2dc96bb'
     ];
     totalPoints:number = 7;
     waves:Array<null | any> = [];

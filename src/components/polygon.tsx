@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { memo, useEffect, useRef, MouseEvent } from 'react';
 import { BaseAngle, BaseLength, Spec } from '../interface/interface';
 import styles from '../css/polygon.module.css';
 
@@ -9,7 +9,8 @@ interface Props {
     polygonClick: () => void;
 }
 
-const Polygon: React.FC<Props> = ({spec, baseAngle, baseLength, polygonClick}) => {
+const Polygon: React.FC<Props> = memo(({spec, baseAngle, baseLength, polygonClick}) => {
+    console.log('polygon');
     const cvsRef = useRef<HTMLCanvasElement>(null);
     const ratio = window.devicePixelRatio;
 
@@ -69,12 +70,17 @@ const Polygon: React.FC<Props> = ({spec, baseAngle, baseLength, polygonClick}) =
         rotateZ(${rttDeg*-1}deg)`,
     };
 
+    const plgClick = (e:MouseEvent) => {
+        e.preventDefault();
+        polygonClick();
+    }
+
     return (
-        <div className={styles.cvsDiv} style={cvsDivStyle} onClick={polygonClick}>
+        <div className={styles.cvsDiv} style={cvsDivStyle} onClick={plgClick}>
             <canvas className={styles.cvs} ref={cvsRef}/>
             <h1 className={styles.txt} style={txtStyle}>works</h1>
         </div>
     );
-};
+});
 
 export default Polygon;

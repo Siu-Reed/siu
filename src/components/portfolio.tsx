@@ -1,8 +1,7 @@
-import React, { memo, useState } from 'react';
+import React, { memo } from 'react';
 import Prism from './prism';
-import PrismBtn from './prismBtn';
 import { Spec } from '../interface/interface';
-// import styles from '../css/portfolio.module.css';
+import styles from '../css/portfolio.module.css';
 import contentsJson from '../json/contents.json';
 import squareSpec from '../json/squareSpec.json';
 
@@ -11,35 +10,20 @@ interface Props {
 }
 
 const Portfolio : React.FC<Props> = memo(({polygonClick}) => {
+    console.log('portfolio');
     const contentsKeys = Object.keys(contentsJson);
     const contentsValues = Object.values(contentsJson);
 
     const side = contentsKeys.length;
-    
     const spec:Spec ={
         side: side,
         ...squareSpec
     };
-    
-    const [angle, setAngle] = useState<number>(0);
-    
-    const angleValue = 360/spec.side;
-    
-    const plusAngle = (e:Event) => {
-        e.preventDefault();
-        setAngle((angle) => angle+angleValue);
-    };
-    
-    const minusAngle = (e:Event) => {
-        e.preventDefault();
-        setAngle((angle) => angle-angleValue);
-    };
 
     return (
-        <>
-            <PrismBtn plusAngle={plusAngle} minusAngle={minusAngle}/>
-            <Prism spec={spec} polygonClick={polygonClick} angle={angle} contentsKeys={contentsKeys} contentsValues={contentsValues}/>
-        </>
+        <div className={styles.portfolio}>
+            <Prism spec={spec} polygonClick={polygonClick} contentsKeys={contentsKeys} contentsValues={contentsValues}/>
+        </div>
     );
 });
 

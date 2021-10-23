@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, memo, useCallback } from 'react';
 import Hidden from './hidden';
 import styles from '../css/threeD.module.css';
 import Main from './main';
 
-const ThreeD : React.FC = () => {
-    console.log('threeD');
+const ThreeD : React.FC = memo(() => {
     const [view, setView] = useState<boolean>(false);
     
     let styleThreeD;
@@ -17,13 +16,9 @@ const ThreeD : React.FC = () => {
         styleScreen = styles.screenY;
     }
 
-    const polygonClick = () => {
-        setView(true);
-    }
+    const polygonClick = useCallback(() => setView(true), []);
+    const hiddenBtnClick = useCallback(() => setView(false), []);
 
-    const hiddenBtnClick = () => {
-        setView(false);
-    }
     return (
         <div className={`${styles.threeD} ${styleThreeD}`}>
             <div className={`${styles.screen} ${styleScreen}`}>
@@ -32,6 +27,6 @@ const ThreeD : React.FC = () => {
             </div>
         </div>
     );
-};
+});
 
 export default ThreeD;

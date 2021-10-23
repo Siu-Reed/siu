@@ -1,13 +1,13 @@
 {
     "1" : {
-        "category" : "사진",
+        "category" : "Design",
         "items" : {
             "ㅇㅅㅇ" : "www.eee",
             "ㅎㅅㅎ" : "www.ttt"
         }
     },
     "2" : {
-        "category" : "영상",
+        "category" : "Front-End",
         "items" : {
             "ㅇㅅㅇ" : "www.eee",
             "ㅎㅅㅎ" : "www.ttt",
@@ -15,7 +15,7 @@
         }
     },
     "3" : {
-        "category" : "프론트",
+        "category" : "Back-End",
         "items" : {
             "ㅇㅅㅇ" : "www.eee",
             "ㅎㅅㅎ" : "www.ttt",
@@ -24,14 +24,14 @@
         }
     },
     "4" : {
-        "category" : "백엔드",
+        "category" : "Managing",
         "items" : {
             "ㅇㅅㅇ" : "www.eee",
             "ㅎㅎㅎㅅㅎ" : "www.ttt"
         }
     },
     "5" : {
-        "category" : "아잉",
+        "category" : "Etc.",
         "items" : {
             "ㅇㅅㅇ" : "www.eee",
             "ㅎㅅㅎ" : "www.ttt"

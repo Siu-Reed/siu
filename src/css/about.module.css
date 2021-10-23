@@ -1,12 +1,43 @@
-@value Acolor1, Bcolor4, Acolor2 from './common/color.css';
+@value Bcolor4, Acolor2, TxtOpacity2 from './common/color.css';
+
+@keyframes arrowNotice {
+    from {
+        width: 3rem;
+        fill: Bcolor1;
+    }
+    to {
+        width: 3.5rem;
+        fill: #000000;
+    }
+}
+
+@keyframes closeNotice {
+    from {
+        color: Bcolor4;
+        font-size: 2rem;
+    }
+    to {
+        color : #000000;
+        font-size: 2.5rem;
+    }
+}
 
 .about {
     position: relative;
     transition: 0.2s;
-    background: Acolor1;
+    background: Acolor2;
     display: flex;
     justify-content: center;
     z-index: 1;
+
+    
+    border: 0.2rem solid Bcolor4;
+    padding: 0.3rem;
+    border-radius: 0.2rem 0.2rem 2rem 2rem;
+    border-top: none;
+}
+.about:hover .aboutMe {
+    top: 50%;
 }
 .default {
     margin: 4em 0 0 0;
@@ -19,19 +50,27 @@
     width: 100%;
     height: 100%;
     cursor: default;
+    padding: 0;
+    border-radius: 0;
+    border: none;
+}
+
+.click .wave {
+    border-radius: 0;
 }
 
 .wave {
     width: 100%;
     height: 100%;
     opacity: 0.9;
+    border-radius: 0 0 1.7rem 1.7rem;
 }
 .aboutMe {
     position: absolute;
     font-size: 1.8rem;
     font-family: 'ColorsOfAutumn';
     font-weight: normal;
-    top: 1em;
+    top: 1rem;
     color: Bcolor4;
 }
 
@@ -116,25 +155,9 @@
     right: 1rem;
     transform: translateY(-50%) rotateZ(90deg);
 }
-
-@keyframes arrowNotice {
-    from {
-        width: 3rem;
-        fill: Bcolor1;
-    }
-    to {
-        width: 3.5rem;
-        fill: #000000;
-    }
-}
-
-@keyframes closeNotice {
-    from {
-        color: Bcolor4;
-        font-size: 2rem;
-    }
-    to {
-        color : #000000;
-        font-size: 2.5rem;
-    }
+.notice {
+    position: absolute;
+    bottom: -1.5em;
+    font-family: 'Times New Roman', Times, serif;
+    opacity: TxtOpacity2;
 }

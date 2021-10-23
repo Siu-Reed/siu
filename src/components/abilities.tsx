@@ -6,6 +6,7 @@ interface Props {
 }
 
 const Abilities:React.FC<Props> = memo(({page}) => {
+    console.log('abilities');
     let animation;
     if (page === 2) {
         animation = styles.appear;

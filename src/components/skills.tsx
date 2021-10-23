@@ -3,13 +3,14 @@ import styles from '../css/skills.module.css';
 import logosJson from '../json/logo.json';
 
 const Skills:React.FC = memo(() => {
+    console.log('skills');
 
     const contents = Object.entries(logosJson).map((value) => { return(
-        <div className={styles.category}>
+        <div className={styles.category} key={value[0]}>
             <h3 className={styles.title}>{value[0]}</h3>
             <div className={styles.items}>
             {Object.values(value[1]).map((item) => { return(
-                <div className={styles.item}>
+                <div className={styles.item} key={item.meta}>
                     <img src={item.src} alt="item" />
                     <h3>{item.meta}</h3>
                 </div>

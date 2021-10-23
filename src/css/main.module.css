@@ -22,11 +22,11 @@
     position: relative;
     float: left;
     height: 100%;
-    background: linear-gradient(to top, Acolor2, Acolor4, Acolor4, Acolor4);
+    background: Acolor4;
 
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     
     transition: 0.8s;
 }
