@@ -35,14 +35,23 @@ const Squares:React.FC<Props> = memo(({spec, baseAngle, baseLength, prsBase, con
         const itemsKeys = Object.keys(contentsValues[i].items);
         const itemsValues = Object.values(contentsValues[i].items);
 
-        let items = itemsKeys.map((key, index) => <a key={key} href={itemsValues[index]} className={styles.a}>{key}</a>);
+        const items = itemsKeys.map((key, index) =>
+            <li key={key} className={styles.li}>
+                <a href={itemsValues[index]} target="_new">{key}</a>
+            </li>
+        );
 
         sqrs[i] = (
         <div className={styles.sqr} style={sqrStyle} key={contentsKeys[i]}>
+            <h3 className={styles.h3}>
+                # 0{contentsKeys[i]}
+            </h3>
             <h2 className={styles.h2}>
                 {contentsValues[i].category}
             </h2>
-            {items}
+            <ul className={styles.ul}>
+                {items}
+            </ul>
         </div>
         )
     }

@@ -1,22 +1,30 @@
 import React, { memo, useState, useMemo, useCallback, MouseEvent } from 'react';
 import Polygon from './polygon';
 import Squares from './squares';
+import contentsJson from '../json/contents.json';
+import squareSpec from '../json/squareSpec.json';
 import { BaseAngle, BaseLength, ContentsValues, PrsBase, Spec } from '../interface/interface';
 import styles from '../css/prism.module.css';
 
 interface Props {
-    spec: Spec;
     polygonClick: () => void;
-    contentsKeys: Array<string | number>;
-    contentsValues: Array<ContentsValues>;
 }
 
-const Prism : React.FC<Props> = memo(({spec, polygonClick, contentsKeys, contentsValues}) => {
+const Prism : React.FC<Props> = memo(({polygonClick}) => {
     console.log('prism');
+    
+    const contentsKeys:Array<string | number> = useMemo(() => Object.keys(contentsJson), []);
+    const contentsValues:Array<ContentsValues> = useMemo(() => Object.values(contentsJson), []);
+
+    const side = useMemo(() => contentsKeys.length, [contentsKeys.length]);
+    const spec:Spec = useMemo(() => Object({
+        side: side,
+        ...squareSpec
+    }), [side]);
 
     const [angle, setAngle] = useState<number>(0);
     const angleValue = useMemo(() => 360/spec.side, [spec.side]);
-    
+
     const rad = useMemo(() => Math.PI/180, []);
 
     const baseAngle:BaseAngle = useMemo(() => Object({

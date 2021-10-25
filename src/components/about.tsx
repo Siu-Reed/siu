@@ -143,7 +143,7 @@ const About:React.FC<Props> = ({aboutOpen, aboutClose, aboutSwitch}) => {
             <h2 className={`${styles.aboutMe} ${startStyle}`}>About Me</h2>
             <canvas className={styles.wave} ref={canvasRef} onClick={waveClick}/>
             <div className={`${styles.contentsBox} ${hiddenStyle}`} style={cBoxTransform}>
-                {aboutSwitch && aboutChildren}
+                {aboutChildren}
             </div>
             <button className={`${styles.btn} ${styles.close} ${hiddenStyle}`} onClick={closeClick}>
                 x

@@ -29,6 +29,7 @@
     display: flex;
     justify-content: center;
     z-index: 1;
+    overflow: hidden;
 
     
     border: 0.2rem solid Bcolor4;
@@ -90,7 +91,7 @@
 
 .disappear {
     pointer-events: none;
-    transition: 0.5s;
+    transition: 0s;
     opacity: 0;
 }
 .appear {

@@ -5,7 +5,8 @@ const Header:React.FC = memo(() => {
     console.log('header');
     return (
         <header className={styles.header}>
-            
+            <a href="">Siu Lee</a>
+            <a href="">Contact</a>
         </header>
     );
 });

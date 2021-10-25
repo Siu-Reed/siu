@@ -6,18 +6,33 @@
     flex-flow: column nowrap;
     align-items: center;
 }
-
-.h2 {
-    font-size: 2.5rem;
+.h3 {
     font-family: 'Sacramento';
-    margin: 1em;
+    font-size: 1.5rem;
+    font-weight: normal;
+    transform: skewX(-20deg) scaleY(1.2);
     color: Bcolor4;
     text-shadow: 0.1rem 0.1rem 0.1rem #00000050;
+    margin-top: 2em;
+}
+.h2 {
+    font-family: 'Sacramento';
+    font-size: 2.5rem;
+    font-weight: normal;
+    color: Bcolor4;
+    text-shadow: 0.1rem 0.1rem 0.1rem #00000050;
+    margin-bottom: 1em;
 }
 
-.a {
-    text-decoration: none;
-    font-size: 1.2rem;
+
+.li {
     margin: 0 0 2rem 0;
+    text-align: center;
+}
+
+.li a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 200;
     color: Bcolor4;
 }
