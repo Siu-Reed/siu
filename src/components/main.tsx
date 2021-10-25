@@ -1,15 +1,17 @@
-import React, { memo, useState, useCallback } from 'react';
+import React, { memo } from 'react';
 import styles from '../css/main.module.css'
 import About from './about';
 import Portfolio from './portfolio';
 
 interface Props {
     polygonClick: () => void;
+    aboutSwitch: boolean;
+    aboutOpen: () => void;
+    aboutClose: () => void;
 }
 
-const Main:React.FC<Props> = memo(({polygonClick}) => {
+const Main:React.FC<Props> = memo(({polygonClick, aboutSwitch, aboutOpen, aboutClose}) => {
     console.log('main');
-    const [aboutSwitch, setAboutSwitch] = useState<boolean>(false);
     let con1Style;
     let con2Style;
     if (!aboutSwitch) {
@@ -19,9 +21,6 @@ const Main:React.FC<Props> = memo(({polygonClick}) => {
         con1Style = styles.con1_y;
         con2Style =  styles.con2_y;    
     }
-    
-    const aboutOpen = useCallback(() => setAboutSwitch(true), [])
-    const aboutClose = useCallback(() => setAboutSwitch(false), []);
 
     return (
         <div className={styles.main}>

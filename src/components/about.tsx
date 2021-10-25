@@ -153,11 +153,11 @@ const About:React.FC<Props> = ({aboutOpen, aboutClose, aboutSwitch}) => {
                     <path d="M91.834,83.806L51.605,14.126c-0.333-0.577-0.949-0.932-1.615-0.932c-0.666,0-1.281,0.355-1.614,0.932L8.03,84.01  c-0.333,0.577-0.333,1.287,0,1.864c0.333,0.576,0.948,0.932,1.614,0.932h80.694c0.008,0.001,0.015,0,0.019,0  c1.029,0,1.863-0.835,1.863-1.863C92.22,84.515,92.076,84.12,91.834,83.806z" />
                 </svg>
             </button>
-            <button className={`${styles.btn} ${styles.arrow} ${styles.right} ${hiddenStyle}`} onClick={pageHandler} data-value={1}>
+            {(page!==3) && (<button className={`${styles.btn} ${styles.arrow} ${styles.right} ${hiddenStyle}`} onClick={pageHandler} data-value={1}>
                 <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" enableBackground="new 0 0 100 100" xmlSpace="preserve">
                     <path d="M91.834,83.806L51.605,14.126c-0.333-0.577-0.949-0.932-1.615-0.932c-0.666,0-1.281,0.355-1.614,0.932L8.03,84.01  c-0.333,0.577-0.333,1.287,0,1.864c0.333,0.576,0.948,0.932,1.614,0.932h80.694c0.008,0.001,0.015,0,0.019,0  c1.029,0,1.863-0.835,1.863-1.863C92.22,84.515,92.076,84.12,91.834,83.806z" />
                 </svg>
-            </button>
+            </button>)}
             <h3 className={styles.notice}>Click this ↑</h3>
         </div>
     );
