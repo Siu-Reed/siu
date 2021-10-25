@@ -1,4 +1,4 @@
-@value Mono1, TxtOpacity1 from './common/color.css';
+@value Mono1, Mono4, TxtOpacity2 from './common/color.css';
 
 .cvsDiv {
     width: 100%;
@@ -18,10 +18,11 @@
     font-family: 'ColorsOfAutumn';
     transition: 0.4s;
     color : Mono1;
-    opacity: TxtOpacity1;
+    opacity: TxtOpacity2;
     text-align : center;
 }
 
 .cvsDiv:hover .txt  {
-    color: #ffffff;
+    color: Mono4;
+    opacity: TxtOpacity2;
 }

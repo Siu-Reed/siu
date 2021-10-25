@@ -1,15 +1,66 @@
+@value Bcolor1, Bcolor2, Bcolor3, Bcolor4, Bcolor5, Acolor1, Acolor2 from './common/color.css';
+
 .hidden {
     width: 100vw;
     height: 100vh;
-    background: #d7ccc6;
-    text-align: center;
-    color: honeydew;
+    position: relative;
+    background: Bcolor4;
+    box-shadow: #ffffff60 0 0 5rem;
     transform: rotateX(-90deg) translateZ(Calc(-100vh*3/2)) translateY(Calc(-100vh/2));
 }
 
 .resetBtn {
-    width: 100px;
-    height: 100px;
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    flex-flow: column nowrap;
+    border-radius: 0 0 100% 0;
+    text-align: left;
     cursor: pointer;
-    background: darkolivegreen;
+    background: Bcolor5;
+    color: Bcolor3;
+    transition: 0.5s;
+    padding: 1rem;
+}
+
+.resetBtn:hover {
+    background: Bcolor1;
+    width: 12rem;
+    height: 12rem;
+}
+
+.resetBtn h1 {
+    font-weight: 400;
+}
+
+.meta {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.meta h1 {
+    font-family: "Sacramento";
+    font-size: 3rem;
+    padding: 1em 0;
+    color: Bcolor1;
+}
+.meta h3 {
+    font-size: 1.5rem;
+    color: Bcolor3;
+}
+.meta div {
+    font-size: 1.2rem;
+    margin-top: 1em;
+    padding: 1.5em 1em;
+    border-radius: 100%;
+    background: Bcolor3;
+    color: Bcolor5;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.meta div:hover {
+    background: Bcolor5;
+    color: Bcolor3;
 }

@@ -1,4 +1,4 @@
-@value Bcolor4, Acolor2, TxtOpacity2 from './common/color.css';
+@value Bcolor5, Acolor2, Bcolor1, TxtOpacity2 from './common/color.css';
 
 @keyframes arrowNotice {
     from {
@@ -13,7 +13,7 @@
 
 @keyframes closeNotice {
     from {
-        color: Bcolor4;
+        color: Bcolor5;
         font-size: 2rem;
     }
     to {
@@ -25,14 +25,14 @@
 .about {
     position: relative;
     transition: 0.2s;
-    background: Acolor2;
+    background: linear-gradient(50deg, Acolor2 10%, #ffffff40 30%, Acolor2 40%, Acolor2 100%);
     display: flex;
     justify-content: center;
     z-index: 1;
     overflow: hidden;
 
     
-    border: 0.2rem solid Bcolor4;
+    border: 0.2rem solid #ffffff20;
     padding: 0.3rem;
     border-radius: 0.2rem 0.2rem 2rem 2rem;
     border-top: none;
@@ -72,7 +72,7 @@
     font-family: 'ColorsOfAutumn';
     font-weight: normal;
     top: 1rem;
-    color: Bcolor4;
+    color: Bcolor5;
 }
 
 .contentsBox {
@@ -128,17 +128,17 @@
     font-size: 2rem;
     font-weight: bolder;
     transform: skewX(30deg);
-    color: Bcolor4;
+    color: Bcolor5;
     user-select: none;
 }
 .close:hover {
-    color : #000000;
+    color : Bcolor1;
     font-size: 2.5rem;
 }
 
 .arrow {
     width: 3rem;
-    fill: Bcolor4;
+    fill: Bcolor5;
 }
 .arrow:hover {
     width: 3.5rem;
@@ -157,8 +157,6 @@
     transform: translateY(-50%) rotateZ(90deg);
 }
 .notice {
-    position: absolute;
-    bottom: -1.5em;
     font-family: 'Times New Roman', Times, serif;
     opacity: TxtOpacity2;
 }

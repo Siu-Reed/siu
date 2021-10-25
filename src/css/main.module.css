@@ -1,4 +1,4 @@
-@value Acolor2, Acolor4 from './common/color.css';
+@value Bcolor2, Acolor2 from './common/color.css';
 
 .main {
     position: relative;
@@ -44,5 +44,26 @@
 }
 .con2_y {
     width:  0;
-    opacity: 0;
+    overflow: hidden;
+}
+
+.desc {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2rem;
+    background: linear-gradient(Bcolor2, Acolor2);
+    text-align: center;
+    font-size: 0.8rem;
+    line-height: 2rem;
+    font-weight: 300;
+    color: #ffffffa0;
+}
+
+.plant {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 2rem;
+    width: 10rem;
+    opacity: 0.6;
 }

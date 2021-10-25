@@ -139,6 +139,7 @@ const About:React.FC<Props> = ({aboutOpen, aboutClose, aboutSwitch}) => {
     }
 
     return (
+        <>
         <div className={`${styles.about} ${aboutStyle}`} >
             <h2 className={`${styles.aboutMe} ${startStyle}`}>About Me</h2>
             <canvas className={styles.wave} ref={canvasRef} onClick={waveClick}/>
@@ -158,8 +159,9 @@ const About:React.FC<Props> = ({aboutOpen, aboutClose, aboutSwitch}) => {
                     <path d="M91.834,83.806L51.605,14.126c-0.333-0.577-0.949-0.932-1.615-0.932c-0.666,0-1.281,0.355-1.614,0.932L8.03,84.01  c-0.333,0.577-0.333,1.287,0,1.864c0.333,0.576,0.948,0.932,1.614,0.932h80.694c0.008,0.001,0.015,0,0.019,0  c1.029,0,1.863-0.835,1.863-1.863C92.22,84.515,92.076,84.12,91.834,83.806z" />
                 </svg>
             </button>)}
-            <h3 className={styles.notice}>Click this ↑</h3>
         </div>
+        {!aboutSwitch && <h3 className={styles.notice}>Click this ↑</h3>}
+        </>
     );
 };
 

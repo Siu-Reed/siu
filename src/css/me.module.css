@@ -1,4 +1,4 @@
-@value Mono1, Mono5, Bcolor4, TxtOpacity1 from './common/color.css';
+@value Mono1, Mono5, Bcolor5, TxtOpacity1 from './common/color.css';
 
 .me {
     width: 100%;
@@ -15,7 +15,7 @@
 .title {
     position: absolute;
     top: 1em;
-    color: Bcolor4;
+    color: Bcolor5;
     font-family: 'ColorsOfAutumn';
     font-weight: normal;
     text-shadow: rgba(0, 0, 0, 0.3) 0.03em 0.03em 0.03em;

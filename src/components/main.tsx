@@ -30,6 +30,10 @@ const Main:React.FC<Props> = memo(({polygonClick, aboutSwitch, aboutOpen, aboutC
             <div className={`${styles.con2} ${con2Style}`}>
                 <Portfolio polygonClick={polygonClick}/>
             </div>
+            <img className={styles.plant} src="./img/plant.gif" alt="plant" />
+            <div className={styles.desc}>
+                Copyright ⓒ 2021 by Siu Lee. All page contents are properties of Siu Lee.
+            </div>
         </div>
     );
 });

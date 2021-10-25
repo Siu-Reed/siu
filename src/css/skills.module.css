@@ -1,4 +1,4 @@
-@value Mono1, Mono5, Bcolor4, Bcolor4, TxtOpacity1 from './common/color.css';
+@value Mono1, Mono5, Bcolor5, Bcolor5, TxtOpacity1 from './common/color.css';
 
 .skills {
     width: 100vw;
@@ -12,7 +12,7 @@
 }
 
 .h1 {
-    color: Bcolor4;
+    color: Bcolor5;
     text-align: center;
     font-family: 'ColorsOfAutumn';
     font-weight: normal;
@@ -47,7 +47,7 @@
 
     width: 15rem;
     border-radius: 0.3em;
-    color: Bcolor4;
+    color: Bcolor5;
     opacity: TxtOpacity1;
     text-align: center;
 }
@@ -66,7 +66,7 @@
     width: 7em;
     height: 7em;
     box-shadow: rgba(0, 0, 0, 0.05) 0.1em 0.1em 0.2em;
-    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.005), rgba(0, 0, 0, 0.08));
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.3), transparent, transparent, rgba(0, 0, 0, 0.08));
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
@@ -107,7 +107,8 @@
     font-weight: 400;
     font-size: 1rem;
     border-radius: 1em;
-    color: rgba(255, 252, 238, 0.5);
+    color: rgba(255, 255, 255, 0.5);
+    text-shadow: #00000050 0.1rem 0.1rem 0.1rem;
     transition: 0.5s;
     /* background: sienna; */
 }

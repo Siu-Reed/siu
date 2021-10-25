@@ -1,4 +1,4 @@
-@value Acolor1, Acolor2, Acolor3, Acolor4, Bcolor1 from './common/color.css';
+@value Acolor1, Acolor2, Acolor4, Bcolor1 from './common/color.css';
 
 @keyframes AnimationName {
     0%{background-position:100% 0%}
@@ -20,8 +20,8 @@
     background:
         radial-gradient(at top, Acolor4, transparent),
         radial-gradient(at top right, Acolor4, transparent),
-        radial-gradient(at top left, Acolor4, transparent, transparent),
-        linear-gradient(70deg, #a065b3, #829ba0, Acolor2, Bcolor1, Acolor1, #8291a0, Bcolor1, #e395de, Acolor1)
+        radial-gradient(at top left, #e1e6c350, transparent, transparent),
+        linear-gradient(70deg, #a065b3, #829ba0, Acolor2, Bcolor1, Acolor1, #8291a0, Bcolor1, #9c6a3e, #e395de, Acolor1)
     ;
     background-size: 250% 250%;
     animation: AnimationName 10s ease alternate infinite;

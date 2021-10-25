@@ -1,4 +1,4 @@
-@value Mono1, Mono5, TxtOpacity1, Acolor4, Acolor3, Bcolor3, Acolor1, Bcolor4 from './common/color.css';
+@value Mono1, Mono5, TxtOpacity1, Acolor4, Acolor3, Bcolor3, Acolor1, Bcolor5 from './common/color.css';
 
 .abilities {
     width: 100%;
@@ -19,7 +19,7 @@
     font-weight: normal;
     text-shadow: rgba(0, 0, 0, 0.3) 0.03em 0.03em 0.03em;
 
-    color: Bcolor4;
+    color: Bcolor5;
 }
 
 .graph {
@@ -50,7 +50,7 @@
     border-radius: 1em 1em 0 0;
     background: Acolor1;
     box-shadow: 0.1em 0em 0.1em rgba(0, 0, 0, 0.2);
-    color: Bcolor4;
+    color: Bcolor5;
 }
 
 .graph li div {

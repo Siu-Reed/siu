@@ -1,10 +1,10 @@
-@value Mono3, Mono4, Bcolor3 from './common/color.css';
+@value Bcolor1, Bcolor5 from './common/color.css';
 
 .threeD {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background: radial-gradient(Bcolor3, Mono4, Mono3);
+    background: radial-gradient(Bcolor5, Bcolor1, #413f30);
 }
 .threeDX {
     perspective: 62500rem;

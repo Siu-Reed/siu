@@ -27,11 +27,11 @@ const ThreeD : React.FC = memo(() => {
 
     return (
         <div className={`${styles.threeD} ${styleThreeD}`}>
-            <FloatingNav view={view} aboutSwitch={aboutSwitch}/>
             <div className={`${styles.screen} ${styleScreen}`}>
                 <Main polygonClick={polygonClick} aboutSwitch={aboutSwitch} aboutOpen={aboutOpen} aboutClose={aboutClose}/>
                 <Hidden hiddenBtnClick={hiddenBtnClick} />
             </div>
+            <FloatingNav view={view} aboutSwitch={aboutSwitch}/>
         </div>
     );
 });

@@ -1,17 +1,18 @@
-@value Bcolor4 from './common/color.css';
+@value Bcolor5, Bcolor3 from './common/color.css';
 
 .sqr {
     position : absolute;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    user-select: none;
 }
 .h3 {
     font-family: 'Sacramento';
     font-size: 1.5rem;
     font-weight: normal;
     transform: skewX(-20deg) scaleY(1.2);
-    color: Bcolor4;
+    color: #ffffff90;
     text-shadow: 0.1rem 0.1rem 0.1rem #00000050;
     margin-top: 2em;
 }
@@ -19,7 +20,7 @@
     font-family: 'Sacramento';
     font-size: 2.5rem;
     font-weight: normal;
-    color: Bcolor4;
+    color: #ffffff90;
     text-shadow: 0.1rem 0.1rem 0.1rem #00000050;
     margin-bottom: 1em;
 }
@@ -31,8 +32,14 @@
 }
 
 .li a {
+    transition: 0.3s;
     text-decoration: none;
     font-size: 1.1rem;
-    font-weight: 200;
-    color: Bcolor4;
+    font-weight: 300;
+    color: Bcolor3;
+}
+
+.li a:hover {
+    font-size: 1.3rem;
+    font-weight: 500;
 }

@@ -1,4 +1,4 @@
-@value Mono1, Acolor2, Acolor1, TxtOpacity2 from './common/color.css';
+@value Mono1, Acolor2, Bcolor5, Bcolor1, TxtOpacity2 from './common/color.css';
 
 .prsHome {
     position: relative;
@@ -25,28 +25,29 @@
     cursor: pointer;
     border: none;
     background: none;
-    fill: Acolor2;
+    fill: Bcolor5;
 }
 
 .left {
-    left: -30%;
+    left: -40%;
     transform: rotateX(90deg) translateY(18.75rem) rotateZ(-90deg);
 }
 
 .right {
-    right: -30%;
+    right: -40%;
     transform: rotateX(90deg) translateY(18.75rem) rotateZ(90deg);
 }
 
 
 .btn:hover {
     width: 6rem;
-    fill: Acolor1;
+    fill: Bcolor1;
 }
 
 .notice {
     position: absolute;
     bottom: -1.5em;
     font-family: 'Times New Roman', Times, serif;
+    color: Mono1;
     opacity: TxtOpacity2;
 }

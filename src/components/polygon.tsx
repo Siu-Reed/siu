@@ -30,7 +30,7 @@ const Polygon: React.FC<Props> = memo(({spec, baseAngle, baseLength, polygonClic
         ctx!.scale(ratio, ratio);
         if (!ctx) return;
         ctx.save();
-        ctx.fillStyle = '#879678';
+        ctx.fillStyle = '#e8e1be';
         ctx.beginPath();
         
         ctx.translate(baseLength.c*16, baseLength.c*16);
