@@ -25,3 +25,5 @@ export interface ContentsValues {
     category: string | number;
     items: object;
 }
+
+export type SqrState = "standing" | "running" | "goal1In" | "goal2In";
