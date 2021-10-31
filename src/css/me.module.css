@@ -1,4 +1,5 @@
 @value Mono1, Mono5, Bcolor5, TxtOpacity1 from './common/color.css';
+@value Laptop, Tablet, Mobile1, Mobile2 from './common/size.css';
 
 .me {
     width: 100%;
@@ -6,6 +7,7 @@
     padding: 0 2rem;
     position: relative;
 
+    gap: 1rem;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -29,8 +31,31 @@
 }
 
 .profileMeta {
+    gap: 3rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.profileBtn {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 2rem;
+    font-family: "ColorsOfAutumn";
+    font-weight: bold;
+    color: Mono1;
+    opacity: TxtOpacity1;
+    transform: skewX(30deg);
+}
+
+.profileMeta .profileBtn:hover {
+    color: Mono5;
+}
+
+.personalInfo {
     height: 34rem;
-    margin: 3rem 5rem 3rem 10rem;
     color: Mono1;
     opacity: TxtOpacity1;
 
@@ -39,29 +64,29 @@
     justify-content: space-between;
 }
 
-.profileMeta h3 {
-    margin-bottom: 0.3em;
+.personalInfo h3 {
+    margin: 0 0 0.3em 0.1em;
     font-size: 1.3rem;
     font-family: 'Baloo Thambi 2', cursive;
     user-select: none;
 }
 
-.profileMeta p {
+.personalInfo p {
     font-size: 1.1rem;
 }
 
-.profileMeta span {
+.personalInfo span {
     font-size: 0.8em;
 }
 
 .aboutMe {
     height: 34rem;
-    margin: 3rem 0;
     color: Mono1;
     opacity: TxtOpacity1;
 
     display: flex;
     flex-flow: column nowrap;
+    gap: 1rem;
     justify-content: baseline;
     user-select: none;
 }
@@ -69,7 +94,6 @@
 .aboutMe h3 {
     font-size: 1.3rem;
     font-family: 'Baloo Thambi 2', cursive;
-    margin-bottom: 0.3em;
 }
 
 .aboutMe div {
@@ -78,4 +102,84 @@
     flex-flow: column nowrap;
     justify-content: space-evenly;
     font-weight: 500;
+}
+
+
+@media screen and (max-width: Laptop) {
+    .profilePic {
+        height: 60%;
+    }
+
+    .personalInfo {
+        height: 32rem;
+    }
+
+    .aboutMe {
+        height: 32rem;
+    }
+}
+
+@media screen and (max-width: Tablet) {
+    .title { top: 2em; }
+
+    .me {
+        gap : 1rem;
+    }
+
+    .profileMeta {
+        gap: 2rem;
+        flex-flow: column nowrap;
+    }
+
+    .personalInfo {
+        height: 28rem;
+        padding: 0 1rem;
+    }
+
+    .personalInfo h3 {
+        margin: 0;
+        font-size: 1.3rem;
+        font-family: 'Baloo Thambi 2', cursive;
+        user-select: none;
+    }
+    
+    .aboutMe {
+        height: auto;
+        color: Mono1;
+        opacity: TxtOpacity1;
+    
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    
+    .aboutMe h3 {
+        padding: 0 1rem;
+    }
+
+    .aboutMe div {
+        height: 5.5rem;
+        overflow: scroll;
+        display: block;
+        font-weight: 500;
+        border-radius: 1rem;
+        box-shadow: 0.1em 0.1em 0.3em Mono1;
+    }
+
+    .aboutMe div pre {
+        padding: 0.5rem 1rem 0.5rem 1rem;
+    }
+    
+}
+
+@media screen and (max-width: Mobile1) {
+    .profileMeta {
+        position: absolute;
+        background: #ffffff50;
+        padding: 2rem 1rem;
+        margin-bottom: 3rem;
+        border-radius: 1rem; 
+    }
+}
+
+@media screen and (max-width: Mobile2) {
 }

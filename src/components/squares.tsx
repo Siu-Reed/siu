@@ -20,9 +20,9 @@ const Squares:React.FC<Props> = memo(({spec, baseAngle, baseLength, prsBase, con
         let sqrStyle = {
             width : `${spec.width}rem`,
             height : `${spec.height}rem`,
-            background : spec.color[i%3],
             left : `${(prsBase.width - spec.width)/2}rem`,
             top : `${(prsBase.height - spec.height)/2}rem`,
+            background : spec.color[i%3],
             transform : `
                 rotateZ(${baseAngle.x * i}deg)
                 translateY(${spec.height/2 + baseLength.b}rem)

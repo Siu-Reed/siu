@@ -3,8 +3,8 @@
 .threeD {
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
     background: radial-gradient(Bcolor5, Bcolor1, #413f30);
+    overflow: hidden;
 }
 .threeDX {
     perspective: 62500rem;
@@ -14,9 +14,9 @@
 }
 
 .screen {
+    transform-style: preserve-3d;
     width: 100%;
     height: 100%;
-    transform-style: preserve-3d;
     transition: 0.5s;
 }
 
@@ -27,3 +27,11 @@
 .screenY {
     transform : rotateX(90deg) translateY(Calc(-100vh/2)) translateZ(Calc(-100vh/2));
 }
+/* 
+.zFalse {
+}
+
+
+.zTrue {
+    transform : rotateX(90deg) translateY(Calc(-100vh/2)) translateZ(Calc(-100vh/2) translateX(-100vh));
+} */

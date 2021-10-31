@@ -1,26 +1,27 @@
 @value Bcolor2, Acolor2 from './common/color.css';
+@value Laptop, Tablet, Mobile1, Mobile2 from './common/size.css';
 
 .main {
     position: relative;
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
 }
 
 .con1 {
     position: relative;
-    float: left;
     height: 100%;
     background-color: Acolor2;
     
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    
+
     transition: 0.8s;
 }
 .con2 {
     position: relative;
-    float: left;
     height: 100%;
     background: Acolor4;
 
@@ -43,7 +44,7 @@
     width: 100%;
 }
 .con2_y {
-    width:  0;
+    width: 0;
     overflow: hidden;
 }
 
@@ -58,6 +59,8 @@
     line-height: 2rem;
     font-weight: 300;
     color: #ffffffa0;
+    z-index: 0;
+    transition: 0.5s;
 }
 
 .plant {
@@ -66,4 +69,40 @@
     left: 2rem;
     width: 10rem;
     opacity: 0.6;
+    z-index: 0;
+}
+
+.hidden {
+    overflow: hidden;
+    height: 0;
+}
+
+
+@media screen and (max-width: Laptop) {
+}
+
+@media screen and (max-width: Tablet) {
+}
+
+@media screen and (max-width: Mobile1) {
+    .main {
+        flex-flow: column nowrap;
+    }
+    .con1_x {
+        width: 100%;
+        height: 40rem;
+    }
+    .con2_x {
+        width: 100%;
+        opacity: 1;
+    }
+    .con2_y {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+
+}
+
+@media screen and (max-width: Mobile2) {
 }

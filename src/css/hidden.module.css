@@ -21,6 +21,7 @@
     color: Bcolor3;
     transition: 0.5s;
     padding: 1rem;
+    z-index: 2;
 }
 
 .resetBtn:hover {

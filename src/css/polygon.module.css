@@ -7,14 +7,14 @@
     cursor: pointer;
 }
 .cvs {
-    border-radius: 50%;
+    border-radius: 100%;
 }
 
 .txt {
     position : absolute;
     top : 50%;
     left : 50%;
-    font-size : 5em;
+    font-size : 4em;
     font-family: 'ColorsOfAutumn';
     transition: 0.4s;
     color : Mono1;

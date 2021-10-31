@@ -1,3 +1,5 @@
+@value Laptop, Tablet, Mobile1, Mobile2, FontSize1, FontSize2, FontSize3, FontSize4 from './css/common/size.css';
+
 @font-face {
     font-family: 'ColorsOfAutumn';
     src: url('./css/fonts/ColorsOfAutumn.woff');
@@ -22,6 +24,11 @@
     list-style: none;
     text-decoration: none;
     font-family: "Noto Sans KR", sans-serif;
+    transform-style: inherit;
+}
+
+html {
+    font-size: 16px;
 }
 
 body {
@@ -32,4 +39,28 @@ body {
 #root {
     width: 100%;
     height: 100%;
+}
+
+@media screen and (max-width: Laptop) {
+    html {
+        font-size: FontSize1;
+    }
+}
+
+@media screen and (max-width: Tablet) {
+    html {
+        font-size: FontSize2;
+    }
+}
+
+@media screen and (max-width: Mobile1) {
+    html {
+        font-size: FontSize3;
+    }
+}
+
+@media screen and (max-width: Mobile2) {
+    html {
+        font-size: FontSize4;
+    }
 }

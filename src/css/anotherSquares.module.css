@@ -1,0 +1,12 @@
+@value Bcolor5, Bcolor3 from './common/color.css';
+
+.sqr {
+    position : absolute;
+    user-select: none;
+    display: flex;
+    flex-flow: row nowrap;
+    transition: 0.5s;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,5 +1,6 @@
 import React, { memo } from 'react';
 import Prism from './prism';
+import AnotherPrism from './anotherPrism';
 import styles from '../css/portfolio.module.css';
 
 interface Props {
@@ -11,7 +12,12 @@ const Portfolio : React.FC<Props> = memo(({polygonClick}) => {
 
     return (
         <div className={styles.portfolio}>
-            <Prism polygonClick={polygonClick}/>
+            <div className={styles.anotherCircle}>
+                <AnotherPrism />
+            </div>
+            <div className={styles.circle}>
+                <Prism polygonClick={polygonClick}/>
+            </div>
         </div>
     );
 });

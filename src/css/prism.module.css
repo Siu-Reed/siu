@@ -4,8 +4,7 @@
     position: relative;
 
     display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
+    flex-flow: row nowrap
 }
 
 .prism {
@@ -13,10 +12,7 @@
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;    
-    transform-style: preserve-3d;
     transition: 0.4s;
-    position: relative;
 }
 .btn {
     position: absolute;
@@ -29,13 +25,13 @@
 }
 
 .left {
-    left: -40%;
-    transform: rotateX(90deg) translateY(18.75rem) rotateZ(-90deg);
+    left: -35%;
+    transform: rotateX(90deg) translateY(15rem) translateZ(-10rem) rotateZ(-90deg);
 }
 
 .right {
-    right: -40%;
-    transform: rotateX(90deg) translateY(18.75rem) rotateZ(90deg);
+    right: -35%;
+    transform: rotateX(90deg) translateY(15rem) translateZ(-10rem) rotateZ(90deg);
 }
 
 

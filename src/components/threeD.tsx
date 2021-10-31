@@ -8,9 +8,11 @@ const ThreeD : React.FC = memo(() => {
     console.log('threed');
     const [view, setView] = useState<boolean>(false);
     const [aboutSwitch, setAboutSwitch] = useState<boolean>(false);
+    const [zView, setZView] = useState<boolean>(true);
 
     let styleThreeD;
     let styleScreen;
+    let zViewStyle;
     if (!view) {
         styleThreeD = styles.threeDX;
         styleScreen = styles.screenX;
@@ -27,7 +29,7 @@ const ThreeD : React.FC = memo(() => {
 
     return (
         <div className={`${styles.threeD} ${styleThreeD}`}>
-            <div className={`${styles.screen} ${styleScreen}`}>
+            <div className={`${styles.screen} ${styleScreen} ${zViewStyle}`}>
                 <Main polygonClick={polygonClick} aboutSwitch={aboutSwitch} aboutOpen={aboutOpen} aboutClose={aboutClose}/>
                 <Hidden hiddenBtnClick={hiddenBtnClick} />
             </div>
