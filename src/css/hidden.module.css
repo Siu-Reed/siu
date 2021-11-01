@@ -38,10 +38,12 @@
     display: flex;
     flex-flow: column wrap;
     align-items: center;
+    transition: 1s;
 }
 
 .meta h1 {
-    font-family: "Sacramento";
+    font-family: 'LeagueScript';
+    /* font-weight: normal; */
     font-size: 3rem;
     padding: 1em 0;
     color: Bcolor1;
@@ -64,4 +66,12 @@
 .meta div:hover {
     background: Bcolor5;
     color: Bcolor3;
+}
+
+.appear {
+    opacity: 1;
+}
+
+.disappear {
+    opacity: 0;
 }

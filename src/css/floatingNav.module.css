@@ -15,18 +15,19 @@
 
 .header a {
     transition: 0.5s;
-    width: 7rem;
-    padding: 0.3rem 0;
-    font-size: 1.2rem;
+    width: 7.5rem;
+    padding: 0.3em 0;
+    font-size: 1.4rem;
     text-align: center;
     border-radius: 0.2rem;
     background: linear-gradient(to bottom right, #ffffff80 0%, transparent 30%, transparent 40%, #ffffff80 50%, transparent 60%, transparent 60%, transparent 100%);
     background-size: 200% 200%;
     background-position: bottom right;
     box-shadow: #00000030 0.1rem 0.1rem 0.2rem;
-    transform: skewX(-20deg);
-    font-weight: 500;
-    color: #00000050;
+    transform: skewX(10deg);
+    color: #00000080;
+    font-family: 'LeagueScript';
+    font-weight: bolder;
 }
 
 .header a:hover {

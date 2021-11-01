@@ -1,5 +1,26 @@
-@value Bcolor2, Acolor2 from './common/color.css';
+@value Acolor1, Acolor2, Acolor4, Bcolor1, Bcolor2, Bcolor5 from './common/color.css';
 @value Laptop, Tablet, Mobile1, Mobile2 from './common/size.css';
+
+@keyframes AnimationName {
+    0%{background-position:100% 0%}
+    20%{background-position:60% 100%}
+    40%{background-position:0% 0%}
+    60%{background-position:50% 100%}
+    80%{background-position:100%  0%}
+    100%{background-position:80% 100%}
+}
+
+.lineBG {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+.lineBG path {
+    stroke: Acolor2;
+    position: absolute;
+}
 
 .main {
     position: relative;
@@ -7,6 +28,14 @@
     height: 100%;
     display: flex;
     flex-flow: row nowrap;
+    background:
+        radial-gradient(at top, Acolor4, transparent),
+        radial-gradient(at top right, Acolor4, transparent),
+        radial-gradient(at top left, #e1e6c350, transparent, transparent),
+        linear-gradient(70deg, #a065b3, #829ba0, Acolor2, Bcolor1, Acolor1, #8291a0, Bcolor1, #9c6a3e, #e395de, Acolor1)
+    ;
+    background-size: 250% 250%;
+    animation: AnimationName 10s ease alternate infinite;
 }
 
 .con1 {
@@ -18,20 +47,18 @@
     flex-flow: column nowrap;
     align-items: center;
 
-    transition: 0.8s;
+    transition:ease 0.8s;
 }
 .con2 {
     position: relative;
     height: 100%;
-    background: Acolor4;
 
     /* display: flex;
     justify-content: center;
     align-items: center; */
     
-    transition: 0.8s;
+    transition:ease 0.8s;
 }
-
 .con1_x {
     width: 30%;
 }
@@ -45,7 +72,7 @@
 }
 .con2_y {
     width: 0;
-    overflow: hidden;
+    transform: translateX(50vw);
 }
 
 .desc {

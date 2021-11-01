@@ -5,33 +5,47 @@ import Main from './main';
 import FloatingNav from './floatingNav';
 
 const ThreeD : React.FC = memo(() => {
-    console.log('threed');
-    const [view, setView] = useState<boolean>(false);
+    console.log('threeD');
+    const [view, setView] = useState<'x'|'y'|'z'|'f'>('f');
     const [aboutSwitch, setAboutSwitch] = useState<boolean>(false);
-    const [zView, setZView] = useState<boolean>(true);
 
     let styleThreeD;
     let styleScreen;
-    let zViewStyle;
-    if (!view) {
-        styleThreeD = styles.threeDX;
-        styleScreen = styles.screenX;
-    } else {
-        styleThreeD = styles.threeDY;
-        styleScreen = styles.screenY;
+    switch (view) {
+        case 'f' : {
+            styleThreeD = styles.flat;
+            styleScreen = styles.screenX;
+            break
+        }
+        case 'x' : {
+            styleThreeD = styles.live;
+            styleScreen = styles.screenX;
+            break
+        }
+        case 'y' : {
+            styleThreeD = styles.live;
+            styleScreen = styles.screenY;
+            break
+        }
+        case 'z' : {
+            styleThreeD = styles.live;
+            styleScreen = styles.screenZ;
+            break
+        }
     }
 
-    const polygonClick = useCallback(() => setView(true), []);
-    const hiddenBtnClick = useCallback(() => setView(false), []);
+    const xViewClick = useCallback(() => setView('x'), []);
+    const polygonClick = useCallback(() => setView('y'), []);
+    const zViewClick = useCallback(() => setView('z'), []);
     
     const aboutOpen = useCallback(() => setAboutSwitch(true), []);
     const aboutClose = useCallback(() => setAboutSwitch(false), []);
 
     return (
         <div className={`${styles.threeD} ${styleThreeD}`}>
-            <div className={`${styles.screen} ${styleScreen} ${zViewStyle}`}>
+            <div className={`${styles.screen} ${styleScreen}`}>
                 <Main polygonClick={polygonClick} aboutSwitch={aboutSwitch} aboutOpen={aboutOpen} aboutClose={aboutClose}/>
-                <Hidden hiddenBtnClick={hiddenBtnClick} />
+                <Hidden xViewClick={xViewClick} zViewClick={zViewClick} aboutOpen={aboutOpen} aboutClose={aboutClose}/>
             </div>
             <FloatingNav view={view} aboutSwitch={aboutSwitch}/>
         </div>

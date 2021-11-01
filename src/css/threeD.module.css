@@ -6,10 +6,10 @@
     background: radial-gradient(Bcolor5, Bcolor1, #413f30);
     overflow: hidden;
 }
-.threeDX {
+.flat {
     perspective: 62500rem;
 }
-.threeDY {
+.live {
     perspective: 250rem;
 }
 
@@ -26,6 +26,10 @@
 
 .screenY {
     transform : rotateX(90deg) translateY(Calc(-100vh/2)) translateZ(Calc(-100vh/2));
+}
+
+.screenZ {
+    transform : rotateX(90deg) translateY(Calc(100vh/2)) translateZ(Calc(-100vh/2));
 }
 /* 
 .zFalse {

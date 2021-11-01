@@ -30,7 +30,7 @@ const Polygon: React.FC<Props> = memo(({spec, baseAngle, baseLength, polygonClic
         ctx!.scale(ratio, ratio);
         if (!ctx) return;
         ctx.save();
-        ctx.fillStyle = '#e8e1be';
+        ctx.fillStyle = '#87967880';
         ctx.beginPath();
         
         ctx.translate(baseLength.c*16, baseLength.c*16);
@@ -78,7 +78,8 @@ const Polygon: React.FC<Props> = memo(({spec, baseAngle, baseLength, polygonClic
     return (
         <div className={styles.cvsDiv} style={cvsDivStyle} onClick={plgClick}>
             <canvas className={styles.cvs} ref={cvsRef}/>
-            <h1 className={styles.txt} style={txtStyle}>works</h1>
+            <h1 className={styles.txt} style={txtStyle}>Works</h1>
+            <h3 className={styles.txt2} style={txtStyle}>작업물</h3>
         </div>
     );
 });
