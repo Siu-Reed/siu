@@ -6,7 +6,7 @@
     display: flex;
     flex-flow: row nowrap;
     transition: 0.5s;
-    gap: 1rem;
+    gap: 1em;
     justify-content: center;
     align-items: center;
 }

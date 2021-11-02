@@ -1,10 +1,11 @@
 @value Mono1, Acolor2, Bcolor5, Bcolor1, TxtOpacity2 from './common/color.css';
+@value Laptop, Tablet, Mobile1, Mobile2 from './common/size.css';
 
 .prsHome {
     position: relative;
 
     display: flex;
-    flex-flow: row nowrap
+    flex-flow: row nowrap;
 }
 
 .prism {
@@ -16,7 +17,8 @@
 }
 .btn {
     position: absolute;
-    width : 5rem;
+    width : 4em;
+    font-size: 1em;
     transition : 0.3s;
     cursor: pointer;
     border: none;
@@ -25,18 +27,18 @@
 }
 
 .left {
-    left: -35%;
-    transform: rotateX(90deg) translateY(15rem) translateZ(-10rem) rotateZ(-90deg);
+    left: -30%;
+    transform: rotateX(90deg) translateY(15em) translateZ(-7.5em) rotateZ(-90deg);
 }
 
 .right {
-    right: -35%;
-    transform: rotateX(90deg) translateY(15rem) translateZ(-10rem) rotateZ(90deg);
+    right: -30%;
+    transform: rotateX(90deg) translateY(15em) translateZ(-7.5em) rotateZ(90deg);
 }
 
 
 .btn:hover {
-    width: 6rem;
+    width: 5em;
     fill: Bcolor1;
 }
 
@@ -46,4 +48,40 @@
     font-family: 'Times New Roman', Times, serif;
     color: Mono1;
     opacity: TxtOpacity2;
+}
+
+@media (orientation: landscape) and (max-width: Laptop) {
+    .prsHome {
+        font-size: 0.8rem;
+    }
+}
+
+@media (orientation: landscape) and (max-width: Tablet) {
+    .prsHome {
+        font-size: 0.7rem;
+    }
+}
+
+@media (orientation: landscape) and (max-width: Mobile2) {
+    .prsHome {
+        font-size: 0.6rem;
+    }
+}
+
+@media (orientation: portrait) and (max-width: Tablet) {
+    .prsHome {
+        font-size: 0.8rem;
+    }
+}
+
+@media (orientation: portrait) and (max-width: Mobile1) {
+    .prsHome {
+        font-size: 0.9rem;
+    }
+}
+
+@media (orientation: portrait) and (max-width: Mobile2) {
+    .prsHome {
+        font-size: 0.9rem;
+    }
 }

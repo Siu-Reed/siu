@@ -1,4 +1,5 @@
 @value Bcolor5, Bcolor1, Acolor2 from './common/color.css';
+@value Laptop, Tablet, Mobile1, Mobile2 from './common/size.css';
 
 .portfolio {
     width: 100%;
@@ -10,31 +11,45 @@
 }
 
 .circle {
-    padding: 4rem;
+    padding: 4em;
     border-radius: 100%;
-    /* border : 0.125rem solid Bcolor5; */
+    /* border : 0.125em solid Bcolor5; */
 }
 
 .anotherCircle {
-    position: absolute;
-    top: 8rem;
-    left: 8rem;
-    padding: 4rem;
+    padding: 4em;
     border-radius: 100%;
     background: #e8e1be80;
+    align-self: flex-start;
+    margin: 6em 0 0 0;
 }
 
 .intro {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) translateZ(21rem);
+    transform: translate(-50%, -50%) translateZ(21em);
 }
 
 .intro h2 {
-    font-size: 3rem;
+    font-size: 3em;
     font-family: 'LeagueScript';
     font-weight: normal;
     color: Acolor2;
     transform: skewX(-10deg);
+}
+
+@media (orientation: landscape) and (max-width: Mobile1) {
+    .anotherCircle { display: none;}
+}
+
+@media (orientation: portrait) and (max-width: Mobile1) {
+    .anotherCircle {
+        padding: 2em;
+        margin: 7em 0 0 4rem;
+    }
+}
+
+@media (orientation: portrait) and (max-width: Mobile2) {
+    .anotherCircle { display: none;}
 }

@@ -2,8 +2,8 @@
 @value Laptop, Tablet, Mobile1, Mobile2 from './common/size.css';
 
 .me {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     padding: 0 2rem;
     position: relative;
 

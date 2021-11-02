@@ -9,7 +9,7 @@ interface Props {
 }
 
 const AnotherPolygon: React.FC<Props> = memo(({spec, baseAngle, baseLength}) => {
-    console.log('polygon');
+    console.log('another polygon');
     const cvsRef = useRef<HTMLCanvasElement>(null);
     const ratio = window.devicePixelRatio;
 
@@ -17,11 +17,11 @@ const AnotherPolygon: React.FC<Props> = memo(({spec, baseAngle, baseLength}) => 
         const cvs = cvsRef.current
         if (!cvs) return;
 
-        cvs.style.width = `${baseLength.c*2}rem`;
-        cvs.style.height = `${baseLength.c*2}rem`;
+        cvs.style.width = `${baseLength.c*2}em`;
+        cvs.style.height = `${baseLength.c*2}em`;
         cvs.style.position = "absolute";
-        cvs.style.top = `${baseLength.b - baseLength.c}rem`;
-        cvs.style.left = `${baseLength.b - baseLength.c}rem`;
+        cvs.style.top = `${baseLength.b - baseLength.c}em`;
+        cvs.style.left = `${baseLength.b - baseLength.c}em`;
 
         const ctx = cvs.getContext('2d');
         cvs.width = baseLength.c*2 * 16 * ratio;
@@ -60,7 +60,7 @@ const AnotherPolygon: React.FC<Props> = memo(({spec, baseAngle, baseLength}) => 
     const cvsDivStyle = {
         transform : 
         `rotateZ(${rttDeg}deg)
-        translateZ(${spec.height}rem)`
+        translateZ(${spec.height}em)`
     };
 
     return (

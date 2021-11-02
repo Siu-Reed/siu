@@ -1,4 +1,5 @@
 @value Mono1, Acolor2, Bcolor5, Bcolor1, TxtOpacity2 from './common/color.css';
+@value Laptop, Tablet, Mobile1, Mobile2 from './common/size.css';
 
 .prsHome {
     position: relative;
@@ -26,9 +27,9 @@
 
 .heights {
     color: #00000080;
-    padding: 0.5rem;
+    padding: 0.5em;
     background: #ffffff50;
-    border-radius: 1rem 1rem 0 0;
+    border-radius: 1em 1em 0 0;
     font-weight: 300;
 }
 .heights h3 {
@@ -41,16 +42,16 @@
 .btns {
     display: flex;
     flex-flow: row nowrap;
-    gap: 1rem;
+    gap: 1em;
     height: 100%;
     justify-content: center;
     align-items: center;
 }
 
 .btns h3 {
-    font-size: 1.5rem;
-    width: 2.5rem;
-    line-height: 2.5rem;
+    font-size: 1.5em;
+    width: 2.5em;
+    line-height: 2.5em;
     border-radius: 100%;
     background:#00000030;
     color: #00000080;
@@ -60,4 +61,29 @@
 
 .btns h3:hover {
     background: #ffffff50;
+}
+
+@media (orientation: landscape) and (max-width: Laptop) {
+    .prsHome {
+        font-size: 0.9rem;
+    }
+}
+
+@media (orientation: landscape) and (max-width: Tablet) {
+    .prsHome {
+        font-size: 0.7rem;
+    }
+}
+
+
+@media (orientation: portrait) and (max-width: Tablet) {
+    .prsHome {
+        font-size: 0.5rem;
+    }
+}
+
+@media (orientation: portrait) and (max-width: Mobile1) {
+    .prsHome {
+        font-size: 0.5rem;
+    }
 }

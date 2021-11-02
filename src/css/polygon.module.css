@@ -14,7 +14,7 @@
     position : absolute;
     top : 50%;
     left : 50%;
-    font-size : 4rem;
+    font-size : 4em;
     font-family: 'ColorsOfAutumn';
     font-weight: normal;
     transition: 0.4s;
@@ -31,11 +31,11 @@
 .txt2 {
     position : absolute;
     top : 50%;
-    left : Calc(50% - 4rem);
+    left : Calc(50% - 4em);
     transition: 0.4s;
     color : Mono1;
     opacity: TxtOpacity2;
-    font-size: 1.3rem;
+    font-size: 1.3em;
     font-weight: 200;
     text-align : center;
     font-style: italic;

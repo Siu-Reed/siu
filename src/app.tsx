@@ -2,11 +2,15 @@ import './app.module.css';
 import React, { memo } from 'react';
 import ThreeD from './components/threeD';
 
-const App: React.FC = memo(() => {
+interface Props {
+    me : React.ReactNode;
+}
+
+const App: React.FC<Props> = memo(({me}) => {
     console.log('app');
     return (
         <>
-            <ThreeD />
+            <ThreeD me={me}/>
         </>
     );
 });

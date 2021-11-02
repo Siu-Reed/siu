@@ -1,3 +1,6 @@
+import React from "react";
+import { Symbol } from "typescript";
+
 export interface Spec {
     side : number;
     width : number;
@@ -26,4 +29,7 @@ export interface ContentsValues {
     items: object;
 }
 
-export type SqrState = "standing" | "running" | "goal1In" | "goal2In";
+export interface MeInterface {
+    props: React.PropsWithChildren<React.ReactNode>;
+    $$typeof: symbol;
+}

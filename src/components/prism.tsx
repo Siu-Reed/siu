@@ -44,8 +44,8 @@ const Prism : React.FC<Props> = memo(({polygonClick}) => {
     }), [baseLength.b]);
 
     const prsHomeStyle = {
-        width : `${prsBase.width}rem`,
-        height : `${prsBase.height}rem`,
+        width : `${prsBase.width}em`,
+        height : `${prsBase.height}em`,
     }
 
     const plusAngle = useCallback((e:MouseEvent) => {

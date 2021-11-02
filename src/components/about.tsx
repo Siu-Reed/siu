@@ -1,7 +1,6 @@
 import React, { useEffect, useLayoutEffect, useRef, MouseEvent, useState, useMemo, useCallback } from 'react';
 import styles from '../css/about.module.css';
 import { WaveGroup } from '../visual/wave-group';
-import Me from './me';
 import Abilities from './abilities';
 import Skills from './skills';
 
@@ -9,9 +8,10 @@ interface Props {
     aboutOpen: () => void;
     aboutClose: () => void;
     aboutSwitch: boolean;
+    me : React.ReactNode;
 }
 
-const About:React.FC<Props> = ({aboutOpen, aboutClose, aboutSwitch}) => {
+const About:React.FC<Props> = ({aboutOpen, aboutClose, aboutSwitch, me}) => {
     console.log('about');
     const [page, setPage] = useState(1);
     const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -36,8 +36,6 @@ const About:React.FC<Props> = ({aboutOpen, aboutClose, aboutSwitch}) => {
     const waveGroup = useMemo(() =>
         (new WaveGroup(stageWidth, stageHeight, heights1)), [stageWidth, stageHeight, heights1]
     );
-
-    const aboutChildren = useMemo(() => [<Me key='me' />, <Abilities key='abilities' page={page} />,<Skills key='skills' />], [page]);
 
     const cBoxTransform = { transform : `translateX(${(page-1)*-100}%)` };
 
@@ -135,7 +133,7 @@ const About:React.FC<Props> = ({aboutOpen, aboutClose, aboutSwitch}) => {
         e.preventDefault();
         e.stopPropagation();
         const value = page + parseInt(e.currentTarget.dataset.value!);
-        (value!==0) && (value!==aboutChildren.length+1) && setPage(value);
+        (value!==0) && (value!==3+1) && setPage(value);
     }
 
     return (
@@ -144,7 +142,9 @@ const About:React.FC<Props> = ({aboutOpen, aboutClose, aboutSwitch}) => {
             <h2 className={`${styles.aboutMe} ${startStyle}`}>About Me</h2>
             <canvas className={styles.wave} ref={canvasRef} onClick={waveClick}/>
             <div className={`${styles.contentsBox} ${hiddenStyle}`} style={cBoxTransform}>
-                {aboutChildren}
+                {me}
+                <Abilities page={page} />
+                <Skills />
             </div>
             <button className={`${styles.btn} ${styles.close} ${hiddenStyle}`} onClick={closeClick}>
                 x

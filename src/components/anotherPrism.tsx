@@ -34,12 +34,12 @@ const AnotherPrism : React.FC = memo(() => {
     }), [baseLength.b]);
 
     const prsHomeStyle = {
-        width : `${prsBase.width}rem`,
-        height : `${prsBase.height}rem`,
+        width : `${prsBase.width}em`,
+        height : `${prsBase.height}em`,
     }
 
     const controllerStyle = {
-        transform: `translateX(-50%) rotateX(-90deg) translateY(-${spec.height+5}rem)`
+        transform: `translateX(-50%) rotateX(-90deg) translateY(-${spec.height+5}em)`
     }
 
     const sidePlus = useCallback(() => {

@@ -1,8 +1,8 @@
 @value Mono1, Mono5, TxtOpacity1, Acolor4, Acolor3, Bcolor3, Acolor1, Bcolor5 from './common/color.css';
 
 .abilities {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     padding: 0 2rem;
     display: flex;
     flex-flow: row nowrap;

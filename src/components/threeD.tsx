@@ -4,7 +4,11 @@ import styles from '../css/threeD.module.css';
 import Main from './main';
 import FloatingNav from './floatingNav';
 
-const ThreeD : React.FC = memo(() => {
+interface Props {
+    me : React.ReactNode;
+}
+
+const ThreeD : React.FC<Props> = memo(({me}) => {
     console.log('threeD');
     const [view, setView] = useState<'x'|'y'|'z'|'f'>('f');
     const [aboutSwitch, setAboutSwitch] = useState<boolean>(false);
@@ -44,7 +48,7 @@ const ThreeD : React.FC = memo(() => {
     return (
         <div className={`${styles.threeD} ${styleThreeD}`}>
             <div className={`${styles.screen} ${styleScreen}`}>
-                <Main polygonClick={polygonClick} aboutSwitch={aboutSwitch} aboutOpen={aboutOpen} aboutClose={aboutClose}/>
+                <Main polygonClick={polygonClick} aboutSwitch={aboutSwitch} aboutOpen={aboutOpen} aboutClose={aboutClose} me={me}/>
                 <Hidden xViewClick={xViewClick} zViewClick={zViewClick} aboutOpen={aboutOpen} aboutClose={aboutClose}/>
             </div>
             <FloatingNav view={view} aboutSwitch={aboutSwitch}/>
