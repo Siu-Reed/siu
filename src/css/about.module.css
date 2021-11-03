@@ -32,12 +32,21 @@
     z-index: 1;
     overflow: hidden;
 
-    
-    border: 0.2rem solid #ffffff20;
+    border: 0.125rem solid #ffffff20;
     padding: 0.3rem;
-    border-radius: 0.2rem 0.2rem 2rem 2rem;
+    border-radius: 0.2rem 0.2rem 1rem 1rem;
     border-top: none;
 }
+
+.default canvas {
+    border-radius: 0 0 0.8rem 0.8rem;
+}
+
+.click canvas {
+    border-radius: none;
+}
+
+
 .about:hover .aboutMe {
     top: 50%;
 }
@@ -49,6 +58,7 @@
 }
 .click {
     margin: 0 0 0 0;
+    width:max-content;
     width: 100vw;
     height: 100vh;
     cursor: default;
@@ -57,16 +67,6 @@
     border: none;
 }
 
-.click .wave {
-    border-radius: 0;
-}
-
-.wave {
-    width: 100%;
-    height: 100%;
-    opacity: 0.9;
-    border-radius: 0 0 1.7rem 1.7rem;
-}
 .aboutMe {
     position: absolute;
     font-size: 1.8rem;
@@ -80,7 +80,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
     height: 100vh;
 
     display: flex;

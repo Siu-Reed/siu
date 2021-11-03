@@ -13,11 +13,6 @@ const Portfolio : React.FC<Props> = memo(({polygonClick}) => {
     return (
         <div className={styles.portfolio}>
             <div className={styles.anotherCircle}>
-                <div className={styles.intro}>
-                    <h2>Front-End Engineer</h2>
-                    <br />
-                    <h2>With Design</h2>
-                </div>
                 <AnotherPrism />
             </div>
             <div className={styles.circle}>

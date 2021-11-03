@@ -1,25 +1,25 @@
 @value Mono1, Mono5, Bcolor5, Bcolor5, TxtOpacity1 from './common/color.css';
+@value Laptop, Tablet, Mobile1, Mobile2 from './common/size.css';
 
 .skills {
     width: 100vw;
     height: 100vh;
-    padding: 0 2rem;
 
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 }
 
-.h1 {
+.title {
+    position:absolute;
+    top: 1em;
     color: Bcolor5;
-    text-align: center;
     font-family: 'ColorsOfAutumn';
     font-weight: normal;
     text-shadow: rgba(0, 0, 0, 0.3) 0.03em 0.03em 0.03em;
-    font-size: 2rem;
-    font-weight: 600;
-    padding: 0.3em 0 0 0;
+
+    font-size: 3rem;
 }
 
 .contentsWrapper {
@@ -39,13 +39,12 @@
     align-items: center;
 }
 
-.title {
+.theme {
     font-family: 'Baloo Thambi 2', cursive;
-    font-size: 2.8rem;
+    width: 5em;
+    font-size: 2rem;
     font-weight: 500;
     text-shadow: rgba(0, 0, 0, 0.3) 0.1em 0.1em 0.3em;
-
-    width: 15rem;
     border-radius: 0.3em;
     color: Bcolor5;
     opacity: TxtOpacity1;
@@ -88,8 +87,8 @@
     background-position: top left;
 }
 .item:hover img {
-    max-width: 7em;
-    height: 6em;
+    max-width: 7rem;
+    height: 6rem;
 }
 .item:hover h3 {
     font-size: 3rem;
@@ -99,8 +98,8 @@
 
 .item img {
     display: block;
-    max-width: 5em;
-    height: 4em;
+    max-width: 5rem;
+    height: 4rem;
     opacity: 0.8;
     transition: 0.5s;
 }
@@ -114,4 +113,43 @@
     text-shadow: #00000050 0.1rem 0.1rem 0.1rem;
     transition: 0.5s;
     /* background: sienna; */
+}
+@media (max-width: 1440px) {
+    .items {
+        width: 65%;
+    }
+}
+@media (max-width: Laptop) {
+    .items {
+        width: 75%;
+    }
+}
+@media (max-width: Tablet) {
+    .category {
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .items {
+        height: 8rem;
+    }
+    .theme {
+        font-size: 1.5rem;
+        width: 7em;
+    }
+    .title {
+        top: 2em;
+        font-size: 2.5rem;
+    }
+}
+
+
+@media (max-width: Mobile1) {
+    .items {
+        width: 90%;
+    }
+    .item {
+        width: 7rem;
+        height: 7rem;
+    }
 }

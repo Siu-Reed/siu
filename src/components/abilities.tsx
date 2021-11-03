@@ -2,17 +2,13 @@ import React, { memo } from 'react';
 import styles from '../css/abilities.module.css';
 
 interface Props {
-    page : number;
+    abilitiesAni : boolean;
 }
 
-const Abilities:React.FC<Props> = memo(({page}) => {
+const Abilities:React.FC<Props> = memo(({abilitiesAni}) => {
     console.log('abilities');
     let animation;
-    if (page === 2) {
-        animation = styles.appear;
-    } else {
-        animation = styles.hidden;
-    }
+    (abilitiesAni)?(animation = styles.appear):(animation = styles.hidden);
     return (
         <div className={styles.abilities}>
             <h1 className={styles.title}>Abilities</h1>

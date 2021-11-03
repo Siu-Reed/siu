@@ -24,21 +24,6 @@
     margin: 6em 0 0 0;
 }
 
-.intro {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) translateZ(21em);
-}
-
-.intro h2 {
-    font-size: 3em;
-    font-family: 'LeagueScript';
-    font-weight: normal;
-    color: Acolor2;
-    transform: skewX(-10deg);
-}
-
 @media (orientation: landscape) and (max-width: Mobile1) {
     .anotherCircle { display: none;}
 }

@@ -12,9 +12,8 @@ const Me:React.FC = memo(() => {
     return (
         <div className={styles.me}>
             <h1 className={styles.title}>Siu Lee</h1>
-            <img className={styles.profilePic} src="./img/profile.png" alt="#" />
             <div className={styles.profileMeta}>
-                <div className={styles.profileBtn}>x</div>
+                <img className={styles.profilePic} src="./img/profile.png" alt="#" />
                 <ul className={styles.personalInfo}>
                     <li>
                         <h3>Name</h3>
@@ -43,6 +42,7 @@ const Me:React.FC = memo(() => {
                         <p>tldn960823@gmail.com</p>
                     </li>
                 </ul>
+            </div>
                 <div className={styles.aboutMe}>
                     <h3>About me</h3>
                     <div>
@@ -73,7 +73,6 @@ const Me:React.FC = memo(() => {
                         </pre>
                     </div>
                 </div>
-            </div>
         </div>
     );
 });
