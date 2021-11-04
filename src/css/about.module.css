@@ -96,7 +96,7 @@
 }
 .appear {
     pointer-events: inherit;
-    transition: 1.4s;
+    transition: 1s;
     opacity: 1;
 }
 

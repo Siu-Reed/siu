@@ -1,4 +1,4 @@
-@value Mono1, Mono5, TxtOpacity1, Acolor4, Acolor3, Bcolor3, Acolor1, Bcolor5 from './common/color.css';
+@value Mono1, Mono5, TxtOpacity1, Acolor4, Acolor3, Bcolor4, Acolor1, Bcolor5 from './common/color.css';
 @value Laptop, Tablet, Mobile1, Mobile2 from './common/size.css';
 
 .abilities {
@@ -73,14 +73,14 @@
 }
 
 .backEnd div {
-    background: Acolor3;
+    background: Bcolor5;
 }
 .backEnd .appear {
     height: 40vh;
 }
 
 .design div {
-    background: Bcolor3;
+    background: Bcolor4;
 }
 .design .appear {
     height: 70vh;

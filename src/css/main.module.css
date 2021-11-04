@@ -109,6 +109,7 @@
         width: 100vw;
         height: 40vh;
         top: 0;
+        justify-content: center;
     }
     .con2_x {
         width: 100vw;

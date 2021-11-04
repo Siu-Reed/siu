@@ -102,3 +102,10 @@
 .viewTrue div:hover a {
     color: Bcolor1;
 }
+
+@media (max-width: Mobile1) {
+    .header {
+        padding: 1rem 0;
+        width: 26rem;
+    }
+}
