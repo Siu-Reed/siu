@@ -1,4 +1,22 @@
 {
+    "Base" : {
+        "javascript" : {
+            "meta" : "JavaScript",
+            "src" : "./img/logo/javascript.svg"
+        },
+        "typescript" : {
+            "meta" : "TypeScript",
+            "src" : "./img/logo/typescript.svg"
+        },
+        "webpack" : {
+            "meta" : "Webpack",
+            "src" : "./img/logo/webpack.svg"
+        },
+        "git" : {
+            "meta" : "Git/GitHub",
+            "src" : "./img/logo/github.svg"
+        }
+    },
     "Front-End" : {
         "html" : {
             "meta" : "HTML",
@@ -8,17 +26,13 @@
             "meta" : "CSS",
             "src" : "./img/logo/css.svg"
         },
-        "javascript" : {
-            "meta" : "JavaScript",
-            "src" : "./img/logo/javascript.svg"
-        },
-        "typescript" : {
-            "meta" : "TypeScript",
-            "src" : "./img/logo/typescript.svg"
-        },
         "react" : {
-            "meta" : "React.js",
+            "meta" : "React",
             "src" : "./img/logo/reactjs.svg"
+        },
+        "reactnative" : {
+            "meta" : "React Native",
+            "src" : "./img/logo/reactnative.svg"
         },
         "three" : {
             "meta" : "Three.js",
@@ -52,10 +66,6 @@
             "meta" : "PhotoShop",
             "src" : "./img/logo/photoshop.svg"
         },
-        "lightroom" : {
-            "meta" : "lightRoom",
-            "src" : "./img/logo/lightroom.svg"
-        },
         "illstrator" : {
             "meta" : "Illstrator",
             "src" : "./img/logo/illustrator.svg"
@@ -63,12 +73,10 @@
         "premiere" : {
             "meta" : "Premiere",
             "src" : "./img/logo/premiere.svg"
-        }
-    },
-    "ETC" : {
-        "git" : {
-            "meta" : "Git/GitHub",
-            "src" : "./img/logo/github.svg"
+        },
+        "lightroom" : {
+            "meta" : "lightRoom",
+            "src" : "./img/logo/lightroom.svg"
         }
     }
 }
