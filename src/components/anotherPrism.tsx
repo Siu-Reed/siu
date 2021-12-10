@@ -7,12 +7,12 @@ import styles from '../css/anotherPrism.module.css';
 const AnotherPrism : React.FC = memo(() => {
     console.log('another prism');
 
-    const [side, setSide] = useState<number>(3);
+    const [side, setSide] = useState<number>(5);
     const spec:Spec = useMemo(() => Object({
         side: side,
         height: 20,
         width: 13*3/side,
-        color : ['linear-gradient(to right, #d6d1b1, #cec9aa)'],
+        color : ['linear-gradient(to right, #7e00ff, #6800d2)'],
     }), [side]);
 
     const rad = useMemo(() => Math.PI/180, []);

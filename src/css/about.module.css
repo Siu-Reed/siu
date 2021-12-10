@@ -1,24 +1,24 @@
-@value Bcolor5, Acolor2, Bcolor1, TxtOpacity2 from './common/color.css';
+@value Acolor5, Acolor2, Acolor1, TxtOpacity2 from './common/color.css';
 @value Laptop, Tablet, Mobile1, Mobile2 from './common/size.css';
 
 @keyframes arrowNotice {
     from {
         width: 3rem;
-        fill: Bcolor5;
+        fill: Acolor5;
     }
     to {
         width: 3.5rem;
-        fill: Bcolor1;
+        fill: Acolor1;
     }
 }
 
 @keyframes closeNotice {
     from {
-        color: Bcolor5;
+        color: Acolor5;
         font-size: 2rem;
     }
     to {
-        color: Bcolor1;
+        color: Acolor1;
         font-size: 2.5rem;
     }
 }
@@ -26,34 +26,18 @@
 .about {
     position: relative;
     transition: 0.8s;
-    background: linear-gradient(50deg, Acolor2 10%, #ffffff40 30%, Acolor2 40%, Acolor2 100%);
     display: flex;
     justify-content: center;
-    z-index: 1;
     overflow: hidden;
-
-    border: 0.125rem solid #ffffff20;
-    padding: 0.3rem;
-    border-radius: 0.2rem 0.2rem 1rem 1rem;
-    border-top: none;
 }
-
-.default canvas {
-    border-radius: 0 0 0.8rem 0.8rem;
-}
-
-.click canvas {
-    border-radius: none;
-}
-
 
 .about:hover .aboutMe {
     top: 50%;
 }
 .default {
     margin: 4em 0 0 0;
-    width: 12.5rem;
-    height: 18.75rem;
+    width: 100%;
+    height: 100%;
     cursor: pointer;
 }
 .click {
@@ -69,11 +53,11 @@
 
 .aboutMe {
     position: absolute;
-    font-size: 1.8rem;
+    font-size: 4rem;
     font-family: 'ColorsOfAutumn';
     font-weight: normal;
     top: 1rem;
-    color: Bcolor5;
+    color: Acolor5;
 }
 
 .contentsBox {
@@ -128,17 +112,17 @@
     font-size: 2rem;
     font-weight: bolder;
     transform: skewX(30deg);
-    color: Bcolor5;
+    color: Acolor5;
     user-select: none;
 }
 .close:hover {
-    color : Bcolor1;
+    color : Acolor1;
     font-size: 2.5rem;
 }
 
 .arrow {
     width: 3rem;
-    fill: Bcolor5;
+    fill: Acolor5;
 }
 .arrow:hover {
     width: 3.5rem;

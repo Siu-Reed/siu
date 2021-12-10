@@ -1,4 +1,4 @@
-@value Mono1, Mono5, Bcolor5, Bcolor5, TxtOpacity1 from './common/color.css';
+@value Mono1, Mono5, Acolor1, TxtOpacity1 from './common/color.css';
 @value Laptop, Tablet, Mobile1, Mobile2 from './common/size.css';
 
 .skills {
@@ -14,7 +14,7 @@
 .title {
     position:absolute;
     top: 1em;
-    color: Bcolor5;
+    color: Acolor1;
     font-family: 'ColorsOfAutumn';
     font-weight: normal;
     text-shadow: rgba(0, 0, 0, 0.3) 0.03em 0.03em 0.03em;
@@ -40,14 +40,12 @@
 }
 
 .theme {
-    font-family: 'Baloo Thambi 2', cursive;
     width: 5em;
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: 300;
     text-shadow: rgba(0, 0, 0, 0.3) 0.1em 0.1em 0.3em;
     border-radius: 0.3em;
-    color: Bcolor5;
-    opacity: TxtOpacity1;
+    color: #ffffffb0;
     text-align: center;
 }
 
@@ -105,11 +103,10 @@
 }
 
 .item h3 {
-    font-family: 'Baloo Thambi 2', cursive;
     font-weight: 400;
     font-size: 1rem;
     border-radius: 1em;
-    color: rgba(255, 255, 255, 0.5);
+    color: #ffffffa0;
     text-shadow: #00000050 0.1rem 0.1rem 0.1rem;
     transition: 0.5s;
     /* background: sienna; */

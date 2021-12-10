@@ -1,4 +1,4 @@
-@value Mono1, Mono5, Bcolor5, TxtOpacity1 from './common/color.css';
+@value Mono1, Mono5, Acolor1 from './common/color.css';
 @value Laptop, Tablet, Mobile1, Mobile2 from './common/size.css';
 
 .me {
@@ -16,7 +16,7 @@
 .title {
     position:absolute;
     top: 1em;
-    color: Bcolor5;
+    color: Acolor1;
     font-family: 'ColorsOfAutumn';
     font-weight: normal;
     text-shadow: rgba(0, 0, 0, 0.3) 0.03em 0.03em 0.03em;
@@ -38,7 +38,6 @@
 
 .personalInfo {
     color: Mono1;
-    opacity: TxtOpacity1;
 
     margin: 1rem 0 0 0;
     display: flex;
@@ -50,7 +49,6 @@
 .personalInfo h3 {
     margin: 0 0 0.3em 0.1em;
     font-size: 1.3rem;
-    font-family: 'Baloo Thambi 2', cursive;
     user-select: none;
 }
 
@@ -66,7 +64,6 @@
 .aboutMe {
     height: 40rem;
     color: Mono1;
-    opacity: TxtOpacity1;
 
     display: flex;
     flex-flow: column nowrap;
@@ -77,7 +74,6 @@
 
 .aboutMe h3 {
     font-size: 1.3em;
-    font-family: 'Baloo Thambi 2', cursive;
 }
 
 .aboutMe div {
@@ -124,7 +120,6 @@
         bottom: 0;
         right: 0;
         color: Mono1;
-        opacity: TxtOpacity1;
         text-align: right;
     
         margin: 2rem;

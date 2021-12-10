@@ -1,5 +1,4 @@
 import React from "react";
-import { Symbol } from "typescript";
 
 export interface Spec {
     side : number;
@@ -25,8 +24,15 @@ export interface PrsBase {
 }
 
 export interface ContentsValues {
-    category: string | number;
-    items: object;
+    name: string | number;
+    items: Items
+}
+
+export interface Items {
+    Browse: string,
+    Git: string,
+    Desc: string,
+    Stack: string
 }
 
 export interface MeInterface {

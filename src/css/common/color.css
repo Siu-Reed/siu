@@ -1,21 +1,23 @@
 /* eslint-disable */
 
-@value Acolor1: #647350;
-@value Acolor2: #879678;
-@value Acolor3: #d2dc96;
-@value Acolor4: #e1e6c3;
+@value Acolor1: #002e31;
+@value Acolor2: #004549;
+@value Acolor3: #005f65;
+@value Acolor4: #008a93;
 
-@value Bcolor1: #635f4a;
-@value Bcolor2: #78745f;
-@value Bcolor3: #8d8872;
-@value Bcolor4: #bbb598;
-@value Bcolor5: #e8e1be;
+@value Bcolor1: #1d003b;
+@value Bcolor2: #3b0078;
+@value Bcolor3: #5401a9;
+@value Bcolor4: #6800d2;
+@value Bcolor5: #7e00ff;
 
-@value Mono1: #202020;
-@value Mono2: #585858;
-@value Mono3: #909090;
-@value Mono4: #c8c8c8;
+@value Mono1: #000000;
+@value Mono2: #1a1a1a;
+@value Mono3: #323232;
+@value Mono4: #5e5f5f;
 @value Mono5: #ffffff;
 
 @value TxtOpacity1: 0.7;
 @value TxtOpacity2: 0.4;
+
+@value Line1: 2px solid #000000

@@ -48,10 +48,6 @@
             "meta" : "Express.js",
             "src" : "./img/logo/express.svg"
         },
-        "mongodb" : {
-            "meta" : "MongoDB",
-            "src" : "./img/logo/mongodb.svg"
-        },
         "mysql" : {
             "meta" : "MySQL",
             "src" : "./img/logo/mysql.svg"

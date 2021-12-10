@@ -144,7 +144,6 @@ const About:React.FC<Props> = memo(({aboutOpen, aboutClose, aboutSwitch, me}) =>
                 </svg>
             </button>)}
         </div>
-        {!aboutSwitch && <h3 className={styles.notice}>Click this ↑</h3>}
         </>
     );
 });

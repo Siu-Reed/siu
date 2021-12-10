@@ -1,40 +1,38 @@
 {
     "1" : {
-        "category" : "Design",
+        "name" : "SLIP",
         "items" : {
-            "주스 상세페이지" : "https://siujuice.netlify.app/",
-            "다른 페이지" : "www.ttt"
+            "Browse" : "https://slipsiu.netlify.app",
+            "Git" : "https://github.com/Siu-Reed/slip_client",
+            "Desc" : "무지향성의 채팅같은 미니멀 SNS",
+            "Stack" : "Node.js, Express, Socket.io, Mysql, Sequelize, Bcrypt, JWT, React, PostCSS, VanilaJS"
         }
     },
     "2" : {
-        "category" : "Front-End",
+        "name" : "Siutube",
         "items" : {
-            "ㅇㅅㅇ" : "www.eee",
-            "ㅎㅅㅎ" : "www.ttt",
-            "ㅈㅎㅈ" : "www.ttt"
+            "Browse" : "https://siutube.netlify.app",
+            "Git" : "https://github.com/Siu-Reed/youtube",
+            "Desc" : "좀 더 편리한 서칭과 분할시청 기능을 추가한 YOUTUBE",
+            "Stack" : "Youtube Api, React, CSS, Axios"
         }
     },
     "3" : {
-        "category" : "Back-End",
+        "name" : "Siu Juice",
         "items" : {
-            "ㅇㅅㅇ" : "www.eee",
-            "ㅎㅅㅎ" : "www.ttt",
-            "ㅈㅎㅈ" : "www.ttt",
-            "ㅎㅎㄱㅎ" : "www.ttt"
+            "Browse" : "https://siujuice.netlify.app",
+            "Git" : "https://github.com/Siu-Reed/siuJuice",
+            "Desc" : "3D적인 요소를 더한 제품 상세페이지",
+            "Stack" : "PhotoShop, Illustrator, HTML, CSS, Vanila JS"
         }
     },
     "4" : {
-        "category" : "Publishing",
+        "name" : "this page",
         "items" : {
-            "ㅇㅅㅇ" : "www.eee",
-            "ㅎㅎㅎㅅㅎ" : "www.ttt"
-        }
-    },
-    "5" : {
-        "category" : "Etc.",
-        "items" : {
-            "ㅇㅅㅇ" : "www.eee",
-            "ㅎㅅㅎ" : "www.ttt"
+            "Browse" : "*",
+            "Git" : "https://github.com/Siu-Reed/siu",
+            "Desc" : "현재 포트폴리오 페이지, 순수 자바스크립트 및 CSS로 3D 오브젝트 구현",
+            "Stack" : "PhotoShop, Illustrator, React, PostCSS, TypeScript"
         }
     }
 }

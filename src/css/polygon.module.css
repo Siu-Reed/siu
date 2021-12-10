@@ -1,4 +1,4 @@
-@value Acolor2, Mono1, Mono4, TxtOpacity2 from './common/color.css';
+@value Acolor1, Mono1, Mono4, TxtOpacity2 from './common/color.css';
 
 .cvsDiv {
     width: 100%;
@@ -18,8 +18,7 @@
     font-family: 'ColorsOfAutumn';
     font-weight: normal;
     transition: 0.4s;
-    color : Mono1;
-    opacity: TxtOpacity2;
+    color : Acolor1;
     text-align : center;
 }
 
@@ -33,8 +32,7 @@
     top : 50%;
     left : Calc(50% - 4em);
     transition: 0.4s;
-    color : Mono1;
-    opacity: TxtOpacity2;
+    color : Acolor1;
     font-size: 1.3em;
     font-weight: 200;
     text-align : center;

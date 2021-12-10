@@ -1,4 +1,4 @@
-@value Mono1, Mono5, TxtOpacity1, Acolor4, Acolor3, Bcolor4, Acolor1, Bcolor5 from './common/color.css';
+@value Line1, Mono1, Mono5, TxtOpacity1, Acolor4, Acolor3, Acolor2, Acolor1 from './common/color.css';
 @value Laptop, Tablet, Mobile1, Mobile2 from './common/size.css';
 
 .abilities {
@@ -13,7 +13,7 @@
 .title {
     position:absolute;
     top: 1em;
-    color: Bcolor5;
+    color: Acolor1;
     font-family: 'ColorsOfAutumn';
     font-weight: normal;
     text-shadow: rgba(0, 0, 0, 0.3) 0.03em 0.03em 0.03em;
@@ -43,21 +43,21 @@
 .graph li h2 {
     line-height: 5vh;
     font-size: 1.3rem;
-    font-family: 'Baloo Thambi 2', cursive;
-    font-weight: normal;
+    font-weight: 100;
     width: 7em;
     text-align: center;
     border-radius: 1em 1em 0 0;
-    background: Acolor1;
     box-shadow: 0.1em 0em 0.1em rgba(0, 0, 0, 0.2);
-    color: Bcolor5;
+    color: #ffffff;
 }
 
 .graph li div {
     width: 35%;
     transition: 1.5s;
-    border-radius: 1em 1em 0 0;
+    border: Line1;
+    border-bottom: none;
     box-shadow: 0.3em 0em 0.5em rgba(0, 0, 0, 0.2);
+    background: #ffffff;
     overflow: hidden;
 }
 
@@ -65,22 +65,22 @@
     height: 0;
 }
 
-.frontEnd div {
+.frontEnd h2 {
     background: Acolor4;
 }
 .frontEnd .appear {
     height: 80vh;
 }
 
-.backEnd div {
-    background: Bcolor5;
+.backEnd h2 {
+    background: Acolor3;
 }
 .backEnd .appear {
     height: 40vh;
 }
 
-.design div {
-    background: Bcolor4;
+.design h2 {
+    background: Acolor2;
 }
 .design .appear {
     height: 70vh;
@@ -101,14 +101,13 @@
     width: 27em;
     padding: 0.5em 1em 1.3em 1em;
     border-radius: 0.5em;
-    background: rgba(256, 256, 256, 0.5);
+    background: rgba(256, 256, 256, 0.8);
     box-shadow: rgba(0, 0, 0, 0.2) 0.2em 0.2em 0.4em;
 }
 
 .meta div h2 {
     margin: 0 0 0.1em 0.3em;
-    opacity: TxtOpacity1;
-    font-family: 'Baloo Thambi 2', cursive;
+    font-size: 1.3rem;
 }
 
 .meta div pre {

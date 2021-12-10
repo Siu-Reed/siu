@@ -1,10 +1,10 @@
-@value Bcolor1, Bcolor2, Bcolor3, Bcolor4, Bcolor5, Acolor1, Acolor2 from './common/color.css';
+@value Bcolor1, Bcolor2, Bcolor3, Bcolor4, Bcolor5, Acolor1, Acolor2, Mono2 from './common/color.css';
 
 .hidden {
     width: 100vw;
     height: 100vh;
     position: relative;
-    background: Bcolor4;
+    background: Mono2;
     box-shadow: #ffffff60 0 0 5rem;
     transform: rotateX(-90deg) translateZ(Calc(-100vh*3/2)) translateY(Calc(-100vh/2));
 }
@@ -17,15 +17,15 @@
     border-radius: 0 0 100% 0;
     text-align: left;
     cursor: pointer;
-    background: Bcolor5;
-    color: Bcolor3;
+    background: Bcolor4;
+    color: Bcolor1;
     transition: 0.5s;
     padding: 1rem;
     z-index: 2;
 }
 
 .resetBtn:hover {
-    background: Bcolor1;
+    background: Bcolor5;
     width: 12rem;
     height: 12rem;
 }
@@ -43,10 +43,9 @@
 
 .meta h1 {
     font-family: 'LeagueScript';
-    /* font-weight: normal; */
     font-size: 3rem;
     padding: 1em 0;
-    color: Bcolor1;
+    color: Bcolor5;
 }
 .meta h3 {
     font-size: 1.5rem;
@@ -57,15 +56,15 @@
     margin-top: 1em;
     padding: 1.5em 1em;
     border-radius: 100%;
-    background: Bcolor3;
-    color: Bcolor5;
+    background: Bcolor2;
+    color: #ffffff;
     transition: 0.3s;
     cursor: pointer;
 }
 
 .meta div:hover {
     background: Bcolor5;
-    color: Bcolor3;
+    color: Bcolor1;
 }
 
 .appear {

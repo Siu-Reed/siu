@@ -22,7 +22,8 @@ const Squares:React.FC<Props> = memo(({spec, baseAngle, baseLength, prsBase, con
             height : `${spec.height}em`,
             left : `${(prsBase.width - spec.width)/2}em`,
             top : `${(prsBase.height - spec.height)/2}em`,
-            background : spec.color[i%3],
+            border : `2px solid ${spec.color[i%4]}`,
+            background : `linear-gradient(to bottom, ${spec.color[i%4]} 0%, #000000 30%, #000000 100%`,
             transform : `
                 rotateZ(${baseAngle.x * i}deg)
                 translateY(${spec.height/2 + baseLength.b}em)
@@ -32,25 +33,28 @@ const Squares:React.FC<Props> = memo(({spec, baseAngle, baseLength, prsBase, con
             `,
         }
 
-        const itemsKeys = Object.keys(contentsValues[i].items);
-        const itemsValues = Object.values(contentsValues[i].items);
-
-        const items = itemsKeys.map((key, index) =>
-            <li key={key} className={styles.li}>
-                <a href={itemsValues[index]} target="_new">{key}</a>
-            </li>
-        );
+        const items = contentsValues[i].items;
 
         sqrs[i] = (
         <div className={styles.sqr} style={sqrStyle} key={contentsKeys[i]}>
             <h3 className={styles.h3}>
                 # 0{contentsKeys[i]}
             </h3>
-            <h2 className={styles.h2}>
-                {contentsValues[i].category}
-            </h2>
+            <a className={styles.browse} href={items.Browse} target="_new">
+                {contentsValues[i].name}
+            </a>
             <ul className={styles.ul}>
-                {items}
+                <li className={styles.li}>
+                    <h3>Description</h3>
+                    <p>{items.Desc}</p>
+                </li>
+                <li className={styles.li}>
+                    <h3>Stack</h3>
+                    <p>{items.Stack}</p>
+                </li>
+                <li className={styles.li}>
+                    <a href={items.Git} target="_new"><h3>Git</h3></a>
+                </li>
             </ul>
         </div>
         )

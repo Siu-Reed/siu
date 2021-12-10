@@ -1,4 +1,4 @@
-@value Bcolor1, Acolor1, Acolor2 from './common/color.css';
+@value Line1, Bcolor1, Acolor1, Acolor2 from './common/color.css';
 @value Laptop, Tablet, Mobile1, Mobile2 from './common/size.css';
 
 .header {
@@ -6,16 +6,34 @@
     z-index: 3;
     top: 0;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: center;
-    width: 27rem;
-    padding: 1.5rem 0;
-    gap: 1rem;
     transition: 0.5s;
 }
-.header div {
-    width: 7rem;
-    height: 3.5rem;
+
+.aboutFalse {
+    right: 0;
+    transform: translateX(0%);
+}
+
+.aboutTrue {
+    right: 100%;
+    transform: translateX(100%);
+}
+
+.viewFalse {
+}
+
+.viewTrue {
+    flex-flow: column;
+    transition: 0.5s;
+    background: #000000;
+}
+
+.btn {
+    width: 9rem;
+    height: 4rem;
+    border-left: Line1;
     position: relative;
     display: flex;
     flex-flow: row nowrap;
@@ -24,15 +42,12 @@
     cursor: pointer;
 }
 
-.header svg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transition: 1s;
+.aboutTrue .btn {
+    border-left: none;
 }
 
-.header svg path {
-    transition: 1s;
+.viewTrue .btn a {
+    color : #ffffff;
 }
 
 .header a {
@@ -47,65 +62,6 @@
     transition: 1s;
 }
 
-.viewFalse div:hover path {
-    fill: Bcolor1;
-}
-
-.header div:hover a {
+.btn:hover a {
     color: #ffffff;
-}
-
-.aboutFalse {
-    right: 0;
-    transform: translateX(0%);
-}
-
-.aboutFalse path {
-    stroke: Bcolor1;
-}
-
-.aboutTrue {
-    right: 100%;
-    transform: translateX(100%);
-}
-
-.aboutTrue path {
-    stroke : #ffffff;
-}
-
-.viewTrue {
-    background : Bcolor1;
-    flex-flow: row wrap;
-    width: 10rem;
-    margin: 2rem 0 0 0;
-    border-radius: 1rem 0 0 1rem;
-    transition: 0.5s;
-}
-
-.viewTrue path {
-    stroke : #ffffff;
-    flex-flow: row wrap;
-    width: 10rem;
-    margin: 2rem 0 0 0;
-    border-radius: 1rem 0 0 1rem;
-    transition: 0.5s;
-}
-
-.viewTrue div:hover path {
-    fill: #ffffff;
-}
-
-.viewTrue a {
-    color: #ffffff;
-}
-
-.viewTrue div:hover a {
-    color: Bcolor1;
-}
-
-@media (max-width: Mobile1) {
-    .header {
-        padding: 1rem 0;
-        width: 26rem;
-    }
 }
