@@ -50,15 +50,18 @@
     color : #ffffff;
 }
 
+.aboutTrue .btn a {
+    color: #ffffff;
+}
+
+
 .header a {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     text-align: center;
     border-radius: 0.2rem;
-    color: #00000080;
-    font-family: 'LeagueScript';
-    font-weight: bolder;
+    color: #000000;
+    font-weight: 500;
     z-index: 4;
-    transform: skewX(20deg);
     transition: 1s;
 }
 

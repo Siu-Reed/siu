@@ -1,4 +1,4 @@
-@value Mono1, Mono5, Acolor1 from './common/color.css';
+@value Mono5, Acolor1 from './common/color.css';
 @value Laptop, Tablet, Mobile1, Mobile2 from './common/size.css';
 
 .me {
@@ -16,10 +16,10 @@
 .title {
     position:absolute;
     top: 1em;
-    color: Acolor1;
+    color: #ffffff;
     font-family: 'ColorsOfAutumn';
     font-weight: normal;
-    text-shadow: rgba(0, 0, 0, 0.3) 0.03em 0.03em 0.03em;
+    text-shadow: #8dffc8 0.03em 0.03em 0.03em;
 
     font-size: 3rem;
 }
@@ -37,7 +37,7 @@
 }
 
 .personalInfo {
-    color: Mono1;
+    color: #000000;
 
     margin: 1rem 0 0 0;
     display: flex;
@@ -63,7 +63,7 @@
 
 .aboutMe {
     height: 40rem;
-    color: Mono1;
+    color: #000000;
 
     display: flex;
     flex-flow: column nowrap;
@@ -119,7 +119,7 @@
         position: absolute;
         bottom: 0;
         right: 0;
-        color: Mono1;
+        color: #000000;
         text-align: right;
     
         margin: 2rem;

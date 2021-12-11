@@ -42,14 +42,6 @@
     fill: Bcolor1;
 }
 
-.notice {
-    position: absolute;
-    bottom: -1.5em;
-    font-family: 'Times New Roman', Times, serif;
-    color: Mono1;
-    opacity: TxtOpacity2;
-}
-
 @media (orientation: landscape) and (max-width: Laptop) {
     .prsHome {
         font-size: 0.8rem;

@@ -23,7 +23,7 @@ const Squares:React.FC<Props> = memo(({spec, baseAngle, baseLength, prsBase, con
             left : `${(prsBase.width - spec.width)/2}em`,
             top : `${(prsBase.height - spec.height)/2}em`,
             border : `2px solid ${spec.color[i%4]}`,
-            background : `linear-gradient(to bottom, ${spec.color[i%4]} 0%, #000000 30%, #000000 100%`,
+            background : `linear-gradient(to bottom, ${spec.color[i%4]} 0%, #ffffff 30%, #ffffff 100%`,
             transform : `
                 rotateZ(${baseAngle.x * i}deg)
                 translateY(${spec.height/2 + baseLength.b}em)

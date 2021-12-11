@@ -1,4 +1,4 @@
-@value Line1, Bcolor5, Bcolor1, Acolor2 from './common/color.css';
+@value Line1, Bcolor5, Bcolor1, Acolor2, Ccolor1 from './common/color.css';
 @value Laptop, Tablet, Mobile1, Mobile2 from './common/size.css';
 
 .portfolio {
@@ -25,6 +25,13 @@
 .row {
     height: 100%;
 }
+.row0 {
+    width: Calc(24rem + 4px);
+    border-left: Line1;
+    background: Bcolor1;
+    float: right;
+    margin-right: Calc(27rem - 4px);
+}
 .row1 {
     flex: 1 1 0;
     
@@ -33,7 +40,10 @@
 }
 .row2 {
     flex: 0 0 Calc(27rem - 2px);
-    border-left: Line1;
+    border-top: 2px solid #000000;
+    border-left: 4px solid #000000;
+    background: url('./dune.jpg') no-repeat;
+    background-size: cover;
 }
 .row3 {
     flex: auto;
@@ -50,7 +60,7 @@
     width: 100%;
     height: Calc((100% - 24rem + 4px)/2 - 2px);
     border-bottom: Line1;
-    background:#7e00ff;
+    background:Ccolor1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,6 +71,38 @@
     height: Calc(24rem + 4px);
     border-top: Line1;
     border-bottom: Line1;
+}
+
+.intro {
+    margin: 3rem;
+}
+.name {
+    font-size: 3rem;
+    font-family: 'Megrim';
+    margin: 0 0 0.7rem 0;
+}
+.occupation {
+    font-size: 2.5rem;
+    font-weight: 100;
+    padding: 0.1rem 0;
+}
+.occupation:last-child::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1rem;
+    border-bottom: Line1;
+}
+.clickThis {
+    position: absolute;
+    font-size: 2em;
+    font-weight: 100;
+    bottom: -2em;
+    left: 1em;
+}
+.script {
+    font-weight: 300;
+    padding: 0 3rem;
 }
 /* 
 @media (orientation: landscape) and (max-width: Mobile1) {

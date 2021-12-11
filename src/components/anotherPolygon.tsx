@@ -29,7 +29,7 @@ const AnotherPolygon: React.FC<Props> = memo(({spec, baseAngle, baseLength}) => 
         ctx!.scale(ratio, ratio);
         if (!ctx) return;
         ctx.save();
-        ctx.fillStyle = '#7e00ff';
+        ctx.fillStyle = '#aa0004';
         ctx.beginPath();
         
         ctx.translate(baseLength.c*16, baseLength.c*16);

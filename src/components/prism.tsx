@@ -73,7 +73,6 @@ const Prism : React.FC<Props> = memo(({polygonClick}) => {
             <div className={styles.prism} style={{transform :`rotateZ(${angle}deg)`}}>
                 <Squares spec={spec} baseAngle={baseAngle} baseLength={baseLength} prsBase={prsBase} contentsKeys={contentsKeys} contentsValues={contentsValues}/>
                 <Polygon spec={spec} baseAngle={baseAngle} baseLength={baseLength} polygonClick={polygonClick}/>
-                <h3 className={styles.notice}>Click this ↑</h3>
             </div>
         </div>
     );

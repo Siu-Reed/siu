@@ -24,14 +24,14 @@
     position: absolute;
     left: 0;
     height: 100vh;
-    background-color: #ffffff;
+    background-color: Acolor1;
     border: Line1;
 
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
 
-    transition:ease 0.8s;
+    transition:0.8s;
 }
 .con2 {
     position: absolute;
@@ -43,7 +43,7 @@
     justify-content: center;
     align-items: center; */
     
-    transition:ease 0.8s;
+    transition:0.8s;
 }
 .con1_x {
     width: 25vw;
@@ -72,7 +72,7 @@
     line-height: 2rem;
     font-weight: 300;
     color: #000000;
-    transition: 0.5s;
+    transition: 0.8s;
 }
 .hidden {
     opacity: 0;

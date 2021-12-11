@@ -12,7 +12,7 @@ const AnotherPrism : React.FC = memo(() => {
         side: side,
         height: 20,
         width: 13*3/side,
-        color : ['linear-gradient(to right, #7e00ff, #6800d2)'],
+        color : ['linear-gradient(to right, #d80005, #aa0004)'],
     }), [side]);
 
     const rad = useMemo(() => Math.PI/180, []);

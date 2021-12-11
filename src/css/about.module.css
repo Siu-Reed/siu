@@ -33,6 +33,7 @@
 
 .about:hover .aboutMe {
     top: 50%;
+    color: #000000
 }
 .default {
     margin: 4em 0 0 0;
@@ -54,10 +55,17 @@
 .aboutMe {
     position: absolute;
     font-size: 4rem;
-    font-family: 'ColorsOfAutumn';
+    font-family: 'Megrim';
     font-weight: normal;
     top: 1rem;
     color: Acolor5;
+}
+.clickHere {
+    position: absolute;
+    font-size: 2rem;
+    font-weight: 100;
+    top: 6rem;
+    color: #ffffff50;
 }
 
 .contentsBox {
@@ -70,7 +78,7 @@
     flex-flow: column wrap;
     
     opacity: 0;
-    transition: 1s;
+    transition: 0.8s;
 }
 
 .disappear {
@@ -80,7 +88,7 @@
 }
 .appear {
     pointer-events: inherit;
-    transition: 1s;
+    transition: 0.8s;
     opacity: 1;
 }
 
@@ -112,21 +120,21 @@
     font-size: 2rem;
     font-weight: bolder;
     transform: skewX(30deg);
-    color: Acolor5;
+    color: #ffffff;
     user-select: none;
 }
 .close:hover {
-    color : Acolor1;
+    color : #000000;
     font-size: 2.5rem;
 }
 
 .arrow {
     width: 3rem;
-    fill: Acolor5;
+    fill: #ffffff;
 }
 .arrow:hover {
     width: 3.5rem;
-    fill: Acolor2;
+    fill: #000000;
 }
 .left {
     position: absolute;

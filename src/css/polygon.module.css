@@ -1,4 +1,4 @@
-@value Acolor1, Mono1, Mono4, TxtOpacity2 from './common/color.css';
+@value Bcolor4, Mono1, Mono4, TxtOpacity2 from './common/color.css';
 
 .cvsDiv {
     width: 100%;
@@ -14,17 +14,17 @@
     position : absolute;
     top : 50%;
     left : 50%;
-    font-size : 4em;
-    font-family: 'ColorsOfAutumn';
+    font-size : 4rem;
+    font-family: 'Megrim';
     font-weight: normal;
     transition: 0.4s;
-    color : Acolor1;
+    color : Bcolor4;
     text-align : center;
 }
 
 .cvsDiv:hover .txt, 
 .cvsDiv:hover .txt2  {
-    color: #ffffff;
+    color: #000000;
 }
 
 .txt2 {
@@ -32,7 +32,7 @@
     top : 50%;
     left : Calc(50% - 4em);
     transition: 0.4s;
-    color : Acolor1;
+    color : Bcolor4;
     font-size: 1.3em;
     font-weight: 200;
     text-align : center;

@@ -20,7 +20,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-weight: 100;
+    font-weight: 500;
     width: 8rem;
     height: 8rem;
     border: 0.5rem solid #ffffff;
@@ -45,21 +45,25 @@
 .li {
     margin: 0 0 2em 0;
     text-align: center;
-    color: #ffffff;
+    color: #000000;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
 }
+.li h3 {
+    font-weight: 500;
+}
 
 .li p {
     padding: 0.3rem 3rem 0 3rem;
+    font-weight: 300;
 }
 
 .li a {
     text-align: center;
     text-decoration: none;
-    color: #ffffff;
+    color: #000000;
 }
 
 .li::before {
@@ -67,5 +71,5 @@
     display: block;
     width: 1rem;
     height: 0.2rem;
-    border-top: 1px solid #ffffff;
+    border-top: 1px solid #000000;
 }

@@ -4,7 +4,7 @@
     width: 100vw;
     height: 100vh;
     position: relative;
-    background: Mono2;
+    background: #ffffff;
     box-shadow: #ffffff60 0 0 5rem;
     transform: rotateX(-90deg) translateZ(Calc(-100vh*3/2)) translateY(Calc(-100vh/2));
 }

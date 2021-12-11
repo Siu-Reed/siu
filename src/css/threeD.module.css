@@ -3,7 +3,7 @@
 .threeD {
     width: 100vw;
     height: 100vh;
-    background: radial-gradient(Bcolor5, Bcolor1, #413f30);
+    background: #000000;
     overflow: hidden;
 }
 .flat {

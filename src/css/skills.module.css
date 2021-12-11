@@ -1,4 +1,3 @@
-@value Mono1, Mono5, Acolor1, TxtOpacity1 from './common/color.css';
 @value Laptop, Tablet, Mobile1, Mobile2 from './common/size.css';
 
 .skills {
@@ -14,10 +13,10 @@
 .title {
     position:absolute;
     top: 1em;
-    color: Acolor1;
+    color: #ffffff;
     font-family: 'ColorsOfAutumn';
     font-weight: normal;
-    text-shadow: rgba(0, 0, 0, 0.3) 0.03em 0.03em 0.03em;
+    text-shadow: #8dffc8 0.03em 0.03em 0.03em;
 
     font-size: 3rem;
 }
