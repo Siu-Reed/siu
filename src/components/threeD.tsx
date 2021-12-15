@@ -6,35 +6,41 @@ import FloatingNav from './floatingNav';
 
 interface Props {
     me : React.ReactNode;
+    writeSurveyData : (resultId:number, tiger:number, retire:number, it:boolean, impression:string, why:string) => void;
 }
 
-const ThreeD : React.FC<Props> = memo(({me}) => {
+const ThreeD : React.FC<Props> = memo(({me, writeSurveyData}) => {
     console.log('threeD');
     const [view, setView] = useState<'x'|'y'|'z'|'f'>('f');
     const [aboutSwitch, setAboutSwitch] = useState<boolean>(false);
 
-    let styleThreeD;
-    let styleScreen;
+    let styleThreeD:string;
+    let styleScreen:string;
+    let zBtnVisible:boolean;
     switch (view) {
         case 'f' : {
             styleThreeD = styles.flat;
             styleScreen = styles.screenX;
-            break
+            zBtnVisible = true;
+            break;
         }
         case 'x' : {
             styleThreeD = styles.live;
             styleScreen = styles.screenX;
-            break
+            zBtnVisible = true;
+            break;
         }
         case 'y' : {
             styleThreeD = styles.live;
             styleScreen = styles.screenY;
-            break
+            zBtnVisible = true;
+            break;
         }
         case 'z' : {
             styleThreeD = styles.live;
             styleScreen = styles.screenZ;
-            break
+            zBtnVisible = false;
+            break;
         }
     }
 
@@ -49,7 +55,7 @@ const ThreeD : React.FC<Props> = memo(({me}) => {
         <div className={`${styles.threeD} ${styleThreeD}`}>
             <div className={`${styles.screen} ${styleScreen}`}>
                 <Main polygonClick={polygonClick} aboutSwitch={aboutSwitch} aboutOpen={aboutOpen} aboutClose={aboutClose} me={me}/>
-                <Hidden xViewClick={xViewClick} zViewClick={zViewClick} aboutOpen={aboutOpen} aboutClose={aboutClose}/>
+                <Hidden xViewClick={xViewClick} zViewClick={zViewClick} aboutOpen={aboutOpen} aboutClose={aboutClose} zBtnVisible={zBtnVisible} writeSurveyData={writeSurveyData}/>
             </div>
             <FloatingNav view={view} aboutSwitch={aboutSwitch}/>
         </div>

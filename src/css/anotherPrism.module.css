@@ -1,4 +1,4 @@
-@value Mono1, Acolor2, Bcolor5, Bcolor1, TxtOpacity2 from './common/color.css';
+@value Mono1, Acolor2, Bcolor5, Bcolor1, TxtOpacity2, Ccolor1 from './common/color.css';
 @value Laptop, Tablet, Mobile1, Mobile2 from './common/size.css';
 
 .prsHome {
@@ -26,9 +26,9 @@
 }
 
 .heights {
-    color: #000000;
+    color: #ffffff;
     padding: 0.5em;
-    background: Bcolor5;
+    background: Ccolor1;
     border-radius: 1em 1em 0 0;
     font-weight: 300;
 }
@@ -60,7 +60,7 @@
 }
 
 .btns h3:hover {
-    background: #ffffff50;
+    background: Ccolor1;
 }
 
 @media (orientation: landscape) and (max-width: Laptop) {

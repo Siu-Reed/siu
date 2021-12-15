@@ -1,66 +1,43 @@
 @value Line1, Acolor1, Acolor2, Acolor4, Bcolor1, Bcolor2, Bcolor5 from './common/color.css';
 @value Laptop, Tablet, Mobile1, Mobile2 from './common/size.css';
 
-.lineBG {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-}
-
-.lineBG path {
-    stroke: Acolor2;
-    position: absolute;
-}
 
 .main {
-    position: relative;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background: #ffffff;
 }
 
-.con1 {
+.con {
     position: absolute;
-    left: 0;
-    height: 100vh;
-    background-color: Acolor1;
-    border: Line1;
-
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-
+    height: Calc(100vh - 3rem);
     transition:0.8s;
+}
+.con1 {
+    border: Line1;
 }
 .con2 {
-    position: absolute;
-    right: 0;
-    height: 100vh;
     border: Line1;
-
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    
-    transition:0.8s;
 }
-.con1_x {
+
+.con1_aboutFalse {
+    left: 0;
     width: 25vw;
 }
-.con2_x {
+.con2_aboutFalse {
+    right: 0;
     width: 75vw;
-    opacity: 1;
 }
 
-.con1_y {
+.con1_aboutTrue {
     width: 100vw;
+    border: none;
 }
-.con2_y {
+.con2_aboutTrue {
     transform: translateX(200vw);
 }
 
-.desc {
+.footer {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -69,11 +46,11 @@
     border: Line1;
     text-align: center;
     font-size: 0.8rem;
-    line-height: 2rem;
     font-weight: 300;
     color: #000000;
     transition: 0.8s;
 }
+
 .hidden {
     opacity: 0;
 }

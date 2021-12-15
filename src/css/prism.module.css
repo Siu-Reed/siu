@@ -1,4 +1,4 @@
-@value Mono1, Acolor2, Bcolor5, Bcolor1, TxtOpacity2 from './common/color.css';
+@value Mono1, Acolor2, Bcolor4, Bcolor1, TxtOpacity2 from './common/color.css';
 @value Laptop, Tablet, Mobile1, Mobile2 from './common/size.css';
 
 .prsHome {
@@ -23,7 +23,7 @@
     cursor: pointer;
     border: none;
     background: none;
-    fill: Bcolor5;
+    fill: Bcolor4;
 }
 
 .left {

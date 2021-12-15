@@ -32,6 +32,7 @@
     text-decoration: none;
     font-family: "Noto Sans KR", sans-serif;
     transform-style: inherit;
+    user-select: none;
 }
 
 html {

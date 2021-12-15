@@ -17,27 +17,26 @@ const Main:React.FC<Props> = memo(({polygonClick, aboutSwitch, aboutOpen, aboutC
     let con2Style;
     let visiblity;
     if (!aboutSwitch) {
-        con1Style = styles.con1_x;
-        con2Style =  styles.con2_x;
+        con1Style = styles.con1_aboutFalse;
+        con2Style =  styles.con2_aboutFalse;
         visiblity = styles.visible;
     } else {
-        con1Style = styles.con1_y;
-        con2Style =  styles.con2_y;
+        con1Style = styles.con1_aboutTrue;
+        con2Style =  styles.con2_aboutTrue;
         visiblity = styles.hidden;    
     }
 
     return (
         <div className={styles.main}>
-            <div className={`${styles.con1} ${con1Style}`}>
+            <div className={`${styles.con} ${styles.con1} ${con1Style}`}>
                 <About aboutOpen={aboutOpen} aboutClose={aboutClose} aboutSwitch={aboutSwitch} me={me}/>
             </div>
-            <div className={`${styles.con2} ${con2Style}`}>
-                {/* <img className={styles.lineBG} src="./img/line_bg.svg" alt="mountain" /> */}
+            <div className={`${styles.con} ${styles.con2} ${con2Style}`}>
                 <Portfolio polygonClick={polygonClick}/>
             </div>
-            <div className={`${styles.desc} ${visiblity}`}>
+            <footer className={`${styles.footer} ${visiblity}`}>
                 Copyright ⓒ 2021 by Siu Lee. All page contents are properties of Siu Lee.
-            </div>
+            </footer>
         </div>
     );
 });

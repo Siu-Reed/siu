@@ -54,7 +54,6 @@ const Abilities:React.FC<Props> = memo(({abilitiesAni}) => {
                     <h2>Design</h2>
                     <pre>
                         &nbsp;평소 디자인에 관심이 많아<br/>
-                        여러 툴들을 틈틈히 공부하고,<br/>
                         다양한 디자인 사료들을 보면서<br/>
                         어떻게 서비스에 적용하여<br/>
                         좋은 사용자 경험을 제공할 지,<br/>
