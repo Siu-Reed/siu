@@ -21,14 +21,23 @@
     align-items: center;
     text-align: center;
     font-weight: 500;
-    width: 8rem;
-    height: 8rem;
+    width: 9rem;
+    height: 9rem;
     border: 0.5rem solid #ffffff;
     background: Bcolor2;
     color: #ffffff;
     margin-bottom: 1.3em;
     font-size: 1.6rem;
     transition: 0.3s;
+}
+
+.browse::after {
+    content: 'Click this';
+    position: absolute;
+    bottom: 1.5rem;
+    color:#00000050;
+    font-weight: 500;
+    font-size: 0.9rem;
 }
 
 .browse:hover {

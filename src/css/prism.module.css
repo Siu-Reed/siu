@@ -47,13 +47,11 @@
         font-size: 0.8rem;
     }
 }
-
 @media (orientation: landscape) and (max-width: Tablet) {
     .prsHome {
         font-size: 0.7rem;
     }
 }
-
 @media (orientation: landscape) and (max-width: Mobile2) {
     .prsHome {
         font-size: 0.6rem;
@@ -65,13 +63,11 @@
         font-size: 0.8rem;
     }
 }
-
 @media (orientation: portrait) and (max-width: Mobile1) {
     .prsHome {
         font-size: 0.9rem;
     }
 }
-
 @media (orientation: portrait) and (max-width: Mobile2) {
     .prsHome {
         font-size: 0.9rem;

@@ -37,7 +37,7 @@
 }
 
 .personalInfo {
-    color: #000000;
+    color: #ffffff;
 
     margin: 1rem 0 0 0;
     display: flex;
@@ -63,7 +63,7 @@
 
 .aboutMe {
     height: 40rem;
-    color: #000000;
+    color: #ffffff;
 
     display: flex;
     flex-flow: column nowrap;
@@ -77,12 +77,17 @@
 }
 
 .aboutMe div {
-    height: 100%;
+    height: auto;
+    padding: 1rem;
+    border-radius: 1rem;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     gap: 1.5em;
     font-weight: 500;
+    background: rgba(256, 256, 256, 0.8);
+    box-shadow: rgba(0, 0, 0, 0.2) 0.2em 0.2em 0.4em;
+    color: #000000c0;
 }
 
 
@@ -119,7 +124,7 @@
         position: absolute;
         bottom: 0;
         right: 0;
-        color: #000000;
+        color: #ffffff;
         text-align: right;
     
         margin: 2rem;

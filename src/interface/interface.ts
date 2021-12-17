@@ -1,5 +1,3 @@
-import React from "react";
-
 export interface Spec {
     side : number;
     width : number;
@@ -35,7 +33,17 @@ export interface Items {
     Stack: string
 }
 
-export interface MeInterface {
-    props: React.PropsWithChildren<React.ReactNode>;
-    $$typeof: symbol;
+export interface SubmitObject {
+    tiger: number,
+    retire: number,
+    it: boolean,
+    portfolio: number,
+    why: string,
+}
+
+export enum SurveyState {
+    Ready,
+    Start,
+    Result,
+    End
 }

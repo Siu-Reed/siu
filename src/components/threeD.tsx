@@ -3,13 +3,15 @@ import Hidden from './hidden';
 import styles from '../css/threeD.module.css';
 import Main from './main';
 import FloatingNav from './floatingNav';
+import { SubmitObject } from '../interface/interface';
 
 interface Props {
     me : React.ReactNode;
-    writeSurveyData : (resultId:number, tiger:number, retire:number, it:boolean, impression:string, why:string) => void;
+    writeSurveyData : (submit: SubmitObject) => Promise<void>;
+    surveyImgs : JSX.Element[];
 }
 
-const ThreeD : React.FC<Props> = memo(({me, writeSurveyData}) => {
+const ThreeD : React.FC<Props> = memo(({me, writeSurveyData, surveyImgs}) => {
     console.log('threeD');
     const [view, setView] = useState<'x'|'y'|'z'|'f'>('f');
     const [aboutSwitch, setAboutSwitch] = useState<boolean>(false);
@@ -55,7 +57,7 @@ const ThreeD : React.FC<Props> = memo(({me, writeSurveyData}) => {
         <div className={`${styles.threeD} ${styleThreeD}`}>
             <div className={`${styles.screen} ${styleScreen}`}>
                 <Main polygonClick={polygonClick} aboutSwitch={aboutSwitch} aboutOpen={aboutOpen} aboutClose={aboutClose} me={me}/>
-                <Hidden xViewClick={xViewClick} zViewClick={zViewClick} aboutOpen={aboutOpen} aboutClose={aboutClose} zBtnVisible={zBtnVisible} writeSurveyData={writeSurveyData}/>
+                <Hidden xViewClick={xViewClick} zViewClick={zViewClick} aboutOpen={aboutOpen} aboutClose={aboutClose} zBtnVisible={zBtnVisible} writeSurveyData={writeSurveyData} surveyImgs={surveyImgs}/>
             </div>
             <FloatingNav view={view} aboutSwitch={aboutSwitch}/>
         </div>
