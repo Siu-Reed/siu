@@ -62,11 +62,6 @@
     padding: 2.5rem 3rem;
     background: #f2f2f2;
 }
-.name {
-    font-size: 2.5rem;
-    font-family: 'Megrim';
-    margin: 0 0 0.7rem 0;
-}
 .occupation {
     font-size: 2rem;
     font-weight: 300;
@@ -83,10 +78,8 @@
     margin: 0.8rem 0 0 0;
     font-weight: 300;
 }
-
-
 .img {
-    background: url('./dune.jpg') no-repeat;
+    background: url("https://drive.google.com/uc?export=view&id=12gc55exPdfTNrOmXBpcUK3V3P2DWFry0") no-repeat;
     background-size: cover;
 }
 /* 

@@ -102,6 +102,8 @@
     left: -40rem;
     top: 0;
     z-index: 2;
+    animation-name: imgAppear;
+    animation-duration: 3s;
 }
 .pen {
     width: 10rem;
@@ -109,6 +111,8 @@
     right: -13rem;
     top: 1rem;
     z-index: 2;
+    animation-name: imgAppear;
+    animation-duration: 3s;
 }
 .pin {
     width: 4rem;
@@ -144,4 +148,16 @@
     transition: 0.3s;
     cursor: pointer;
     z-index: 2;
+}
+
+@keyframes imgAppear {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

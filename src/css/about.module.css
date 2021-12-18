@@ -148,7 +148,3 @@
     right: 1rem;
     transform: translateY(-50%) rotateZ(90deg);
 }
-.notice {
-    font-family: 'Times New Roman', Times, serif;
-    opacity: TxtOpacity2;
-}

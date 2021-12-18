@@ -49,7 +49,7 @@ const Wave:React.FC<Props> = ({heights}) => {
         }
     }, [ratio, waveGroup]);
 
-    const timeLimit = 1100;
+    const timeLimit = 800;
     let timeStart:number;
 
     useEffect(() => {

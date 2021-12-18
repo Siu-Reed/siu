@@ -54,7 +54,6 @@ const Hidden : React.FC<Props> = memo(({xViewClick, zViewClick, aboutOpen, about
             break;
         default : break;
     }
-
     return (
         <div className={`${styles.hidden} ${opacity}`}>
             <h2 className={styles.sorry}>
@@ -70,9 +69,9 @@ const Hidden : React.FC<Props> = memo(({xViewClick, zViewClick, aboutOpen, about
             </div>
             <h1 className={styles.title}>Welcome to cosy 3D web.</h1>
             <div className={`${styles.survey} ${surveyStyle}`}>
-                {!zBtnVisible && <img src="./img/coffee.png" alt="coffee" className={styles.coffee}/>}
-                {!zBtnVisible && <img src="./img/pen.png" alt="pen" className={styles.pen}/>}
-                <img src="./img/pin.png" alt="pin" className={styles.pin}/>
+                {!zBtnVisible && <img src="https://drive.google.com/uc?export=view&id=1NKWJdaAk4VkG7QfLZ378F1nkO7LmVLo6" alt="coffee" className={styles.coffee}/>}
+                {!zBtnVisible && <img src="https://drive.google.com/uc?export=view&id=1uYkvkZ4Rl9TynuFDkQgswU-VtLwCM9Mq" alt="pen" className={styles.pen}/>}
+                <img src="https://drive.google.com/uc?export=view&id=1r90CLHi_FXYSWn8sNZB3r8N45RVZv_jR" alt="pin" className={styles.pin}/>
                 {!zBtnVisible && surveyCont}
             </div>
             <div className={`${styles.zBtnCont}`}>
