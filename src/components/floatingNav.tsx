@@ -1,12 +1,14 @@
 import React, { memo } from 'react';
 import styles from '../css/floatingNav.module.css';
+import Mailer from '../service/mail';
 
 interface Props {
     view: string;
     aboutSwitch: boolean;
+    mailService : Mailer;
 }
 
-const Header:React.FC<Props> = memo(({view, aboutSwitch}) => {
+const Header:React.FC<Props> = memo(({view, aboutSwitch, mailService}) => {
     console.log('header');
 
     let positionAbout;
@@ -31,13 +33,10 @@ const Header:React.FC<Props> = memo(({view, aboutSwitch}) => {
     return (
         <header className={`${styles.header} ${positionAbout} ${positionView}`}>
             <div className={styles.btn}>
-                <a href="www.eee">Siu Lee</a>
             </div>
             <div className={styles.btn}>
-                <a href="www.eee">Contact</a>
             </div>
             <div className={styles.btn}>
-                <a href="www.eee">Send mail</a>
             </div>
         </header>
     );

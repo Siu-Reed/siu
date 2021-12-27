@@ -78,8 +78,8 @@ const Polygon: React.FC<Props> = memo(({spec, baseAngle, baseLength, polygonClic
     return (
         <div className={styles.cvsDiv} style={cvsDivStyle} onClick={plgClick}>
             <canvas className={styles.cvs} ref={cvsRef}/>
-            <h1 className={styles.txt} style={txtStyle}>Works</h1>
-            <h3 className={styles.txt2} style={txtStyle}>작업물</h3>
+            <img src="./img/robot.png" alt="robot" style={txtStyle} className={styles.robot}/>
+            <h1 className={styles.txt} style={txtStyle}>Click This</h1>
         </div>
     );
 });

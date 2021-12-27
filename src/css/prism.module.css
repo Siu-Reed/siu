@@ -17,7 +17,7 @@
 }
 .btn {
     position: absolute;
-    width : 4em;
+    width : 5em;
     font-size: 1em;
     transition : 0.3s;
     cursor: pointer;
@@ -28,48 +28,16 @@
 
 .left {
     left: -30%;
-    transform: rotateX(90deg) translateY(15em) translateZ(-7.5em) rotateZ(-90deg);
+    transform: rotateX(90deg) translateY(22.5em) translateZ(-7.5em) rotateZ(-90deg);
 }
 
 .right {
     right: -30%;
-    transform: rotateX(90deg) translateY(15em) translateZ(-7.5em) rotateZ(90deg);
+    transform: rotateX(90deg) translateY(22.5em) translateZ(-7.5em) rotateZ(90deg);
 }
 
 
 .btn:hover {
-    width: 5em;
+    width: 6em;
     fill: Bcolor1;
-}
-
-@media (orientation: landscape) and (max-width: Laptop) {
-    .prsHome {
-        font-size: 0.8rem;
-    }
-}
-@media (orientation: landscape) and (max-width: Tablet) {
-    .prsHome {
-        font-size: 0.7rem;
-    }
-}
-@media (orientation: landscape) and (max-width: Mobile2) {
-    .prsHome {
-        font-size: 0.6rem;
-    }
-}
-
-@media (orientation: portrait) and (max-width: Tablet) {
-    .prsHome {
-        font-size: 0.8rem;
-    }
-}
-@media (orientation: portrait) and (max-width: Mobile1) {
-    .prsHome {
-        font-size: 0.9rem;
-    }
-}
-@media (orientation: portrait) and (max-width: Mobile2) {
-    .prsHome {
-        font-size: 0.9rem;
-    }
 }

@@ -37,10 +37,6 @@ const Me:React.FC = memo(() => {
                             <span>2019.10.31 ~ 2020.12.31 (주임)</span>
                         </p>
                     </li>
-                    <li>
-                        <h3>E-mail</h3>
-                        <p>tldn960823@gmail.com</p>
-                    </li>
                 </ul>
             </div>
                 <div className={styles.aboutMe}>

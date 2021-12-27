@@ -120,7 +120,7 @@
         width: 75%;
     }
 }
-@media (max-width: Tablet) {
+@media (max-width: Mobile1) {
     .category {
         flex-flow: column nowrap;
         justify-content: center;
@@ -140,7 +140,7 @@
 }
 
 
-@media (max-width: Mobile1) {
+@media (max-width: Mobile2) {
     .items {
         width: 90%;
     }

@@ -2,10 +2,10 @@ import { Wave } from "./wave-object";
 
 export class WaveGroup {
     colors:Array<string> = [
-        '#002e31', '#28d40010',
-        '#004549', '#28d40020',
-        '#005f65', '#28d40030',
-        '#008a93', '#28d40040'
+        '#a3b8dd50', '#005cff',
+        '#a3b8dd50', '#0050dc',
+        '#a3b8dd50', '#0047c4',
+        '#a3b8dd50', '#003ca6'
     ];
     totalPoints:number = 7;
     waves:Array<null | any> = [];

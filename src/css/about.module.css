@@ -11,7 +11,6 @@
         fill: Acolor1;
     }
 }
-
 @keyframes closeNotice {
     from {
         color: Acolor5;
@@ -41,7 +40,6 @@
     cursor: pointer;
 }
 .click {
-    width:max-content;
     width: 100vw;
     height: 100vh;
     cursor: default;
@@ -49,25 +47,24 @@
     border-radius: 0;
     border: none;
 }
+.cloud {
+    position: absolute;
+    height: 25%;
+    top: 0;
+    right: 50%;
+    transform: translate(50%, 0);
 
+    animation: cloudAni 20s linear alternate infinite;
+}
 .aboutMe {
     position: absolute;
-    font-size: 4rem;
+    font-size: 2.7rem;
     font-family: 'ColorsOfAutumn';
     font-weight: normal;
-    top: 3rem;
-    color: #28d40090;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #307bff80;
 }
-.aboutMe2 {
-    position: absolute;
-    top: 8rem;
-    color: #ffffff;
-    font-size: 1.3em;
-    font-weight: 100;
-    text-align : center;
-    font-style: italic;
-}
-
 .contentsBox {
     position: absolute;
     top: 0;
@@ -114,8 +111,8 @@
 
 .close {
     position: absolute;
-    top: 0.5rem;
-    right: 1rem;
+    top: 1.5rem;
+    right: 2.5rem;
     font-family: 'ColorsOfAutumn';
     font-size: 2rem;
     font-weight: bolder;
@@ -147,4 +144,40 @@
     top: 50%;
     right: 1rem;
     transform: translateY(-50%) rotateZ(90deg);
+}
+
+@keyframes cloudAni {
+    0% {
+        transform: skew(1deg, 0deg) scale(1.0,1.0) translate(49%, -5%);
+    }
+    10% {
+        transform: skew(2deg, 1deg) scale(1.05,1.0) translate(50%, -10%);
+    }
+    20% {
+        transform: skew(3deg, 2deg) scale(1.1,1.0) translate(52%, -5%);
+    }
+    30% {
+        transform: skew(4deg, 4deg) scale(1.05,1.05) translate(50%, -10%);
+    }
+    40% {
+        transform: skew(6deg, 4deg) scale(1.0,1.05) translate(51%, -5%);
+    }
+    50% {
+        transform: skew(7deg, 4deg) scale(1.05,1.0) translate(50%, -10%);
+    }
+    60% {
+        transform: skew(8deg, 5deg) scale(1.1,1.0) translate(50%, -5%);
+    }
+    70% {
+        transform: skew(8deg, 5deg) scale(1.1,1.05) translate(49%, -10%);
+    }
+    80% {
+        transform: skew(5deg, 4deg) scale(1.05,1.05) translate(48%, -5%);
+    }
+    90% {
+        transform: skew(6deg, 3deg) scale(1.1,1.05) translate(46%, -10%);
+    }
+    100% {
+        transform: skew(7deg, 4deg) scale(1.1,1.05) translate(43%, -5%);
+    }
 }

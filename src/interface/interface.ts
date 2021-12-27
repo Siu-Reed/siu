@@ -10,6 +10,19 @@ export interface BaseAngle {
     y : number;
 }
 
+export enum View {
+    X,
+    Y,
+    Z,
+    F
+}
+
+export enum Action {
+    Default,
+    Mail,
+    Contact
+}
+
 export interface BaseLength {
     b : number;
     c : number;
@@ -27,18 +40,18 @@ export interface ContentsValues {
 }
 
 export interface Items {
-    Browse: string,
-    Git: string,
-    Desc: string,
-    Stack: string
+    Browse: string;
+    Git: string;
+    Desc: string;
+    Stack: string;
 }
 
 export interface SubmitObject {
-    tiger: number,
-    retire: number,
-    it: boolean,
-    portfolio: number,
-    why: string,
+    tiger: number;
+    retire: number;
+    it: boolean;
+    portfolio: number;
+    why: string;
 }
 
 export enum SurveyState {
@@ -46,4 +59,10 @@ export enum SurveyState {
     Start,
     Result,
     End
+}
+
+export interface MailSendForm {
+    senderAddress : string;
+    subject : string;
+    content : string;
 }

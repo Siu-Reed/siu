@@ -39,15 +39,15 @@
 .personalInfo {
     color: #ffffff;
 
-    margin: 1rem 0 0 0;
+    height: 40rem;
+    padding: 3rem 0;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: flex-start;
-    gap: 3rem;
+    justify-content: space-between;
 }
 
 .personalInfo h3 {
-    margin: 0 0 0.3em 0.1em;
+    margin: 0 0 0.3em 0;
     font-size: 1.3rem;
     user-select: none;
 }
@@ -63,21 +63,23 @@
 
 .aboutMe {
     height: 40rem;
+    padding: 3rem 0;
     color: #ffffff;
 
     display: flex;
     flex-flow: column nowrap;
-    gap: 2rem;
     justify-content: baseline;
     user-select: none;
 }
 
 .aboutMe h3 {
     font-size: 1.3em;
+    margin: 0 0 0.7em 0.2em;
 }
 
 .aboutMe div {
-    height: auto;
+    font-size: 0.95rem;
+    height: 100%;
     padding: 1rem;
     border-radius: 1rem;
     display: flex;
@@ -91,7 +93,7 @@
 }
 
 
-@media (max-width: Tablet) {
+@media (max-width: Mobile1) {
     .me {
         width: 200vw;
     }
@@ -111,7 +113,7 @@
     }
 }
 
-@media (max-width:  Mobile1) {
+@media (max-width:  Mobile2) {
     .profilePic {
         position: absolute;
         bottom: 0;

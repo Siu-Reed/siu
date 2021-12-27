@@ -9,32 +9,25 @@
 .cvs {
     border-radius: 100%;
 }
+.robot {
+    position : absolute;
+    height: 100%;
+    top : 50%;
+    left : 50%;
+}
 
 .txt {
     position : absolute;
-    top : 50%;
-    left : 50%;
-    font-size : 4rem;
+    top: 22%;
+    left: 22%;
+    font-size : 2.7rem;
     font-family: 'ColorsOfAutumn';
     font-weight: normal;
-    transition: 0.4s;
-    color : Bcolor4;
+    transition: 0.3s;
+    color : #fec730;
     text-align : center;
 }
 
-.cvsDiv:hover .txt, 
-.cvsDiv:hover .txt2  {
+.cvsDiv:hover .txt {
     color: #000000;
-}
-
-.txt2 {
-    position : absolute;
-    top : 50%;
-    left : Calc(50% - 4em);
-    transition: 0.4s;
-    color : Bcolor4;
-    font-size: 1.3em;
-    font-weight: 100;
-    text-align : center;
-    font-style: italic;
 }

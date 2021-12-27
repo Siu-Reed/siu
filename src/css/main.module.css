@@ -3,14 +3,13 @@
 
 
 .main {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background: #ffffff;
 }
 
 .con {
     position: absolute;
-    height: Calc(100vh - 3rem);
     transition:0.8s;
 }
 .con1 {
@@ -19,31 +18,16 @@
 .con2 {
     border: Line1;
 }
-
-.con1_aboutFalse {
-    left: 0;
-    width: 25vw;
-}
-.con2_aboutFalse {
-    right: 0;
-    width: 75vw;
-}
-
-.con1_aboutTrue {
-    width: 100vw;
-    border: none;
-}
-.con2_aboutTrue {
-    transform: translateX(200vw);
-}
-
 .footer {
     position: absolute;
     bottom: 0;
-    width: 100%;
-    line-height: 3rem;
+    width: 100vw;
+    height: 3rem;
     background: #ffffff;
     border: Line1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     font-size: 0.8rem;
     font-weight: 300;
@@ -55,22 +39,48 @@
     opacity: 0;
 }
 
+@media (orientation: landscape) {
+
+    .con {
+        height: Calc(100% - 3rem);
+    }
+    .con1_aboutFalse {
+        left: 0;
+        width: 30%;
+    }
+    .con2_aboutFalse {
+        right: 0;
+        width: 70%;
+    }
+
+    .con1_aboutTrue {
+        width: 100%;
+        border: none;
+    }
+    .con2_aboutTrue {
+        right: 0;
+        transform: translateX(200%);
+    }
+}
 
 @media (orientation: portrait) {
-    .con1_x {
-        width: 100vw;
-        height: 40vh;
+    .con1_aboutFalse {
+        width: 100%;
+        height: 30%;
         top: 0;
         justify-content: center;
     }
-    .con2_x {
-        width: 100vw;
-        height: 60vh;
-        bottom: 0;
-    }
-    .con2_y {
+    .con2_aboutFalse {
         width: 100%;
-        height: 0;
+        height: Calc(70% - 3rem);
+        bottom: 3rem;
+    }
+    .con1_aboutTrue {
+        height: 100%;
         overflow: hidden;
+    }
+    .con2_aboutTrue {
+        bottom: 3rem;
+        transform: translateX(200%);
     }
 }

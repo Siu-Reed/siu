@@ -114,8 +114,7 @@
 .meta div pre {
     font-weight: 500;
 }
-
-@media (max-width: Tablet) {
+@media (max-width: Mobile1) {
     .abilities {
         width: 200vw;
     }
@@ -135,7 +134,7 @@
     }
 }
 
-@media (max-width:  Mobile1) {
+@media (max-width:  Mobile2) {
     .graph li div {
         width: 60%;
     }

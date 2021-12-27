@@ -1,14 +1,5 @@
 .wave {
     width: 100%;
     height: 100%;
-    background: linear-gradient(270deg, #000000, #002e31, #000000);
-    background-size: 1000% 1000%;
-    animation: Gradation 19s ease infinite;
-    
-}
-
-@keyframes Gradation {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    background: #000024;
 }

@@ -67,16 +67,17 @@ const Hidden : React.FC<Props> = memo(({xViewClick, zViewClick, aboutOpen, about
                 <h3>이전 상태</h3>
                 <h1>←</h1>
             </div>
-            <h1 className={styles.title}>Welcome to cosy 3D web.</h1>
+            { zBtnVisible ?
+                (<div className={`${styles.zBtnCont}`}>
+                    <h3>이쪽 면을 크게 보고 싶으시다면,</h3>
+                    <div className={styles.zBtn} onClick={zViewHandle}>여기를 클릭하세요.</div>
+                </div>) : 
+                (<h1 className={styles.title}>Welcome to brand-new 3D web.</h1>)
+            }
             <div className={`${styles.survey} ${surveyStyle}`}>
-                {!zBtnVisible && <img src="https://drive.google.com/uc?export=view&id=1NKWJdaAk4VkG7QfLZ378F1nkO7LmVLo6" alt="coffee" className={styles.coffee}/>}
                 {!zBtnVisible && <img src="https://drive.google.com/uc?export=view&id=1uYkvkZ4Rl9TynuFDkQgswU-VtLwCM9Mq" alt="pen" className={styles.pen}/>}
                 <img src="https://drive.google.com/uc?export=view&id=1r90CLHi_FXYSWn8sNZB3r8N45RVZv_jR" alt="pin" className={styles.pin}/>
                 {!zBtnVisible && surveyCont}
-            </div>
-            <div className={`${styles.zBtnCont}`}>
-                {zBtnVisible && <h3>이쪽 면을 크게 보고 싶으시다면,</h3>}
-                {zBtnVisible && <div className={styles.zBtn} onClick={zViewHandle}>여기를 클릭하세요.</div>}
             </div>
         </div>
     );

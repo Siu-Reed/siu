@@ -5,8 +5,13 @@ import App from './components/app';
 import Me from './components/me';
 import { writeSurveyData } from './service/firebase';
 import questionsImg from './json/questionsImg.json';
+import HttpClient from './network/http';
+import MailService from './service/mail';
 
 console.log('index');
+const serverURL = process.env.REACT_APP_SERVER_URL!;
+const httpClient = new HttpClient(serverURL);
+const mailService = new MailService(httpClient);
 
 const me = <Me key='me'/>;
 const surveyImgs = Object.entries(questionsImg)
@@ -16,7 +21,7 @@ const surveyImgs = Object.entries(questionsImg)
 ReactDOM.render(
     <React.StrictMode>
         {console.log('index')}
-        <App me={me} writeSurveyData={writeSurveyData} surveyImgs={surveyImgs}/>
+        <App me={me} writeSurveyData={writeSurveyData} surveyImgs={surveyImgs} mailService={mailService}/>
     </React.StrictMode>,
     document.getElementById('root')
 );
