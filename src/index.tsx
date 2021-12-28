@@ -18,7 +18,9 @@ const surveyImgs = Object.entries(questionsImg)
 );
 
 ReactDOM.render(
-    <App me={me} writeSurveyData={writeSurveyData} surveyImgs={surveyImgs} mailService={mailService}/>
+    <React.StrictMode>
+        <App me={me} writeSurveyData={writeSurveyData} surveyImgs={surveyImgs} mailService={mailService}/>
+    </React.StrictMode>
     ,
     document.getElementById('root')
 );
