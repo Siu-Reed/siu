@@ -31,6 +31,11 @@
 .grid:nth-child(2) {
     background: Bcolor1;
 }
+.grid:nth-child(8) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .grid:nth-child(6) {
     grid-row-start: 3;
     grid-row-end: 5;
@@ -39,6 +44,14 @@
 .grid:nth-child(9) {
     grid-column-start: 2;
     grid-column-end: 4;
+}
+
+.dtdLogo {
+    stroke-linejoin: round;
+    stroke: #000000;
+    fill: none;
+    width: 15%;
+    opacity: 0.3;
 }
 
 .anoPrismCont {

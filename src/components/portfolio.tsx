@@ -15,7 +15,8 @@ const Portfolio : React.FC<Props> = memo(({polygonClick}) => {
             </div>
             <div className={styles.grid}></div>
             <div className={styles.grid}></div>
-            <div className={styles.grid}></div>
+            <div className={styles.grid}>
+            </div>
             
             <div className={`${styles.grid} ${styles.anoPrismCont}`}>
                 <AnotherPrism />
@@ -31,6 +32,12 @@ const Portfolio : React.FC<Props> = memo(({polygonClick}) => {
             </div>
             
             <div className={styles.grid}>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101 101" className={styles.dtdLogo}>
+                    <circle cx="50.5" cy="50.5" r="50" />
+                    <path d="M12.92,83C27.54,53.8,52.8,2.8,52.8,2.8l40,80" transform="translate(-2.3 -2.3)" />
+                    <path d="M52.92,63a49.92,49.92,0,0,0-40,20,50,50,0,0,0,79.89-.15A49.92,49.92,0,0,0,52.92,63Z" transform="translate(-2.3 -2.3)" />
+                    <circle cx="50.5" cy="80.58" r="19.92" />
+                </svg>
             </div>
             <div className={`${styles.grid} ${styles.duneImg}`}></div>
         </div>
