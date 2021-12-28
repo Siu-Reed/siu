@@ -1,4 +1,4 @@
-import React, {useMemo , useState, useRef, useEffect} from 'react';
+import React, {useMemo , useState, useRef, useEffect, memo} from 'react';
 import { WaveGroup } from '../visual/wave-group';
 import styles from '../css/wave.module.css';
 
@@ -6,7 +6,7 @@ interface Props {
     heights : Array<number>;
 }
 
-const Wave:React.FC<Props> = ({heights}) => {
+const Wave:React.FC<Props> =  memo(({heights}) => {
 
     const [waveHeights, setWaveHeights] = useState<Array<number>>(heights);
 
@@ -84,6 +84,6 @@ const Wave:React.FC<Props> = ({heights}) => {
     return (
         <canvas className={styles.wave} ref={canvasRef}/>
     );
-};
+});
 
 export default Wave;

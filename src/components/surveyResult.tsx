@@ -1,4 +1,4 @@
-import React, {memo, MouseEvent} from 'react';
+import React, {memo, MouseEvent, useCallback} from 'react';
 import styles from '../css/survey.module.css';
 import { SurveyState } from '../interface/interface';
 
@@ -8,10 +8,10 @@ interface Props {
 
 const SurveyResult:React.FC<Props> = memo(({setSurveyState}) => {
 
-    const resultBtnHndlr = (e:MouseEvent) => {
+    const resultBtnHndlr = useCallback((e:MouseEvent) => {
         e.preventDefault();
-        setSurveyState(SurveyState.End)
-    }
+        setSurveyState(SurveyState.End);
+    }, [setSurveyState]);
 
     return (
         <div className={styles.surveyResult}>
