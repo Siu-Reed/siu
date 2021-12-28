@@ -15,7 +15,7 @@ interface Props {
 }
 
 const ThreeD : React.FC<Props> = memo(({me, writeSurveyData, surveyImgs, mailService}) => {
-    console.log('threeD');
+
     const [view, setView] = useState<View>(View.F);
     const [aboutSwitch, setAboutSwitch] = useState<boolean>(false);
     const [action, setAction] = useState<Action>(Action.Default);
@@ -68,13 +68,14 @@ const ThreeD : React.FC<Props> = memo(({me, writeSurveyData, surveyImgs, mailSer
     const xViewClick = useCallback(() => setView(View.X), []);
     const polygonClick = useCallback(() => setView(View.Y), []);
     const zViewClick = useCallback(() => setView(View.Z), []);
+    const aboutOpen = useCallback(() => setAboutSwitch(true), []);
+    const aboutClose = useCallback(() => setAboutSwitch(false), []);
+
     const fViewClick = useCallback((e:MouseEvent) => {
         setView(View.F);
         setAboutSwitch(false);
     }, []);
     
-    const aboutOpen = useCallback(() => setAboutSwitch(true), []);
-    const aboutClose = useCallback(() => setAboutSwitch(false), []);
     const mailAction = useCallback((e:MouseEvent) => {
         setAction(Action.Mail);
     }, []);

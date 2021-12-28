@@ -12,8 +12,6 @@ interface Props {
 }
 
 const Squares:React.FC<Props> = memo(({spec, baseAngle, baseLength, prsBase, contentsKeys, contentsValues}) => {
-    console.log('squares');
-    
     const sqrs = [];
 
     for (let i:number = 0; i < spec.side; i++) {

@@ -16,7 +16,7 @@ interface Props {
 };
 
 const Hidden : React.FC<Props> = memo(({xViewClick, zViewClick, aboutOpen, aboutClose, zBtnVisible, writeSurveyData, surveyImgs}) => {
-    console.log('hidden');
+
     const [surveyState, setSurveyState] = useState<SurveyState>(SurveyState.Ready);
     const opacity = zBtnVisible ? styles.opaque : styles.clear;
 

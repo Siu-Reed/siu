@@ -12,7 +12,6 @@ interface Props {
 }
 
 const Main:React.FC<Props> = memo(({polygonClick, aboutSwitch, aboutOpen, aboutClose, me}) => {
-    console.log('main');
     let con1Style;
     let con2Style;
     let visiblity;

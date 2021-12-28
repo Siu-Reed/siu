@@ -7,8 +7,6 @@ interface Props {
 }
 
 const Textarea:React.FC<Props> = memo(({injectResult, setQstNumber}) => {
-    
-    console.log('text Area');
 
     const txtRef = useRef<HTMLTextAreaElement>(null);
 

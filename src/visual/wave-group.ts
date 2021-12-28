@@ -33,8 +33,6 @@ export class WaveGroup {
             );
             this.waves[i] = wave;
         });
-
-        console.log('뉴 옵젝');
     }
 
     resize(waveHeights: Array<number> = this.waveHeights):void {

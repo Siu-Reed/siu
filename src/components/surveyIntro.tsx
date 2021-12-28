@@ -1,4 +1,4 @@
-import React, { memo, MouseEvent } from 'react';
+import React, { memo, MouseEvent, useCallback } from 'react';
 import styles from '../css/surveyIntro.module.css';
 import { SurveyState } from '../interface/interface';
 
@@ -8,11 +8,10 @@ interface Props {
 
 const SurveyIntro:React.FC<Props> = memo(({setSurveyState}) => {
     
-    console.log('survey intro');
-    
-    const surveyStartHandle = (e:MouseEvent) => {
+    const surveyStartHandle = useCallback((e:MouseEvent) => {
+        e.preventDefault();
         setSurveyState(SurveyState.Start);
-    }
+    }, [setSurveyState]);
 
     return (
         <div className={styles.surveyIntro}>
@@ -23,10 +22,10 @@ const SurveyIntro:React.FC<Props> = memo(({setSurveyState}) => {
             </div>
             <div className={styles.surveyCont}>
                 <div className={styles.underLine}></div>
-                <div className={styles.surveyBtn} onClick={surveyStartHandle}>
+                <button className={styles.surveyBtn} onClick={surveyStartHandle}>
                     <h3>시작하기.</h3>
                     <h2>Start Now.</h2>
-                </div>
+                </button>
             </div>
         </div>
     );

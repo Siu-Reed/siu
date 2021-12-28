@@ -8,8 +8,6 @@ interface Props {
 }
 
 const Portfolio : React.FC<Props> = memo(({polygonClick}) => {
-    console.log('portfolio');
-
     return (
         <div className={styles.portfolio}>
             <div className={`${styles.grid} ${styles.scriptContainer}`}>

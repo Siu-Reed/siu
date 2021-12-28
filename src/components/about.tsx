@@ -12,8 +12,6 @@ interface Props {
 }
 
 const About:React.FC<Props> = memo(({aboutOpen, aboutClose, aboutSwitch, me}) => {
-    console.log('about');
-
     const heights1 = useMemo(() => [1/4, 1/4, 1/4, 1/4, 1/4, 1/4, 1/4, 1/4], []);
     const heights2 = useMemo(() => [15/100, 15/100, 25/100, 25/100, 55/100, 55/100, 95/100, 95/100], []);
     const heights3 = useMemo(() => [12/100, 12/100, 34/100, 34/100, 56/100, 56/100, 78/100, 78/100], []);

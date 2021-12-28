@@ -5,8 +5,6 @@ import AnotherPolygon from './anotherPolygon';
 import styles from '../css/anotherPrism.module.css';
 
 const AnotherPrism : React.FC = memo(() => {
-    console.log('another prism');
-
     const [side, setSide] = useState<number>(5);
     const spec:Spec = useMemo(() => Object({
         side: side,

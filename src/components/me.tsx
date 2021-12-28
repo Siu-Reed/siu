@@ -2,7 +2,6 @@ import React, { memo } from 'react';
 import styles from '../css/me.module.css';
 
 const Me:React.FC = memo(() => {
-    console.log('me');
     let age : number;
     let today = new Date();
     let myBirth = new Date(1996, 8, 23);

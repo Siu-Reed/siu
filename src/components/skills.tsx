@@ -3,8 +3,6 @@ import styles from '../css/skills.module.css';
 import logosJson from '../json/logo.json';
 
 const Skills:React.FC = memo(() => {
-    console.log('skills');
-
     const contents = Object.entries(logosJson).map((value) => { return(
         <div className={styles.category} key={value[0]}>
             <h3 className={styles.theme}>{value[0]}</h3>

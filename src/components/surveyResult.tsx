@@ -8,8 +8,6 @@ interface Props {
 
 const SurveyResult:React.FC<Props> = memo(({setSurveyState}) => {
 
-    console.log('survey result');
-
     const resultBtnHndlr = (e:MouseEvent) => {
         e.preventDefault();
         setSurveyState(SurveyState.End)

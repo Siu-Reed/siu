@@ -12,7 +12,6 @@ interface Props {
 }
 
 const App: React.FC<Props> = memo(({me, writeSurveyData, surveyImgs, mailService}) => {
-    console.log('app');
     return (
         <>
             <ThreeD me={me} writeSurveyData={writeSurveyData} surveyImgs={surveyImgs} mailService={mailService}/>

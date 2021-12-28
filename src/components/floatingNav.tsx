@@ -9,7 +9,6 @@ interface Props {
 }
 
 const Header:React.FC<Props> = memo(({view, aboutSwitch, mailService}) => {
-    console.log('header');
 
     let positionAbout;
     let positionView;

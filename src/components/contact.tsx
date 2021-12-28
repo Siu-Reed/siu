@@ -1,9 +1,7 @@
-import React, { MouseEvent } from 'react';
+import React, { memo, MouseEvent } from 'react';
 import styles from '../css/contact.module.css';
 
-const Contact:React.FC = () => {
-
-
+const Contact:React.FC = memo(() => {
 
     const kakao = (e:MouseEvent) => {
         e.preventDefault();
@@ -35,6 +33,6 @@ const Contact:React.FC = () => {
             </ul>
         </div>
     );
-};
+});
 
 export default Contact;

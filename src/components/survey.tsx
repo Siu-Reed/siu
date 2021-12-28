@@ -14,8 +14,6 @@ interface Props {
 }
 
 const Survey:React.FC<Props> = memo(({setSurveyState, writeSurveyData, surveyImgs}) => {
-    
-    console.log('survey');
 
     const [qstNumber, setQstNumber] = useState<number>(0);
     const [qstResults, setQstResults] = useState<Object>({});

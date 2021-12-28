@@ -6,8 +6,6 @@ interface Props {
 }
 
 const LastQuestion:React.FC<Props> = memo(({setQstNumber}) => {
-    
-    console.log('last question');
 
     const optionHdlr = (e:MouseEvent) => {
         e.preventDefault();

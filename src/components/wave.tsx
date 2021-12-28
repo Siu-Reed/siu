@@ -7,7 +7,6 @@ interface Props {
 }
 
 const Wave:React.FC<Props> = ({heights}) => {
-    console.log('wave');
 
     const [waveHeights, setWaveHeights] = useState<Array<number>>(heights);
 

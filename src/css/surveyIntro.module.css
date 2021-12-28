@@ -47,6 +47,8 @@
     width: fit-content;
     background: #ffffff;
     transition: 0.3s;
+    border: none;
+    outline: none;
 }
 .surveyBtn:hover {
     background: Bcolor1;

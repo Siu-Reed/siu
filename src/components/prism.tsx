@@ -11,8 +11,6 @@ interface Props {
 }
 
 const Prism : React.FC<Props> = memo(({polygonClick}) => {
-    console.log('prism');
-    
     const contentsKeys:Array<string | number> = useMemo(() => Object.keys(contentsJson), []);
     const contentsValues:Array<ContentsValues> = useMemo(() => Object.values(contentsJson), []);
 

@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FormEvent, useState } from 'react';
+import React, { ChangeEvent, FormEvent, memo, useState } from 'react';
 import styles from '../css/mail.module.css';
 import { MailSendForm } from '../interface/interface';
 import Mailer from '../service/mail';
@@ -7,7 +7,7 @@ interface Props {
     mailService : Mailer;
 }
 
-const Mail:React.FC<Props> = ({mailService}) => {
+const Mail:React.FC<Props> = memo(({mailService}) => {
     
     const [mail, setMail] = useState<MailSendForm>({
         senderAddress : "",
@@ -91,6 +91,6 @@ const Mail:React.FC<Props> = ({mailService}) => {
             </form>
         </div>
     );
-};
+});
 
 export default Mail;

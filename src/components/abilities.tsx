@@ -6,7 +6,6 @@ interface Props {
 }
 
 const Abilities:React.FC<Props> = memo(({abilitiesAni}) => {
-    console.log('abilities');
     let animation;
     (abilitiesAni)?(animation = styles.appear):(animation = styles.hidden);
     return (

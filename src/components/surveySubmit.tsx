@@ -9,8 +9,6 @@ interface Props {
 }
 
 const SurveySubmit:React.FC<Props> = memo(({writeSurveyData, qstResults, setSurveyState}) => {
-    
-    console.log('survey submit');
 
     const submitHandle = (e:MouseEvent) => {
         e.preventDefault();

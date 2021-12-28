@@ -11,9 +11,6 @@ interface Props {
 }
 
 const Question:React.FC<Props> = memo(({name, index, question, options, injectResult, setQstNumber}) => {
-    
-    console.log('question');
-    
     const selectList = options.map((value, index) => { return (
         <li
             key={name + index}

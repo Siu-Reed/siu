@@ -10,7 +10,6 @@ interface Props {
 }
 
 const Polygon: React.FC<Props> = memo(({spec, baseAngle, baseLength, polygonClick}) => {
-    console.log('polygon');
     const cvsRef = useRef<HTMLCanvasElement>(null);
     const ratio = window.devicePixelRatio;
 
