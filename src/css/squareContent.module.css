@@ -1,12 +1,5 @@
 @value Bcolor3, Bcolor2, Bcolor1 from './common/color.css';
 
-.sqr {
-    position : absolute;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    user-select: none;
-}
 .h3 {
     font-size: 1.5em;
     font-weight: 300;

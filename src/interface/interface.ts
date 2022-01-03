@@ -1,8 +1,16 @@
+export interface PolygonContents {
+    img?: {
+        src: string;
+        alt: string;
+    };
+    text?: string;
+}
+
 export interface Spec {
     side : number;
     width : number;
     height : number;
-    color : string[];
+    colors : string[];
 }
 
 export interface BaseAngle {
@@ -22,18 +30,6 @@ export enum Action {
     Mail,
     Contact
 }
-
-export interface BaseLength {
-    b : number;
-    c : number;
-    d : number;
-}
-
-export interface PrsBase {
-    width: number;
-    height: number;
-}
-
 export interface ContentsValues {
     name: string | number;
     items: Items

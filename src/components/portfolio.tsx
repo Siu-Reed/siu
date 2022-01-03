@@ -1,6 +1,8 @@
 import React, { memo } from 'react';
 import Prism from './prism';
-import AnotherPrism from './anotherPrism';
+// import AnotherPrism from './anotherPrism';
+import SquareContent from './squareContent';
+import contents from '../json/contents.json';
 import styles from '../css/portfolio.module.css';
 
 interface Props {
@@ -8,6 +10,9 @@ interface Props {
 }
 
 const Portfolio : React.FC<Props> = memo(({polygonClick}) => {
+    const squaresContents = Object.values(contents).map((value, index) => {
+        return (<SquareContent contentsValues={value} index={index+1} key={`${index}${value.name}`}/>)
+    });
     return (
         <div className={styles.portfolio}>
             <div className={`${styles.grid} ${styles.scriptContainer}`}>
@@ -15,11 +20,10 @@ const Portfolio : React.FC<Props> = memo(({polygonClick}) => {
             </div>
             <div className={styles.grid}></div>
             <div className={styles.grid}></div>
-            <div className={styles.grid}>
-            </div>
+            <div className={styles.grid}></div>
             
             <div className={`${styles.grid} ${styles.anoPrismCont}`}>
-                <AnotherPrism />
+                {/* <AnotherPrism /> */}
             </div>
             
             <div className={`${styles.grid} ${styles.scriptContainer}`}>
@@ -28,7 +32,22 @@ const Portfolio : React.FC<Props> = memo(({polygonClick}) => {
             </div>
 
             <div className={`${styles.grid} ${styles.prismCont}`}>
-                <Prism polygonClick={polygonClick}/>
+                <Prism
+                    prismVar={{
+                        width : 28,
+                        height : 45,
+                        side : 4,
+                        colors : [
+                            "#ffc600",
+                            "#ffde00",
+                            "#ffc600",
+                            "#ffa800"
+                        ]
+                    }}
+                    rotatable={true}
+                    squaresContents={squaresContents}
+                    polygonClick={polygonClick}
+                />
             </div>
             
             <div className={styles.grid}>
