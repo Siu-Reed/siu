@@ -8,7 +8,7 @@
     transform: rotateX(-90deg) translateZ(Calc(-100vh*3/2)) translateY(Calc(-100vh/2));
 
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     overflow: hidden;
     
     align-items: center;

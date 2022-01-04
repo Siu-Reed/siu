@@ -68,7 +68,7 @@ const Prism : React.FC<Props> = memo(({prismVar, rotatable, addable, polygonCont
         );
     }, [rotatable, spec.angle]);
 
-    const addControllerGenerator = () => {
+    const addControllerGenerator = useCallback(() => {
         if (!addable) return;
         const sidePlus = (e:MouseEvent) => {
             e.preventDefault();
@@ -87,14 +87,23 @@ const Prism : React.FC<Props> = memo(({prismVar, rotatable, addable, polygonCont
                     <h4>just ignore it</h4>
                 </div>
                 <div className={styles.addControllerBtns}>
-                    <button onClick={sideMinus}>-</button>
-                    <button onClick={sidePlus}>+</button>
+                    <button onClick={sideMinus}>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+                            <line x1="0" y1="40" x2="80" y2="40" />
+                        </svg>
+                        </button>
+                    <button onClick={sidePlus}>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+                            <line x1="0" y1="40" x2="80" y2="40" />
+                            <line x1="40" y1="0" x2="40" y2="80" />
+                        </svg>
+                    </button>
                 </div>
             </div>
         );
-    }
+    }, [addable, fixWidth, side, spec]);
 
-    const squaresGenerator = () => {
+    const squaresGenerator = useCallback(() => {
         let squares:Array<JSX.Element> = [];
         for(let i:number = 0; i < spec.side; i++) {
             squares[i] = (
@@ -104,7 +113,7 @@ const Prism : React.FC<Props> = memo(({prismVar, rotatable, addable, polygonCont
             );
         }
         return squares;
-    }
+    }, [spec, squaresContents]);
 
     const polygonContentsGenerator = () => {
         if (!polygonContents) return;

@@ -54,6 +54,7 @@ export class PrismSpec {
         cvs.style.position = "absolute";
         cvs.style.top = `${this.lengthA - this.lengthB}em`;
         cvs.style.left = `${this.lengthA - this.lengthB}em`;
+        cvs.style.borderRadius = "100%";
 
         cvs.width = this.lengthB * 2 * 16 * this.ratio;
         cvs.height = this.lengthB * 2 * 16 * this.ratio;
@@ -97,7 +98,7 @@ export class PrismSpec {
 
     controllerStyle() {
         return {
-            transform: `translateX(-50%) rotateX(-90deg) translateY(-${this.height + 5}em)`
+            transform: `translateX(-50%) rotateX(-90deg) translateY(-${this.height + 6}em)`
         }
     }
 }

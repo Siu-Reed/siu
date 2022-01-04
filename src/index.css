@@ -30,10 +30,12 @@
     font-family: "Noto Sans KR", sans-serif;
     transform-style: inherit;
     user-select: none;
+    -webkit-appearance: none;   
 }
 
 html {
     font-size: 16px;
+    overflow-y: overlay;
 }
 
 #root {
@@ -59,5 +61,12 @@ html {
     }
     100% {
         opacity: 1;
+    }
+}
+
+
+@supports (-webkit-touch-callout: none) {
+    #root {
+        height: -webkit-fill-available;;
     }
 }
