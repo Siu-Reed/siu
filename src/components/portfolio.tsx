@@ -23,7 +23,17 @@ const Portfolio : React.FC<Props> = memo(({polygonClick}) => {
             <div className={styles.grid}></div>
             
             <div className={`${styles.grid} ${styles.anoPrismCont}`}>
-                {/* <AnotherPrism /> */}
+                <Prism
+                    prismVar={{
+                        width : 40,
+                        height : 20,
+                        side : 5,
+                        colors : ['linear-gradient(to right, rgb(216, 0, 5), rgb(170, 0, 4))'],
+                        color : "#aa0004"
+                    }}
+                    rotatable={false}
+                    addable={true}
+                />
             </div>
             
             <div className={`${styles.grid} ${styles.scriptContainer}`}>
@@ -41,11 +51,21 @@ const Portfolio : React.FC<Props> = memo(({polygonClick}) => {
                             "#ffc600",
                             "#ffde00",
                             "#ffc600",
-                            "#ffa800"
-                        ]
+                            "#ffa800",
+                            "#ffde00"
+                        ],
+                        color : "#ffff00"
                     }}
                     rotatable={true}
+                    addable={false}
                     squaresContents={squaresContents}
+                    polygonContents={{
+                        img : {
+                            src : "./img/robot.png",
+                            alt : "robot"
+                        },
+                        text : "Click This"
+                    }}
                     polygonClick={polygonClick}
                 />
             </div>

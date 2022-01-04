@@ -6,14 +6,17 @@ import {PolygonContents, Spec} from '../interface/interface'
 interface Props {
     prismVar: Spec;
     rotatable: boolean;
+    addable: boolean;
     polygonContents?: PolygonContents;
     squaresContents?: Array<JSX.Element>;
     polygonClick?: () => void;
 }
 
-const Prism : React.FC<Props> = memo(({prismVar, rotatable, polygonContents, squaresContents, polygonClick}) => {
+const Prism : React.FC<Props> = memo(({prismVar, rotatable, addable, polygonContents, squaresContents, polygonClick}) => {
+    const fixWidth = useMemo<number>(() => prismVar.width, [prismVar.width]);
     const [angle, setAngle] = useState<number>(0);
     const [side, setSide] = useState<number>(prismVar.side);
+    const [width, setWidth] = useState<number>(fixWidth/side);
     const cvsRef = useRef<HTMLCanvasElement>(null);
     const prismHandle = (e:MouseEvent) => {
         e.preventDefault();
@@ -21,16 +24,25 @@ const Prism : React.FC<Props> = memo(({prismVar, rotatable, polygonContents, squ
         polygonClick();
     }
 
-    const spec = useMemo(() => new PrismSpec(
-            prismVar.width,
+    const spec = useMemo(() => {
+        if (addable) { return new PrismSpec(
+            width,
             prismVar.height,
             side,
-            prismVar.colors
-        )
+            prismVar.colors,
+            prismVar.color
+        )} else {  return new PrismSpec(
+            fixWidth,
+            prismVar.height,
+            side,
+            prismVar.colors,
+            prismVar.color
+        )}
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
     , [side]);
 
-    const btnsGenerator = useCallback(() => {
+    const rotateBtnsGenerator = useCallback(() => {
         if (!rotatable) return;
         const plusAngle = (e:MouseEvent) => {
             e.preventDefault();
@@ -55,6 +67,32 @@ const Prism : React.FC<Props> = memo(({prismVar, rotatable, polygonContents, squ
             </>
         );
     }, [rotatable, spec.angle]);
+
+    const addControllerGenerator = () => {
+        if (!addable) return;
+        const sidePlus = (e:MouseEvent) => {
+            e.preventDefault();
+            setSide((side) => side+1);
+            setWidth(fixWidth/side);
+        };
+        const sideMinus = (e:MouseEvent) => {
+            e.preventDefault();
+            setSide((side) => (side>3)?(side-1):(side));
+            setWidth(fixWidth/side);
+        };
+        return(
+            <div className={styles.addController} style={spec.controllerStyle()}>
+                <div className={styles.addControllerText}>
+                    <h3>It's nothing</h3>
+                    <h4>just ignore it</h4>
+                </div>
+                <div className={styles.addControllerBtns}>
+                    <button onClick={sideMinus}>-</button>
+                    <button onClick={sidePlus}>+</button>
+                </div>
+            </div>
+        );
+    }
 
     const squaresGenerator = () => {
         let squares:Array<JSX.Element> = [];
@@ -87,11 +125,12 @@ const Prism : React.FC<Props> = memo(({prismVar, rotatable, polygonContents, squ
 
     return (
         <div className={styles.prsHome} style={spec.prismContainerStyle()}>
-            {btnsGenerator()}
+            {rotatable && rotateBtnsGenerator()}
+            {addable && addControllerGenerator()}
             <div className={styles.prism} style={{transform :`rotateZ(${angle}deg)`}}>
                 {squaresGenerator()}
                 <div className={styles.cvsDiv} style={spec.polygonContainerStyle()} onClick={prismHandle}>
-                    <canvas ref={cvsRef}/>
+                    <canvas ref={cvsRef}/> 
                     {polygonContentsGenerator()}
                 </div>
             </div>

@@ -11,6 +11,7 @@ export interface Spec {
     width : number;
     height : number;
     colors : string[];
+    color : string;
 }
 
 export interface BaseAngle {

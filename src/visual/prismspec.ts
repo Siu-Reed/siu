@@ -12,7 +12,8 @@ export class PrismSpec {
         public width:number,
         public height:number,
         public side:number,
-        public colors:Array<string>
+        public colors:Array<string>,
+        public color:string
     ) {
     }
 
@@ -47,7 +48,7 @@ export class PrismSpec {
         }
     }
 
-    polygonMaker(cvs:HTMLCanvasElement, color='#ffff00') {
+    polygonMaker(cvs:HTMLCanvasElement) {
         cvs.style.width = `${this.lengthB * 2}em`;
         cvs.style.height = `${this.lengthB * 2}em`;
         cvs.style.position = "absolute";
@@ -62,7 +63,7 @@ export class PrismSpec {
         
         ctx.scale(this.ratio, this.ratio);
         ctx.save();
-        ctx.fillStyle = color;
+        ctx.fillStyle = this.color;
         ctx.beginPath();
         ctx.translate(this.lengthB*16, this.lengthB*16);
         
@@ -91,6 +92,12 @@ export class PrismSpec {
                 translateZ(-${this.height/2}em)
                 translateY(-${this.height/2}em)
             `,
+        }
+    }
+
+    controllerStyle() {
+        return {
+            transform: `translateX(-50%) rotateX(-90deg) translateY(-${this.height + 5}em)`
         }
     }
 }

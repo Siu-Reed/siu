@@ -29,7 +29,7 @@
     "4" : {
         "name" : "this page",
         "items" : {
-            "Browse" : "*",
+            "Browse" : "https://siulee.com",
             "Git" : "https://github.com/Siu-Reed/siu",
             "Desc" : "현재 포트폴리오 페이지, 순수 자바스크립트 및 CSS로 3D 오브젝트 구현",
             "Stack" : "TypeScript, React, PostCSS, Firebase, NodeJS, Express, Nodemailer"
