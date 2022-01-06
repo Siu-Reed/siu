@@ -81,6 +81,7 @@
     background: #00000008;
     padding: 1rem;
     border-radius: 1rem 1rem 0 0;
+    font-size: 1em;
     border: none;
 }
 
@@ -93,6 +94,7 @@
     border: none;
     cursor: pointer;
     transition: 0.3s;
+    font-size: 1em;
 }
 
 .txtSubmit:hover {
