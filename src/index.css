@@ -30,9 +30,7 @@
     font-family: "Noto Sans KR", sans-serif;
     transform-style: inherit;
     user-select: none;
-    -webkit-appearance: none;   
-    z-index: 0;
-    transform: translateZ(0);
+    -webkit-appearance: none;
 }
 
 html {
