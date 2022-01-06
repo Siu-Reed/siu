@@ -13,8 +13,6 @@ interface Props {
 }
 
 const App: React.FC<Props> = memo(({me, writeSurveyData, surveyImgs, mailService}) => {
-    
-    console.log('app');
 
     const [intro, setIntro] = useState<boolean>(true);
 

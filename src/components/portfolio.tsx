@@ -33,6 +33,7 @@ const Portfolio : React.FC<Props> = memo(({polygonClick}) => {
                     }}
                     rotatable={false}
                     addable={true}
+                    key="anotherPrism"
                 />
             </div>
             
@@ -67,6 +68,7 @@ const Portfolio : React.FC<Props> = memo(({polygonClick}) => {
                         text : "Click This"
                     }}
                     polygonClick={polygonClick}
+                    key="mainPrism"
                 />
             </div>
             

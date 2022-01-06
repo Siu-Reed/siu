@@ -107,7 +107,7 @@ const Prism : React.FC<Props> = memo(({prismVar, rotatable, addable, polygonCont
         let squares:Array<JSX.Element> = [];
         for(let i:number = 0; i < spec.side; i++) {
             squares[i] = (
-                <div style={spec.squaresStyles(i)} className={styles.sqr}>
+                <div style={spec.squaresStyles(i)} className={styles.sqr} key={`squares${Math.random()}${i}`}>
                     {(!!squaresContents) && squaresContents[i]}
                 </div>
             );
