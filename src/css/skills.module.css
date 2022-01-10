@@ -41,10 +41,10 @@
 .theme {
     width: 5em;
     font-size: 2rem;
-    font-weight: 300;
+    font-weight: 700;
     text-shadow: rgba(0, 0, 0, 0.3) 0.1em 0.1em 0.3em;
     border-radius: 0.3em;
-    color: #ffffffb0;
+    color: #ffffff;
     text-align: center;
 }
 
@@ -62,7 +62,7 @@
     width: 7em;
     height: 7em;
     box-shadow: rgba(0, 0, 0, 0.05) 0.1em 0.1em 0.2em;
-    background: linear-gradient(to bottom right, #ffffff80 0%, transparent 30%, transparent 40%, #ffffff80 50%, transparent 70%, transparent 70%, transparent 100%);
+    background: linear-gradient(to bottom right, #ffffff80 0%, #ffffff50 30%, #ffffff10 40%, #ffffff80 50%, #ffffff10 70%, #ffffff10 70%, #ffffff20 100%);
     background-size: 200% 200%;
     background-position: bottom right;
     display: flex;
@@ -97,7 +97,6 @@
     display: block;
     max-width: 5rem;
     height: 4rem;
-    opacity: 0.8;
     transition: 0.5s;
 }
 
@@ -105,7 +104,7 @@
     font-weight: 400;
     font-size: 1rem;
     border-radius: 1em;
-    color: #ffffffa0;
+    color: #ffffff;
     text-shadow: #00000050 0.1rem 0.1rem 0.1rem;
     transition: 0.5s;
     /* background: sienna; */
