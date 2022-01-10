@@ -31,6 +31,8 @@
     transform-style: inherit;
     user-select: none;
     -webkit-appearance: none;
+    z-index: 0;
+    transform: translate3d(0,0,0);
 }
 
 html {
@@ -50,6 +52,10 @@ html {
     position: absolute;
     top: -18rem;
     animation: qstImgAppear 1.5s;
+}
+
+.dtdTransform {
+    transform: translate3d(-2.3px, -2.3px, 0);
 }
 
 @keyframes qstImgAppear {
