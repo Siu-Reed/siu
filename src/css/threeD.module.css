@@ -46,6 +46,7 @@
     flex-flow: row nowrap;
     justify-content: center;
     transition: 0.5s;
+    transform: translateZ(1);
 }
 .header svg {
     stroke: #82878e;
@@ -114,6 +115,7 @@
     top: 0;
     background: #6f6f6ff8;
     animation: actionAppear 0.5s;
+    transform: translateZ(1);
 }
 
 .actionClose {

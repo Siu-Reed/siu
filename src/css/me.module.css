@@ -12,6 +12,7 @@
     flex-flow: row nowrap;
     justify-content: center;
     align-items:flex-end;
+    transform: translate3d(0,0,0);
 }
 .title {
     position:absolute;
