@@ -68,14 +68,14 @@ export class PrismSpec {
         ctx.beginPath();
         ctx.translate(this.lengthB*16, this.lengthB*16);
         
-        for (let j = 0; j < this.side; j++) {
+        for (let j = 0; j <= this.side; j++) {
             const x = this.lengthB*16 * Math.cos((Math.PI/180) * this.angle * j);
             const y = this.lengthB*16 * Math.sin((Math.PI/180) * this.angle * j);
 
             (j === 0) ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
         }
-        ctx.fill();
         ctx.closePath();
+        ctx.fill();
         ctx.restore();
     }
 
