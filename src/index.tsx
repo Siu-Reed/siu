@@ -14,7 +14,7 @@ const mailService = new MailService(httpClient);
 
 const me = <Me key='me'/>;
 const surveyImgs = Object.entries(questionsImg)
-    .map(([key, value]) => <img src={value} alt={key} key={`${key}img`} className="qstImg" crossOrigin='anonymous' />
+    .map(([key, value]) => <img src={value} alt={key} key={`${key}img`} className="qstImg" crossOrigin='use-credentials' />
 );
 
 ReactDOM.render(
