@@ -1,5 +1,6 @@
 export class PrismSpec {
     
+    rootSize = 16;
     ratio = window.devicePixelRatio;    
     rad = Math.PI/180;
     angle = 360/this.side;
@@ -32,7 +33,8 @@ export class PrismSpec {
     prismContainerStyle() {
         return ({
             width: `${this.lengthA*2}em`,
-            height: `${this.lengthA*2}em`
+            height: `${this.lengthA*2}em`,
+            transform: `translate3d(0, 0, 1px)`
         });
     }
 
@@ -49,15 +51,16 @@ export class PrismSpec {
     }
 
     polygonMaker(cvs:HTMLCanvasElement) {
+
+        cvs.width = this.lengthB * 2 * this.rootSize * this.ratio;
+        cvs.height = this.lengthB * 2 * this.rootSize * this.ratio;
+        
         cvs.style.width = `${this.lengthB * 2}em`;
         cvs.style.height = `${this.lengthB * 2}em`;
         cvs.style.position = "absolute";
         cvs.style.top = `${this.lengthA - this.lengthB}em`;
         cvs.style.left = `${this.lengthA - this.lengthB}em`;
         cvs.style.borderRadius = "100%";
-
-        cvs.width = this.lengthB * 2 * 16 * this.ratio;
-        cvs.height = this.lengthB * 2 * 16 * this.ratio;
 
         const ctx = cvs.getContext('2d');
         if (!ctx) return;
@@ -66,11 +69,11 @@ export class PrismSpec {
         ctx.save();
         ctx.fillStyle = this.color;
         ctx.beginPath();
-        ctx.translate(this.lengthB*16, this.lengthB*16);
+        ctx.translate(this.lengthB*this.rootSize, this.lengthB*this.rootSize);
         
         for (let j = 0; j <= this.side; j++) {
-            const x = this.lengthB*16 * Math.cos((Math.PI/180) * this.angle * j);
-            const y = this.lengthB*16 * Math.sin((Math.PI/180) * this.angle * j);
+            const x = this.lengthB * this.rootSize * Math.cos((Math.PI/180) * this.angle * j);
+            const y = this.lengthB * this.rootSize * Math.sin((Math.PI/180) * this.angle * j);
 
             (j === 0) ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
         }

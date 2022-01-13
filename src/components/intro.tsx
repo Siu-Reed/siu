@@ -7,15 +7,26 @@ interface Props {
 
 const Intro:React.FC<Props> = memo(({setIntro}) => {
 
+    const docEl = document.documentElement;
+
     const noHandle = (e:MouseEvent) => {
         e.preventDefault();
         setIntro(false);
+        if (!docEl.requestFullscreen) {
+            alert('원할한 사용을 위해 chrome 사용을 권장합니다.');
+        }
     }
 
     const f11Handle = (e:MouseEvent) => {
         e.preventDefault();
         setIntro(false);
-        document.documentElement.requestFullscreen();
+        if (!!docEl.requestFullscreen) {
+            docEl.requestFullscreen().catch(err => {
+                alert('해당 브라우저에서 전체화면을 지원하지 않습니다. 원할한 사용을 위해 최신버전의 chrome 사용을 권장합니다.');
+            });
+        } else {
+            alert('Safari 에서 전체화면을 지원하지 않습니다. 원할한 사용을 위해 chrome 사용을 권장합니다.');
+        }
     }
 
     return (

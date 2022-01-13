@@ -103,15 +103,15 @@
 
 .resultBtn {
     position: absolute;
-    top: -3rem;
+    top: -10rem;
     left: 50%;
     transform: translateX(-50%);
     border: none;
     font-size: 1.5rem;
-    width: 6rem;
-    line-height: 3rem;
-    border-radius: 0 0 6rem 6rem;
-    font-weight: 700;
+    width: 5rem;
+    height: 5rem;
+    padding: 1.5rem;
+    border-radius: 100%;
     
     background: #725c2e80;
     box-shadow: 3px 0px 5px #00000050;
@@ -123,7 +123,7 @@
 }
 .resultBtn svg {
     stroke: #725c2e;
-    width: 1.5rem;
+    width: 100%;
     transition: 0.3s;
 }
 .resultBtn:hover svg {
