@@ -12,7 +12,7 @@ const Me:React.FC = memo(() => {
         <div className={styles.me}>
             <h1 className={styles.title}>Siu Lee</h1>
             <div className={styles.profileMeta}>
-                <img className={styles.profilePic} src="https://drive.google.com/uc?export=view&amp;id=1yIZIId3tjtYTaeY3sFpjdRUEHZyLH4jK" alt="myPortrait" crossOrigin={undefined} />
+                <img className={styles.profilePic} src="https://drive.google.com/uc?export=view&amp;id=15SBM3nMQwfJ6buefAKmVQWlnD7j91mo9" alt="myPortrait" crossOrigin={undefined} />
                 <ul className={styles.personalInfo}>
                     <li>
                         <h3>Name</h3>
