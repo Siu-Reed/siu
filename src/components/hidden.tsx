@@ -75,8 +75,8 @@ const Hidden : React.FC<Props> = memo(({xViewClick, zViewClick, aboutOpen, about
                 (<h1 className={styles.title}>Welcome to brand-new 3D web.</h1>)
             }
             <div className={`${styles.survey} ${surveyStyle}`}>
-                {!zBtnVisible && <img src="https://drive.google.com/uc?export=view&amp;id=1uYkvkZ4Rl9TynuFDkQgswU-VtLwCM9Mq" alt="pen" className={styles.pen} crossOrigin='use-credentials' />}
-                <img src="https://drive.google.com/uc?export=view&amp;id=1r90CLHi_FXYSWn8sNZB3r8N45RVZv_jR" alt="pin" className={styles.pin} crossOrigin='use-credentials' />
+                {!zBtnVisible && <img src="https://drive.google.com/uc?export=view&amp;id=1uYkvkZ4Rl9TynuFDkQgswU-VtLwCM9Mq" alt="pen" className={styles.pen} crossOrigin={undefined} />}
+                <img src="https://drive.google.com/uc?export=view&amp;id=1r90CLHi_FXYSWn8sNZB3r8N45RVZv_jR" alt="pin" className={styles.pin} crossOrigin={undefined} />
                 {!zBtnVisible && surveyCont}
             </div>
         </div>
