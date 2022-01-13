@@ -122,7 +122,7 @@ const About:React.FC<Props> = memo(({aboutOpen, aboutClose, aboutSwitch, me}) =>
         <>
         <div className={`${styles.about} ${aboutStyle}`} onClick={waveClick}>
             <Wave heights={heights.current}/>
-            <img src="./img/cloud.png" alt="cloud" className={`${styles.cloud} ${startStyle}`}/>
+            <img src="./img/cloud.webp" alt="cloud" className={`${styles.cloud} ${startStyle}`}/>
             <h1 className={`${styles.aboutMe} ${startStyle}`}>Click This</h1>
             <div className={`${styles.contentsBox} ${hiddenStyle}`} style={cBoxTransform} ref={containerRef}>
                 {me}

@@ -62,7 +62,7 @@ const Portfolio : React.FC<Props> = memo(({polygonClick}) => {
                     squaresContents={squaresContents}
                     polygonContents={{
                         img : {
-                            src : "./img/robot.png",
+                            src : "./img/robot.webp",
                             alt : "robot"
                         },
                         text : "Click This"
