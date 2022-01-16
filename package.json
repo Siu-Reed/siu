@@ -5,7 +5,7 @@
   "dependencies": {
     "@babel/core": "7.12.3",
     "@fortawesome/fontawesome-free": "^5.15.4",
-    "@pmmmwh/react-refresh-webpack-plugin": "0.4.3",
+    "@pmmmwh/react-refresh-webpack-plugin": "0.5.3",
     "@svgr/webpack": "6.0.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
