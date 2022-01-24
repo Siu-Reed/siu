@@ -1,4 +1,4 @@
-@value Laptop, Tablet, Mobile1, Mobile2, FontSize1, FontSize2, FontSize3, FontSize4 from './common/size.css';
+@value Laptop, Tablet, Mobile1, Mobile2, FontSize1, FontSize2, FontSize3, FontSize4 from '../css/common/size.css';
 
 @media (max-width: Laptop) {
     html {

@@ -1,9 +1,9 @@
-import '../css/app.module.css';
+import './app.module.css';
 import React, { memo, useState } from 'react';
-import ThreeD from './threeD';
+import ThreeD from '../components/threeD';
 import { SubmitObject } from '../interface/interface';
 import Mailer from '../service/mail';
-import Intro from './intro';
+import Intro from '../components/intro';
 
 interface Props {
     me : React.ReactNode;

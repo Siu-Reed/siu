@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './components/app';
+import App from './app/app';
 import Me from './components/me';
 import { writeSurveyData } from './service/firebase';
 import questionsImg from './json/questionsImg.json';
