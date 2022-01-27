@@ -1,0 +1,77 @@
+@value Bcolor3, Bcolor2, Bcolor1 from './common/color.css';
+
+.h3 {
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #656565;
+    margin-top: 2em;
+    transform: skewX(-10deg);
+}
+
+.browse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 500;
+    width: 9rem;
+    height: 9rem;
+    border: 0.5rem solid #ffffff;
+    background: Bcolor2;
+    color: #656565;
+    margin-bottom: 1.3em;
+    font-size: 1.6rem;
+    transition: 0.3s;
+}
+
+.browse::after {
+    content: 'Click this';
+    position: absolute;
+    bottom: 1.5rem;
+    color:#adadad;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.browse:hover {
+    background: Bcolor3;
+    color: #ffffff;
+}
+
+.ul {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.li {
+    margin: 0 0 2em 0;
+    text-align: center;
+    color: #656565;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.li h3 {
+    font-weight: 500;
+}
+
+.li p {
+    padding: 0.3rem 3rem 0 3rem;
+    font-weight: 300;
+}
+
+.li a {
+    text-align: center;
+    text-decoration: none;
+    color: #656565;
+}
+
+.li::before {
+    content: '';
+    display: block;
+    width: 1rem;
+    height: 0.2rem;
+    border-top: 1px solid #656565;
+}

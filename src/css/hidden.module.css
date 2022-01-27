@@ -1,0 +1,171 @@
+@value Line1, Bcolor1, Bcolor2, Bcolor3, Bcolor4, Bcolor5, Acolor1, Acolor2, Mono2 from './common/color.css';
+
+.hidden {
+    width: 100vw;
+    height: 100vh;
+    background: #ffffff;
+    box-shadow: #ffffff60 0 0 5rem;
+    transform: rotateX(-90deg) translateZ(Calc(-100vh*3/2)) translateY(Calc(-100vh/2));
+
+    display: flex;
+    flex-flow: column nowrap;
+    overflow: hidden;
+    
+    align-items: center;
+    justify-content: space-between;
+
+    transition: 0.8s;
+}
+
+.opaque {
+    opacity: 0.5;
+}
+
+.clear {
+    opacity: 1;
+}
+
+.sorry {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.resetBtn {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 10rem;
+    height: 10rem;
+    flex-flow: column nowrap;
+    border-radius: 0 0 100% 0;
+    border-right: 3px solid #000000;
+    text-align: left;
+    cursor: pointer;
+    color: #000000;
+    transition: 0.5s;
+    padding: 1rem;
+    z-index: 2;
+}
+
+.resetBtn:hover {
+    background: Bcolor4;
+    width: 12rem;
+    height: 12rem;
+}
+
+.resetBtn h1 {
+    font-weight: 400;
+}
+
+.title {
+    font-family: 'LeagueScript';
+    font-size: 3rem;
+    padding: 1em 0;
+}
+
+.survey {
+    width: 50%;
+    min-width: 300px;
+    padding: 3rem 3rem 0 ;
+
+    border-radius: 1rem 1rem 0 0;
+    border-top: 3px solid #725c2e60;
+    border-right: 3px solid #725c2e60;
+    box-shadow: 5px -5px 1rem #00000050;
+    background: #f4f2ae;
+    transition: 0.3s;
+}
+
+.defaultStyle {
+    height: 50%;
+    min-height: 30rem;
+}
+
+.resultStyle {
+    height: 60%;
+    min-height: 40rem;
+}
+
+.endStyle {
+    height: 0;
+}
+
+.coffee {
+    width: 35rem;
+    position: absolute;
+    left: -40rem;
+    top: 0;
+    z-index: 2;
+    animation-name: imgAppear;
+    animation-duration: 3s;
+}
+.pen {
+    width: 10rem;
+    position: absolute;
+    right: -13rem;
+    top: 1rem;
+    z-index: 2;
+    animation-name: imgAppear;
+    animation-duration: 3s;
+}
+.pin {
+    width: 4rem;
+    position: absolute;
+    left: 2rem;
+    top: 0rem;
+    z-index: 2;
+}
+
+
+.zBtnCont {
+    margin-top: 1em;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    transition: 1s;
+}
+.zBtnCont h3 {
+    font-size: 2rem;
+    color: Bcolor3;
+}
+
+.zBtn {
+    font-size: 1.5rem;
+    margin-top: 1em;
+    padding: 1.5em 1em;
+    border-radius: 100%;
+    background: Bcolor2;
+    color: #ffffff;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 2;
+}
+.zBtn:hover {
+    background: Bcolor4;
+    color: Bcolor1;
+}
+
+@keyframes imgAppear {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (orientation: portrait) {
+    .title {
+        opacity: 0;
+    }
+
+    .zBtnCont h3 {
+        width: 50%;
+    }
+}

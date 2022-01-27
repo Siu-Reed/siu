@@ -1,0 +1,9 @@
+{
+    "atDirectives": [
+        {
+            "name": "@value",
+            "description": "Use the @value directive to insert variable styles into your CSS.",
+            "references": ["'settings.json', 'css.customData' : '['.vscode/css_custom_data.json']'"]
+        }
+    ]
+}

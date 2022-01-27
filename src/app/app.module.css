@@ -1,0 +1,25 @@
+@value Laptop, Tablet, Mobile1, Mobile2, FontSize1, FontSize2, FontSize3, FontSize4 from '../css/common/size.css';
+
+@media (max-width: Laptop) {
+    html {
+        font-size: FontSize1;
+    }
+}
+
+@media (max-width: Tablet) {
+    html {
+        font-size: FontSize2;
+    }
+}
+
+@media (max-width: Mobile1) {
+    html {
+        font-size: FontSize3;
+    }
+}
+
+@media (max-width: Mobile2) {
+    html {
+        font-size: FontSize4;
+    }
+}

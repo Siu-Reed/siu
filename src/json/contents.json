@@ -1,0 +1,38 @@
+{
+    "1" : {
+        "name" : "SLIP",
+        "items" : {
+            "Browse" : "https://slipsiu.netlify.app",
+            "Git" : "https://github.com/Siu-Reed/slip_client",
+            "Desc" : "무지향성의 채팅같은 미니멀 SNS",
+            "Stack" : "Node.js, Express, Socket.io, Mysql, Sequelize, Bcrypt, JWT, React, PostCSS, VanilaJS"
+        }
+    },
+    "2" : {
+        "name" : "Siutube",
+        "items" : {
+            "Browse" : "https://siutube.netlify.app",
+            "Git" : "https://github.com/Siu-Reed/youtube",
+            "Desc" : "좀 더 편리한 서칭과 분할시청 기능을 추가한 YOUTUBE",
+            "Stack" : "Youtube Api, React, CSS, Axios"
+        }
+    },
+    "3" : {
+        "name" : "Siu Juice",
+        "items" : {
+            "Browse" : "https://siujuice.netlify.app",
+            "Git" : "https://github.com/Siu-Reed/siuJuice",
+            "Desc" : "3D적인 요소를 더한 제품 상세페이지",
+            "Stack" : "PhotoShop, Illustrator, HTML, CSS, Vanila JS"
+        }
+    },
+    "4" : {
+        "name" : "this page",
+        "items" : {
+            "Browse" : "https://siulee.com",
+            "Git" : "https://github.com/Siu-Reed/siu",
+            "Desc" : "현재 포트폴리오 페이지, 순수 자바스크립트 및 CSS로 3D 오브젝트 구현",
+            "Stack" : "TypeScript, React, PostCSS, Firebase, NodeJS, Express, Nodemailer"
+        }
+    }
+}

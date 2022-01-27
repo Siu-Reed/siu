@@ -1,0 +1,183 @@
+@value Acolor5, Acolor2, Acolor1, TxtOpacity2 from './common/color.css';
+@value Laptop, Tablet, Mobile1, Mobile2 from './common/size.css';
+
+@keyframes arrowNotice {
+    from {
+        width: 3rem;
+        fill: Acolor5;
+    }
+    to {
+        width: 3.5rem;
+        fill: Acolor1;
+    }
+}
+@keyframes closeNotice {
+    from {
+        color: Acolor5;
+        font-size: 2rem;
+    }
+    to {
+        color: Acolor1;
+        font-size: 2.5rem;
+    }
+}
+
+.about {
+    position: relative;
+    transition: 0.8s;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.about:hover .aboutMe {
+    top: 50%;
+    color: #000000
+}
+.default {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.click {
+    width: 100vw;
+    height: 100vh;
+    cursor: default;
+    padding: 0;
+    border-radius: 0;
+    border: none;
+}
+.cloud {
+    position: absolute;
+    height: 25%;
+    top: 0;
+    right: 50%;
+    transform: translate(50%, 0);
+
+    animation: cloudAni 20s linear alternate infinite;
+}
+.aboutMe {
+    position: absolute;
+    font-size: 2.7rem;
+    font-family: 'ColorsOfAutumn';
+    font-weight: normal;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #307bff80;
+}
+.contentsBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+
+    display: flex;
+    flex-flow: column wrap;
+    
+    opacity: 0;
+    transition: 0.8s;
+}
+
+.disappear {
+    pointer-events: none;
+    transition: 0s;
+    opacity: 0;
+}
+.appear {
+    pointer-events: inherit;
+    transition: 0.8s;
+    opacity: 1;
+}
+
+.btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.click .btn {
+    animation-delay:1s;
+    animation-duration: 0.4s;
+    animation-iteration-count: 6;
+    animation-direction: alternate;
+}
+.click .arrow {
+    animation-name: arrowNotice;
+}
+.click .close {
+    animation-name: closeNotice;
+}
+
+
+.close {
+    position: absolute;
+    top: 1.5rem;
+    right: 2.5rem;
+    font-family: 'ColorsOfAutumn';
+    font-size: 2rem;
+    font-weight: bolder;
+    transform: skewX(30deg);
+    color: #ffffff;
+    user-select: none;
+}
+.close:hover {
+    color : #000000;
+    font-size: 2.5rem;
+}
+
+.arrow {
+    width: 3rem;
+    fill: #ffffff;
+}
+.arrow:hover {
+    width: 3.5rem;
+    fill: #000000;
+}
+.left {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%) rotateZ(-90deg);
+}
+.right {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%) rotateZ(90deg);
+}
+
+@keyframes cloudAni {
+    0% {
+        transform: skew(1deg, 0deg) scale(1.0,1.0) translate(49%, -5%);
+    }
+    10% {
+        transform: skew(2deg, 1deg) scale(1.05,1.0) translate(50%, -10%);
+    }
+    20% {
+        transform: skew(3deg, 2deg) scale(1.1,1.0) translate(52%, -5%);
+    }
+    30% {
+        transform: skew(4deg, 4deg) scale(1.05,1.05) translate(50%, -10%);
+    }
+    40% {
+        transform: skew(6deg, 4deg) scale(1.0,1.05) translate(51%, -5%);
+    }
+    50% {
+        transform: skew(7deg, 4deg) scale(1.05,1.0) translate(50%, -10%);
+    }
+    60% {
+        transform: skew(8deg, 5deg) scale(1.1,1.0) translate(50%, -5%);
+    }
+    70% {
+        transform: skew(8deg, 5deg) scale(1.1,1.05) translate(49%, -10%);
+    }
+    80% {
+        transform: skew(5deg, 4deg) scale(1.05,1.05) translate(48%, -5%);
+    }
+    90% {
+        transform: skew(6deg, 3deg) scale(1.1,1.05) translate(46%, -10%);
+    }
+    100% {
+        transform: skew(7deg, 4deg) scale(1.1,1.05) translate(43%, -5%);
+    }
+}

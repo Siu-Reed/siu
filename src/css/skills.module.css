@@ -1,0 +1,150 @@
+@value Laptop, Tablet, Mobile1, Mobile2 from './common/size.css';
+
+.skills {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.title {
+    position:absolute;
+    top: 1em;
+    color: #ffffff;
+    font-family: 'ColorsOfAutumn';
+    font-weight: normal;
+    text-shadow: #8dffc8 0.03em 0.03em 0.03em;
+
+    font-size: 3rem;
+}
+
+.contentsWrapper {
+    width: 100%;
+
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.category {
+    width: 100%;
+    height: 22vh;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.theme {
+    width: 5em;
+    font-size: 2rem;
+    font-weight: 700;
+    text-shadow: rgba(0, 0, 0, 0.3) 0.1em 0.1em 0.3em;
+    border-radius: 0.3em;
+    color: #ffffff;
+    text-align: center;
+}
+
+.items {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.item {
+    width: 7em;
+    height: 7em;
+    box-shadow: rgba(0, 0, 0, 0.05) 0.1em 0.1em 0.2em;
+    background: linear-gradient(to bottom right, #ffffff80 0%, #ffffff50 30%, #ffffff10 40%, #ffffff80 50%, #ffffff10 70%, #ffffff10 70%, #ffffff20 100%);
+    background-size: 200% 200%;
+    background-position: bottom right;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 3em;
+    padding: 1em 0 0 0;
+    transition: 0.5s;
+}
+
+.item img {
+    user-select: none;
+}
+
+.item:hover {
+    width: 10em;
+    height: 10em;
+    background-position: top left;
+}
+.item:hover img {
+    max-width: 7rem;
+    height: 6rem;
+}
+.item:hover h3 {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+
+.item img {
+    display: block;
+    max-width: 5rem;
+    height: 4rem;
+    transition: 0.5s;
+}
+
+.item h3 {
+    font-weight: 400;
+    font-size: 1rem;
+    border-radius: 1em;
+    color: #ffffff;
+    text-shadow: #00000050 0.1rem 0.1rem 0.1rem;
+    transition: 0.5s;
+    /* background: sienna; */
+}
+@media (max-width: 1440px) {
+    .items {
+        width: 65%;
+    }
+}
+@media (max-width: Laptop) {
+    .items {
+        width: 75%;
+    }
+}
+@media (max-width: Mobile1) {
+    .category {
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .items {
+        height: 8rem;
+    }
+    .theme {
+        font-size: 1.5rem;
+        width: 7em;
+    }
+    .title {
+        top: 2em;
+        font-size: 2.5rem;
+    }
+}
+
+
+@media (max-width: Mobile2) {
+    .items {
+        width: 90%;
+    }
+    .item {
+        width: 7rem;
+        height: 7rem;
+    }
+}

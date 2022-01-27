@@ -1,0 +1,142 @@
+@value Mono1, Acolor2, Bcolor4, Bcolor1, Ccolor1, TxtOpacity2 from './common/color.css';
+@value Laptop, Tablet, Mobile1, Mobile2 from './common/size.css';
+
+.prsHome {
+    position: relative;
+    
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.prism {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    transition: 0.4s;
+}
+.btn {
+    position: absolute;
+    width : 5em;
+    font-size: 1em;
+    transition : 0.3s;
+    cursor: pointer;
+    border: none;
+    background: none;
+    fill: Bcolor4;
+}
+
+.left {
+    left: -30%;
+    transform: rotateX(90deg) translateY(22.5em) translateZ(-7.5em) rotateZ(-90deg);
+}
+
+.right {
+    right: -30%;
+    transform: rotateX(90deg) translateY(22.5em) translateZ(-7.5em) rotateZ(90deg);
+}
+
+
+.btn:hover {
+    width: 6em;
+    fill: Bcolor1;
+}
+.sqr {
+    position : absolute;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    user-select: none;
+}
+.cvsDiv {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    cursor: pointer;
+}
+.robot {
+    position : absolute;
+    height: 100%;
+    top : 50%;
+    left : 50%;
+}
+
+.txt {
+    position : absolute;
+    top: 22%;
+    left: 22%;
+    font-size : 2.7rem;
+    font-family: 'ColorsOfAutumn';
+    font-weight: normal;
+    transition: 0.3s;
+    color : #fec730;
+    text-align : center;
+}
+
+.cvsDiv:hover .txt {
+    color: #000000;
+}
+
+.addController {
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    opacity: 0.8;
+}
+.addControllerText {
+    padding: 0.5em 1.2em;
+    background: #ffffff;
+    border-radius: 1em 1em 0 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    color: #00000090;
+}
+.addControllerText h3 {
+    width:max-content;
+    padding-bottom: 0.2em;
+}
+.addControllerText h4 {
+    width:max-content;
+}
+.addControllerBtns {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0.5em;
+    background: #ffffff50;
+
+    border-radius: 0 0 1em 1em;
+}
+.addControllerBtns button {
+    width: 2.1em;
+    height: 2.1em;
+    border: none;
+    background: #00000050;
+    border-radius: 100%;
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.addControllerBtns button svg {
+    width: 60%;
+    fill: none;
+    stroke: #ffffff;
+    stroke-linecap : round;
+    stroke-width : 1.8em;
+    stroke-miterlimit:10;
+}
+.addControllerBtns button:hover {
+    background: #ffffff;
+}
+
+.addControllerBtns button:hover svg {
+    stroke: Ccolor1;
+}
