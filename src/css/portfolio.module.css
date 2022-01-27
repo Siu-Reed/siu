@@ -29,7 +29,7 @@
     overflow: hidden;
 }
 .grid:nth-child(2) {
-    background: Bcolor1;
+    background: #ffffc9;
 }
 .grid:nth-child(8) {
     display: flex;
@@ -55,13 +55,13 @@
 }
 
 .anoPrismCont {
-    background:Ccolor1;
+    background:#ffd3d4;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .prismCont {
-    background: Bcolor1;
+    background: #ffffc9;
 }
 
 .scriptContainer {

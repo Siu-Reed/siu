@@ -50,11 +50,13 @@
     margin: 0 0 0.3em 0;
     font-size: 1.3rem;
     user-select: none;
+    text-shadow: 2px 2px 2px #00000080;
 }
 
 .personalInfo p {
     font-size: 1.1rem;
     width: 100%;
+    text-shadow: 2px 2px 2px #00000080;
 }
 
 .personalInfo span {
@@ -75,6 +77,7 @@
 .aboutMe h3 {
     font-size: 1.3em;
     margin: 0 0 0.7em 0.2em;
+    text-shadow: 2px 2px 2px #00000080;
 }
 
 .aboutMe div {

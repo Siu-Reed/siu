@@ -28,8 +28,8 @@ const Portfolio : React.FC<Props> = memo(({polygonClick}) => {
                         width : 40,
                         height : 20,
                         side : 5,
-                        colors : ['linear-gradient(to right, rgb(216, 0, 5), rgb(170, 0, 4))'],
-                        color : "#aa0004"
+                        colors : ['linear-gradient(to right, #ffbdbe, #ffa6a8, #ffa6a8)'],
+                        color : "#ffa6a8"
                     }}
                     rotatable={false}
                     addable={true}
@@ -48,14 +48,8 @@ const Portfolio : React.FC<Props> = memo(({polygonClick}) => {
                         width : 28,
                         height : 45,
                         side : 4,
-                        colors : [
-                            "#ffc600",
-                            "#ffde00",
-                            "#ffc600",
-                            "#ffa800",
-                            "#ffde00"
-                        ],
-                        color : "#ffff00"
+                        colors : ['linear-gradient(to left, #f1f1b8, #ffffc9, #ffffd7, #ffffed'],
+                        color : "#ffffc9"
                     }}
                     rotatable={true}
                     addable={false}
