@@ -1,3 +1,4 @@
+@value Acolor1, Acolor2, Acolor3, Acolor4, Acolor5, Bcolor1, Bcolor2, Bcolor3, Bcolor4, Ccolor1, Mono1, Mono2, Mono3, Mono4, Mono5, TxtOpacity1, TxtOpacity2, Line1 from './common/color.css';
 @value Laptop, Tablet, Mobile1, Mobile2 from './common/size.css';
 
 .skills {
@@ -13,10 +14,10 @@
 .title {
     position:absolute;
     top: 1em;
-    color: #ffffff;
+    color: Mono5;
     font-family: 'ColorsOfAutumn';
     font-weight: normal;
-    text-shadow: #8dffc8 0.03em 0.03em 0.03em;
+    text-shadow: Acolor6 0.03em 0.03em 0.03em;
 
     font-size: 3rem;
 }
@@ -44,7 +45,7 @@
     font-weight: 700;
     text-shadow: rgba(0, 0, 0, 0.3) 0.1em 0.1em 0.3em;
     border-radius: 0.3em;
-    color: #ffffff;
+    color: Mono5;
     text-align: center;
 }
 
@@ -103,7 +104,7 @@
     font-weight: 400;
     font-size: 1rem;
     border-radius: 1em;
-    color: #ffffff;
+    color: Mono5;
     text-shadow: #00000050 0.1rem 0.1rem 0.1rem;
     transition: 0.5s;
     /* background: sienna; */

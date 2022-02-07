@@ -1,9 +1,9 @@
-@value Line1, Bcolor1, Bcolor2, Bcolor3, Bcolor4, Bcolor5, Acolor1, Acolor2, Mono2 from './common/color.css';
+@value Acolor1, Acolor2, Acolor3, Acolor4, Acolor5, Bcolor1, Bcolor2, Bcolor3, Bcolor4, Ccolor1, Mono1, Mono2, Mono3, Mono4, Mono5, TxtOpacity1, TxtOpacity2, Line1 from './common/color.css';
 
 .hidden {
     width: 100vw;
     height: 100vh;
-    background: #ffffff;
+    background: Mono5;
     box-shadow: #ffffff60 0 0 5rem;
     transform: rotateX(-90deg) translateZ(Calc(-100vh*3/2)) translateY(Calc(-100vh/2));
 
@@ -41,10 +41,10 @@
     height: 10rem;
     flex-flow: column nowrap;
     border-radius: 0 0 100% 0;
-    border-right: 3px solid #303030;
+    border-right: 3px solid Mono1;
     text-align: left;
     cursor: pointer;
-    color: #303030;
+    color: Mono1;
     transition: 0.5s;
     padding: 1rem;
     z-index: 2;
@@ -138,7 +138,7 @@
     padding: 1.5em 1em;
     border-radius: 100%;
     background: Bcolor2;
-    color: #ffffff;
+    color: Mono5;
     transition: 0.3s;
     cursor: pointer;
     z-index: 2;

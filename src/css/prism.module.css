@@ -1,4 +1,4 @@
-@value Mono1, Acolor2, Bcolor4, Bcolor1, Ccolor1, TxtOpacity2 from './common/color.css';
+@value Acolor1, Acolor2, Acolor3, Acolor4, Acolor5, Bcolor1, Bcolor2, Bcolor3, Bcolor4, Ccolor1, Mono1, Mono2, Mono3, Mono4, Mono5, TxtOpacity1, TxtOpacity2, Line1 from './common/color.css';
 @value Laptop, Tablet, Mobile1, Mobile2 from './common/size.css';
 
 .prsHome {
@@ -74,7 +74,7 @@
 }
 
 .cvsDiv:hover .txt {
-    color: #303030;
+    color: Mono1;
 }
 
 .addController {
@@ -87,7 +87,7 @@
 }
 .addControllerText {
     padding: 0.5em 1.2em;
-    background: #ffffff;
+    background: Mono5;
     border-radius: 1em 1em 0 0;
     display: flex;
     flex-flow: column;
@@ -117,7 +117,7 @@
     border: none;
     background: #00000050;
     border-radius: 100%;
-    color: #ffffff;
+    color: Mono5;
     font-weight: 700;
     cursor: pointer;
 
@@ -128,13 +128,13 @@
 .addControllerBtns button svg {
     width: 60%;
     fill: none;
-    stroke: #ffffff;
+    stroke: Mono5;
     stroke-linecap : round;
     stroke-width : 1.8em;
     stroke-miterlimit:10;
 }
 .addControllerBtns button:hover {
-    background: #ffffff;
+    background: Mono5;
 }
 
 .addControllerBtns button:hover svg {

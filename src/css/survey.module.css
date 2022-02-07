@@ -1,3 +1,4 @@
+@value Acolor1, Acolor2, Acolor3, Acolor4, Acolor5, Bcolor1, Bcolor2, Bcolor3, Bcolor4, Ccolor1, Mono1, Mono2, Mono3, Mono4, Mono5, TxtOpacity1, TxtOpacity2, Line1 from './common/color.css';
 @value Bcolor2, Bcolor4 from './common/color.css';
 
 .surveyBox {
@@ -15,7 +16,7 @@
     bottom: 0;
     width: 100%;
     height: 20rem;
-    background: #ffffff;
+    background: Mono5;
     transform: rotateZ(-5deg) translate(-1.2rem, 8rem);
     box-shadow: 1px 1px 5px #00000020;
 }
@@ -65,7 +66,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 100%;
-    background: #ffffff;
+    background: Mono5;
     color: Bcolor4;
     box-shadow: 3px 0 5px #00000030;
     cursor: pointer;
@@ -127,7 +128,7 @@
     transition: 0.3s;
 }
 .resultBtn:hover svg {
-    stroke: #ffffff;
+    stroke: Mono5;
 }
 
 
@@ -158,7 +159,7 @@
     width: 11em;
     height: 11em;
     border-radius: 50%;
-    background: #ffffff;
+    background: Mono5;
     background: linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
     animation: load3 1.4s infinite linear;
     transform: translate(-50%, -50%);

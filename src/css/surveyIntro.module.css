@@ -1,3 +1,4 @@
+@value Acolor1, Acolor2, Acolor3, Acolor4, Acolor5, Bcolor1, Bcolor2, Bcolor3, Bcolor4, Ccolor1, Mono1, Mono2, Mono3, Mono4, Mono5, TxtOpacity1, TxtOpacity2, Line1 from './common/color.css';
 @value Bcolor1, Bcolor4 from './common/color.css';
 
 .surveyIntro {
@@ -45,14 +46,14 @@
     color: #8b620a;
     padding: 0 1rem;
     width: fit-content;
-    background: #ffffff;
+    background: Mono5;
     transition: 0.3s;
     border: none;
     outline: none;
 }
 .surveyBtn:hover {
     background: Bcolor1;
-    color: #303030;
+    color: Mono1;
 }
 .surveyBtn h2 {
     font-size: 1.5rem;

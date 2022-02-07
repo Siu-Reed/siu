@@ -1,3 +1,4 @@
+@value Acolor1, Acolor2, Acolor3, Acolor4, Acolor5, Bcolor1, Bcolor2, Bcolor3, Bcolor4, Ccolor1, Mono1, Mono2, Mono3, Mono4, Mono5, TxtOpacity1, TxtOpacity2, Line1 from './common/color.css';
 @value Bcolor3, Bcolor2, Bcolor1 from './common/color.css';
 
 .h3 {
@@ -17,7 +18,7 @@
     width: 9rem;
     height: 9rem;
     border: 0.5rem solid Bcolor2;
-    background: #ffffff;;
+    background: Mono5;;
     color: Bcolor3;
     margin-bottom: 1.3em;
     font-size: 1.6rem;
@@ -35,7 +36,7 @@
 
 .browse:hover {
     background: Bcolor3;
-    color: #ffffff;
+    color: Mono5;
 }
 
 .ul {

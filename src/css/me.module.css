@@ -1,4 +1,4 @@
-@value Mono5, Acolor1 from './common/color.css';
+@value Acolor1, Acolor2, Acolor3, Acolor4, Acolor5, Bcolor1, Bcolor2, Bcolor3, Bcolor4, Ccolor1, Mono1, Mono2, Mono3, Mono4, Mono5, TxtOpacity1, TxtOpacity2, Line1 from './common/color.css';
 @value Laptop, Tablet, Mobile1, Mobile2 from './common/size.css';
 
 .me {
@@ -16,10 +16,10 @@
 .title {
     position:absolute;
     top: 1em;
-    color: #ffffff;
+    color: Mono5;
     font-family: 'ColorsOfAutumn';
     font-weight: normal;
-    text-shadow: #8dffc8 0.03em 0.03em 0.03em;
+    text-shadow: Acolor6 0.03em 0.03em 0.03em;
 
     font-size: 3rem;
 }
@@ -37,7 +37,7 @@
 }
 
 .personalInfo {
-    color: #ffffff;
+    color: Mono5;
 
     height: 40rem;
     padding: 3rem 0;
@@ -50,13 +50,13 @@
     margin: 0 0 0.3em 0;
     font-size: 1.3rem;
     user-select: none;
-    text-shadow: 1px 1px 2px #303030;
+    text-shadow: 1px 1px 2px Mono1;
 }
 
 .personalInfo p {
     font-size: 1.1rem;
     width: 100%;
-    text-shadow: 1px 1px 2px #303030;
+    text-shadow: 1px 1px 2px Mono1;
 }
 
 .personalInfo span {
@@ -66,7 +66,7 @@
 .aboutMe {
     line-height: 1.6rem;
     padding: 3rem 0;
-    color: #ffffff;
+    color: Mono5;
 
     display: flex;
     flex-flow: column nowrap;
@@ -77,7 +77,7 @@
 .aboutMe h3 {
     font-size: 1.3em;
     margin: 0 0 0.7em 0.2em;
-    text-shadow: 1px 1px 2px #303030;
+    text-shadow: 1px 1px 2px Mono1;
 }
 
 .aboutMe div {
@@ -129,7 +129,7 @@
         position: absolute;
         bottom: 0;
         right: 0;
-        color: #ffffff;
+        color: Mono5;
         text-align: right;
     
         margin: 2rem;

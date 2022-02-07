@@ -1,8 +1,8 @@
-@value Line1, Bcolor1, Acolor2, Ccolor1 from './common/color.css';
+@value Acolor1, Acolor2, Acolor3, Acolor4, Acolor5, Bcolor1, Bcolor2, Bcolor3, Bcolor4, Ccolor1, Mono1, Mono2, Mono3, Mono4, Mono5, TxtOpacity1, TxtOpacity2, Line1 from './common/color.css';
 @value Laptop, Tablet, Mobile1, Mobile2 from './common/size.css';
 
 .portfolio {
-    background: #303030;
+    background: Mono1;
     width: 100%;
     height: 100%;
     display: grid;
@@ -20,7 +20,7 @@
     gap: 2px;
 }
 .grid {
-    background: #ffffff;
+    background: Mono5;
 }
 
 .grid:nth-child(1) {
@@ -48,7 +48,7 @@
 
 .dtdLogo {
     stroke-linejoin: round;
-    stroke: #303030;
+    stroke: Mono1;
     fill: none;
     width: 15%;
     opacity: 0.3;

@@ -1,8 +1,10 @@
+@value Acolor1, Acolor2, Acolor3, Acolor4, Acolor5, Bcolor1, Bcolor2, Bcolor3, Bcolor4, Ccolor1, Mono1, Mono2, Mono3, Mono4, Mono5, TxtOpacity1, TxtOpacity2, Line1 from './common/color.css';
+
 .introContainer {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background: #ffffff;
+    background: Mono5;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-evenly;
@@ -27,7 +29,7 @@
 
 .dtdHolder svg {
     stroke-linejoin: round;
-    stroke: #303030;
+    stroke: Mono1;
     fill: none;
 }
 
@@ -54,7 +56,7 @@
 .btnF11 {
     font-size: 1.5rem;
     background: #003ca6;
-    color: #ffffff;
+    color: Mono5;
     padding: 1em;
     border-radius: 1em;
     box-shadow: 3px 3px 4px #00163d50;
@@ -62,7 +64,7 @@
     transition: 0.3s;
 }
 .btnF11:hover {
-    background: #ffffff;
+    background: Mono5;
     color: #003ca6;
 }
 
@@ -75,8 +77,8 @@
     transition: 0.3s;
 }
 .btnNo:hover {
-    background: #ffffff;
-    color: #303030;
+    background: Mono5;
+    color: Mono1;
 }
 .h6 {
     color: #00000050;
@@ -177,7 +179,7 @@
         fill: #00000000;
     }
     100% {
-        fill: #303030;
+        fill: Mono1;
     }
 }
 

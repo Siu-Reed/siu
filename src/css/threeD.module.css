@@ -1,10 +1,10 @@
-@value Line1, Bcolor1, Bcolor5 from './common/color.css';
+@value Acolor1, Acolor2, Acolor3, Acolor4, Acolor5, Bcolor1, Bcolor2, Bcolor3, Bcolor4, Ccolor1, Mono1, Mono2, Mono3, Mono4, Mono5, TxtOpacity1, TxtOpacity2, Line1 from './common/color.css';
 @value Laptop, Tablet, Mobile1, Mobile2 from './common/size.css';
 
 .threeD {
     width: 100vw;
     height: 100vh;
-    background: #303030;
+    background: Mono1;
     overflow: hidden;
     position: absolute;
     right: 50%;
@@ -63,7 +63,7 @@
 .aboutTrue {
     right: 100%;
     transform: translateX(100%);
-    color: #ffffff;
+    color: Mono5;
 }
 
 .headerX {
@@ -72,13 +72,13 @@
 
 .headerY {
     flex-flow: column;
-    color: #ffffff;
-    border: 2px solid #ffffff;
+    color: Mono5;
+    border: 2px solid Mono5;
 }
 
 .headerZ {
     flex-flow: column;
-    border: dotted 5px #303030;
+    border: dotted 5px Mono1;
 }
 
 
@@ -123,7 +123,7 @@
     width: 4rem;
     height: 4rem;
     border-radius: 100%;
-    background: #ffffff;
+    background: Mono5;
     box-shadow: 0.5rem 0.5rem 1rem #00000050;
     transition: 0.3s;
 
@@ -142,7 +142,7 @@
     box-shadow: 0.5rem -0.5rem 1rem #00000050;
 }
 .actionClose:hover svg {
-    stroke: #ffffff;
+    stroke: Mono5;
 }
 
 @keyframes actionAppear {
@@ -170,7 +170,7 @@
     }
     .aboutTrue {
         transform: translateX(Calc(100% + 2.4em));
-        color: #ffffff;
+        color: Mono5;
     }
     .headerY {
         border: none;

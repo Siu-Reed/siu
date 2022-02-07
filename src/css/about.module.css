@@ -1,4 +1,4 @@
-@value Acolor5, Acolor2, Acolor1, TxtOpacity2 from './common/color.css';
+@value Acolor1, Acolor2, Acolor3, Acolor4, Acolor5, Bcolor1, Bcolor2, Bcolor3, Bcolor4, Ccolor1, Mono1, Mono2, Mono3, Mono4, Mono5, TxtOpacity1, TxtOpacity2, Line1 from './common/color.css';
 @value Laptop, Tablet, Mobile1, Mobile2 from './common/size.css';
 
 @keyframes arrowNotice {
@@ -32,7 +32,7 @@
 
 .about:hover .aboutMe {
     top: 50%;
-    color: #303030;
+    color: Mono1;
 }
 .default {
     width: 100%;
@@ -117,21 +117,21 @@
     font-size: 2rem;
     font-weight: bolder;
     transform: skewX(30deg);
-    color: #ffffff;
+    color: Mono5;
     user-select: none;
 }
 .close:hover {
-    color : #303030;
+    color : Mono1;
     font-size: 2.5rem;
 }
 
 .arrow {
     width: 3rem;
-    fill: #ffffff;
+    fill: Mono5;
 }
 .arrow:hover {
     width: 3.5rem;
-    fill: #303030;
+    fill: Mono1;
 }
 .left {
     position: absolute;

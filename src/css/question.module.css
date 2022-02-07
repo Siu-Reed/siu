@@ -1,3 +1,4 @@
+@value Acolor1, Acolor2, Acolor3, Acolor4, Acolor5, Bcolor1, Bcolor2, Bcolor3, Bcolor4, Ccolor1, Mono1, Mono2, Mono3, Mono4, Mono5, TxtOpacity1, TxtOpacity2, Line1 from './common/color.css';
 @value Bcolor3 from './common/color.css';
 
 .qstBox {
@@ -5,7 +6,7 @@
     flex-flow: column;
     width: 100%;
     flex: 1;
-    background: #ffffff;
+    background: Mono5;
     box-shadow: 1px -1px 3px #00000020;
 }
 
@@ -57,8 +58,8 @@
 
 .option:hover {
 
-    background: #ffffff;
-    color: #303030;
+    background: Mono5;
+    color: Mono1;
     border: 2px solid Bcolor3;
     cursor: pointer;
 }
@@ -98,6 +99,6 @@
 }
 
 .txtSubmit:hover {
-    background: #303030;
-    color: #ffffff;
+    background: Mono1;
+    color: Mono5;
 }

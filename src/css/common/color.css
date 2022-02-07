@@ -1,25 +1,28 @@
 /* eslint-disable */
 
+@value Mono1: #505050;
+@value Mono2: #707070;
+@value Mono3: #909090;
+@value Mono4: #c0c0c0;
+@value Mono5: #ffffff;
+
+@value MonoOpacity1: #50505070;
+@value MonoOpacity2: #a0a0a070;
+@value MonoOpacity3: #ffffff70;
+
 @value Acolor1: #002e31;
 @value Acolor2: #004549;
 @value Acolor3: #005f65;
 @value Acolor4: #008a93;
 @value Acolor5: #009ea8;
+@value Acolor6: #8dffc8;
 
 @value Bcolor1: #ffff00;
 @value Bcolor2: #ffde00;
 @value Bcolor3: #ffc600;
 @value Bcolor4: #ffa800;
+@value Bcolor5: #ffa800;
 
 @value Ccolor1: #b20004;
 
-@value Mono1: #303030;
-@value Mono2: #1a1a1a;
-@value Mono3: #323232;
-@value Mono4: #5e5f5f;
-@value Mono5: #ffffff;
-
-@value TxtOpacity1: 0.7;
-@value TxtOpacity2: 0.4;
-
-@value Line1: 2px solid #303030;
+@value Line1: 2px solid Mono1;

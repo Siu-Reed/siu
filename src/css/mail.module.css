@@ -1,4 +1,4 @@
-@value Mono5 from './common/color.css';
+@value Acolor1, Acolor2, Acolor3, Acolor4, Acolor5, Bcolor1, Bcolor2, Bcolor3, Bcolor4, Ccolor1, Mono1, Mono2, Mono3, Mono4, Mono5, TxtOpacity1, TxtOpacity2, Line1 from './common/color.css';
 
 .container {
     width: 40%;
@@ -8,7 +8,7 @@
     max-height: 50rem;
     border-radius: 3rem;
     padding: 0 3rem;
-    background: #ffffff;
+    background: Mono5;
     box-shadow: 0.5rem 0.5rem 1rem #00000050;
 
     display: flex;
@@ -51,7 +51,7 @@
 
 .mailSubmit {
     background: #003ca6;
-    color: #ffffff;
+    color: Mono5;
     cursor: pointer;
     font-weight: 500;
     transition: 0.3s;
@@ -60,6 +60,6 @@
 
 .mailSubmit:hover {
     box-shadow: 0.5rem 0.5rem 0.5rem #003ca6;
-    background: #ffffff;
+    background: Mono5;
     color: #003ca6;
 }
