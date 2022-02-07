@@ -13,7 +13,7 @@
 
 @value Ccolor1: #b20004;
 
-@value Mono1: #000000;
+@value Mono1: #303030;
 @value Mono2: #1a1a1a;
 @value Mono3: #323232;
 @value Mono4: #5e5f5f;
@@ -22,4 +22,4 @@
 @value TxtOpacity1: 0.7;
 @value TxtOpacity2: 0.4;
 
-@value Line1: 2px solid #000000
+@value Line1: 2px solid #303030;

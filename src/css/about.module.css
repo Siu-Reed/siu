@@ -32,7 +32,7 @@
 
 .about:hover .aboutMe {
     top: 50%;
-    color: #000000
+    color: #303030;
 }
 .default {
     width: 100%;
@@ -121,7 +121,7 @@
     user-select: none;
 }
 .close:hover {
-    color : #000000;
+    color : #303030;
     font-size: 2.5rem;
 }
 
@@ -131,7 +131,7 @@
 }
 .arrow:hover {
     width: 3.5rem;
-    fill: #000000;
+    fill: #303030;
 }
 .left {
     position: absolute;

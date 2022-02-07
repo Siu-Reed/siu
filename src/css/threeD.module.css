@@ -4,7 +4,7 @@
 .threeD {
     width: 100vw;
     height: 100vh;
-    background: #000000;
+    background: #303030;
     overflow: hidden;
     position: absolute;
     right: 50%;
@@ -78,7 +78,7 @@
 
 .headerZ {
     flex-flow: column;
-    border: dotted 5px #000000;
+    border: dotted 5px #303030;
 }
 
 

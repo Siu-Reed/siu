@@ -53,11 +53,8 @@
 }
 
 .graph li div {
-    width: 35%;
+    width: 40%;
     transition: 1.5s;
-    border: Line1;
-    border-bottom: none;
-    border-top: 1rem solid #000000;
     box-shadow: 0.3em 0em 0.5em rgba(0, 0, 0, 0.2);
     background: #ffffff;
     overflow: hidden;
@@ -70,6 +67,9 @@
 .frontEnd h2 {
     background: Acolor3;
 }
+.frontEnd div {
+    border-top: 1rem solid Acolor3;
+}
 .frontEnd .appear {
     height: 80vh;
 }
@@ -77,12 +77,18 @@
 .backEnd h2 {
     background: Acolor2;
 }
+.backEnd div {
+    border-top: 1rem solid Acolor2;
+}
 .backEnd .appear {
     height: 40vh;
 }
 
 .design h2 {
     background: Acolor1;
+}
+.design div {
+    border-top: 1rem solid Acolor1;
 }
 .design .appear {
     height: 70vh;

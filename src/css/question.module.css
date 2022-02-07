@@ -58,7 +58,7 @@
 .option:hover {
 
     background: #ffffff;
-    color: #000000;
+    color: #303030;
     border: 2px solid Bcolor3;
     cursor: pointer;
 }
@@ -98,6 +98,6 @@
 }
 
 .txtSubmit:hover {
-    background: #000000;
+    background: #303030;
     color: #ffffff;
 }

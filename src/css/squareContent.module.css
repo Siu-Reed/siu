@@ -16,9 +16,9 @@
     font-weight: 500;
     width: 9rem;
     height: 9rem;
-    border: 0.5rem solid #ffffff;
-    background: Bcolor2;
-    color: #656565;
+    border: 0.5rem solid Bcolor2;
+    background: #ffffff;;
+    color: Bcolor3;
     margin-bottom: 1.3em;
     font-size: 1.6rem;
     transition: 0.3s;

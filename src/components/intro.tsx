@@ -78,11 +78,12 @@ const Intro:React.FC<Props> = memo(({setIntro}) => {
             <div className={styles.buttonContainer}>
                 <button className={styles.btnF11} onClick={f11Handle}>전체화면 보기</button>
                 <h3 className={styles.notice}>
-                    포트폴리오를 보기 전,<br/>
-                    더 나은 경험을 위해 F11을 누르거나,<br/>
+                    포트폴리오를 보기 전에<br/>
+                    더 나은 경험을 위해,<br/>
                     위 버튼을 눌러 브라우저를 전체화면으로 전환해주세요.
                 </h3>
                 <button className={styles.btnNo} onClick={noHandle}>보러 가기</button>
+                <h6 className={styles.h6}>Inspired by Mondrian</h6>
             </div>
         </div>
     );

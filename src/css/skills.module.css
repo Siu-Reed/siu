@@ -49,8 +49,7 @@
 }
 
 .items {
-    width: 50%;
-    height: 100%;
+    max-width: 40rem;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;

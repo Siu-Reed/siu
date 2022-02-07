@@ -100,7 +100,7 @@ const ThreeD : React.FC<Props> = memo(({me, writeSurveyData, surveyImgs, mailSer
                     <line x1="8.5" y1="73.43" x2="83.83" y2="73.43" />
                 </svg>
                 <div className={styles.headerBtn} onClick={fViewClick}>
-                    SIU
+                    RESET
                 </div>
                 <div className={styles.headerBtn} onClick={mailAction}>
                     MAIL

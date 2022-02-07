@@ -2,7 +2,7 @@
 @value Laptop, Tablet, Mobile1, Mobile2 from './common/size.css';
 
 .portfolio {
-    background: #000000;
+    background: #303030;
     width: 100%;
     height: 100%;
     display: grid;
@@ -48,7 +48,7 @@
 
 .dtdLogo {
     stroke-linejoin: round;
-    stroke: #000000;
+    stroke: #303030;
     fill: none;
     width: 15%;
     opacity: 0.3;

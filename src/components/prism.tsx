@@ -83,7 +83,7 @@ const Prism : React.FC<Props> = memo(({prismVar, rotatable, addable, polygonCont
         return(
             <div className={styles.addController} style={spec.controllerStyle()}>
                 <div className={styles.addControllerText}>
-                    <h3>It's HTML</h3>
+                    <h3>They are HTML</h3>
                     <h4>Elements</h4>
                 </div>
                 <div className={styles.addControllerBtns}>

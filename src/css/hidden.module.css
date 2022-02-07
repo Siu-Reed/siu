@@ -41,10 +41,10 @@
     height: 10rem;
     flex-flow: column nowrap;
     border-radius: 0 0 100% 0;
-    border-right: 3px solid #000000;
+    border-right: 3px solid #303030;
     text-align: left;
     cursor: pointer;
-    color: #000000;
+    color: #303030;
     transition: 0.5s;
     padding: 1rem;
     z-index: 2;
