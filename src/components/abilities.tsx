@@ -41,9 +41,9 @@ const Abilities:React.FC<Props> = memo(({abilitiesAni}) => {
                 <div className={styles.metaBack}>
                     <h2>Back-End</h2>
                     <pre>
-                        &nbsp;협업에 필요한 지식 외에도 관심으로<br/>
-                        부족하지만 계속해서 공부하고 있습니다.<br/>
-                        Node.js 와 Express로 간단한 Api를 구현한<br/>
+                        &nbsp;프론트엔드 측 보다 아직 떨어지지만<br/>
+                        원활한 협업과 풀스택에 대한 관심으로<br/>
+                        백엔드도 꾸준히 공부하고 있습니다.
                     </pre>
                 </div>
 
@@ -51,10 +51,10 @@ const Abilities:React.FC<Props> = memo(({abilitiesAni}) => {
                     <h2>Design</h2>
                     <pre>
                         &nbsp;다양한 디자인툴을 활용합니다.<br/>
-                        관련 실무 경험 또한 있으며<br/>
+                        관련 실무 경험도 있으며<br/>
                         일상에서도 디자인에 관심이 많아,<br/>
                         항상 번뜩이는 아이디어와 함께<br/>
-                        새롭고 참신한 웹에 대해 고민합니다.
+                        새롭고 참신한 웹에 대해 고민하고, 시도합니다.
                     </pre>
                 </div>
 

@@ -23,6 +23,7 @@
 }
 .iconContainer svg {
     fill: #003ca650;
+    width: 100%;
 }
 
 .mailForm {
