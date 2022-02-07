@@ -50,6 +50,7 @@
 }
 
 .items {
+    width: 60%;
     max-width: 40rem;
     display: flex;
     flex-flow: row nowrap;
