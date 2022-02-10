@@ -9,7 +9,6 @@
 
     display: flex;
     flex-flow: column nowrap;
-    overflow: hidden;
     
     align-items: center;
     justify-content: space-between;
